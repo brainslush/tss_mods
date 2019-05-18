@@ -1,0 +1,12 @@
+name = "TSS Mods";
+picture = "logo.paa";
+actionName = "GitHub";
+action = "https://github.com/brainslush/tss_mods";
+description = "TSS Mods";
+logo = "logo.paa";
+logoOver = "logo.paa";
+tooltip = "TSS Mods";
+tooltipOwned = "";
+overview = "Just awesome";
+author = "brainslush";
+overviewPicture = "logo.paa";
