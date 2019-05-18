@@ -9,10 +9,6 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class helipilot {
             class all {
@@ -20,12 +16,8 @@ class CfgTSSLoadout {
                     uniforms[] = {
                         "U_B_HeliPilotCoveralls"
                     };
-                }
+                };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
     };
     class CfgVests {
@@ -38,10 +30,6 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class helipilot {
             class all {
@@ -51,10 +39,6 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
     };
     class CfgBackpacks {
