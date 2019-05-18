@@ -48,12 +48,12 @@ class CfgTSSLoadout {
                     backpacks[] = {"B_AssaultPack_blk"};
                 };
             };
-        }
+        };
         class medium {
             class all {
                 class vanilla {
                     backpacks[] = {"B_Kitbag_rgr"};
-                }
+                };
             };
         };
         class large {
@@ -154,10 +154,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class riflegl {
             class all {
@@ -169,10 +165,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","1Rnd_HE_Grenade_shell"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class lmg {
             class all {
@@ -181,10 +173,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"200Rnd_556x45_Box_Red_F"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class slmg {
             class all {
@@ -193,10 +181,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"150Rnd_556x45_Drum_Mag_Tracer_F"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class mmg {
             class all {
@@ -205,10 +189,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"150Rnd_762x54_Box_Tracer"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class dmr {
             class all {
@@ -217,10 +197,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"20Rnd_762x51_Mag"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class sniper {
             class all {
@@ -229,10 +205,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_10Rnd_338_300gr_HPBT_Mag"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
     };
     class CfgSecondary {
@@ -246,10 +218,6 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"16Rnd_9x21_Mag"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
     };
     class CfgLaunchers {
@@ -309,8 +277,6 @@ class CfgTSSLoadout {
                     attachments[] = {"muzzle_snds_338_black"};
                 };
             };
-            class silent : all;
-            class fire : all;
         };
         class opticsRifle {
             class day {
@@ -360,7 +326,7 @@ class CfgTSSLoadout {
             class night {
                 class vanilla {
                     nvgs[] = {"ACE_NVG_Gen4"};
-                }
+                };
             };
         };
     };
@@ -371,8 +337,6 @@ class CfgTSSLoadout {
                     binoculars[] = {"Binocular"};
                 };
             };
-            class day : all;
-            class night : all;
         };
         class rangefinder {
             class all {
@@ -380,8 +344,6 @@ class CfgTSSLoadout {
                     binoculars[] = {"ACE_Vector"};
                 };
             };
-            class day : all;
-            class night : all;
         };
         class laserdesignator {
             class all {
@@ -389,8 +351,6 @@ class CfgTSSLoadout {
                     binoculars[] = {"Laserdesignator"};
                 };
             };
-            class day : all;
-            class night : all;
         };
     };
     class CfgMaps {
