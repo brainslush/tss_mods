@@ -30,7 +30,7 @@ class CfgVehicles {
     class B_Helipilot_F;
     class B_Pilot_F;
 
-    #include "CfgIntantry.hpp"
+    #include "CfgInfantry.hpp"
     #include "CfgRecon.hpp"
     #include "CfgSnipers.hpp"
     #include "CfgDivers.hpp"

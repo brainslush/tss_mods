@@ -1,7 +1,6 @@
 class tss_infantry_soldier: B_soldier_F {
     TSSAUTHOR
     INFUNITSETBASE
-    EMPTYLOADOUT
     _generalMacro = "B_Soldier_F";
     displayName = "Rifleman";
 

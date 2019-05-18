@@ -23,7 +23,7 @@
 #define EMPTYUNIT \
     uniformClass = ""; \
     backpack = ""; \
-    weapons[]; \
+    weapons[] = {}; \
     magazines[] = {}; \
     items[] = {}; \
     linkedItems[] = {}; \

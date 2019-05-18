@@ -8,7 +8,7 @@ class CfgEditorSubcategories {
     class tss_infantry_jgl: no_category {
         displayname = "Jungle";
     };
-    class tss_infantry_wdl1 no_category {
+    class tss_infantry_wdl: no_category {
         displayname = "Woodland";
     };
     class tss_infantry_mdt: no_category {
@@ -73,10 +73,10 @@ class CfgEditorSubcategories {
     class tss_fd_plane: no_category {
         displayname = "plane pilots";
     };
-    class tss_fd_log_des1: no_category {
+    class tss_fd_log_des: no_category {
         displayname = "logistics desert";
     };
-    class tss_fd_log_wdl1: no_category {
+    class tss_fd_log_wdl: no_category {
         displayname = "logistics woodland";
     };
 

@@ -9,6 +9,7 @@ class CfgPatches {
         weapons[] = {};
         requiredAddons[] = {
             "tss_mods_main",
+            "ace_main"
         };
     };
 };

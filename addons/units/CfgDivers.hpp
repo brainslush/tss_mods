@@ -1,40 +1,40 @@
-class tss_diver_soldier_diver: tss_recon_soldier {
+class tss_diver_soldier: tss_recon_soldier {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_gl_diver: tss_recon_gl {
+class tss_diver_gl: tss_recon_gl {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_tl_diver: tss_recon_tl {
+class tss_diver_tl: tss_recon_tl {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_ws_diver: tss_recon_ws {
+class tss_diver_ws: tss_recon_ws {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_wsm27_diver: tss_recon_wsm27 {
+class tss_diver_wsm27: tss_recon_wsm27 {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_com_diver: tss_recon_com {
+class tss_diver_com: tss_recon_com {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_exp_diver: tss_recon_exp {
+class tss_diver_exp: tss_recon_exp {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_med_diver: tss_recon_med {
+class tss_diver_cls: tss_recon_cls {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_mks_diver: tss_recon_mks {
+class tss_diver_mm: tss_recon_mm {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_mec_diver: tss_recon_mec {
+class tss_diver_mec: tss_recon_mec {
     TSSAUTHOR
     DIVERUNITSETBASE
 };

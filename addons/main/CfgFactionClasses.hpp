@@ -9,7 +9,7 @@ class CfgFactionClasses {
         displayName = "=TSS= Reconnaissance";
         priority = -333;
         side = 1;
-        icon = QPATHTOF(data\ui\icon_6thFR_factionClass.paa);
+        icon = QPATHTOF(data\ui\icon_1stInfPl_factionClass.paa);
     };
     class tss_infantry {
         displayName = "=TSS= Infantry";

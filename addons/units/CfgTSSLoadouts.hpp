@@ -78,10 +78,6 @@ class CfgTSSLoadout {
                     helmets[] = {"H_HelmetB_snakeskin"};
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class recon {
             class all {
@@ -100,10 +96,6 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
         class helipilot {
             class all {
@@ -115,10 +107,6 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class mdt : all;
-            class des : all;
-            class wdl : all;
-            class snw : all;
         };
     };
     class CfgGlasses {
@@ -127,7 +115,7 @@ class CfgTSSLoadout {
                 class vanilla {
                     glasses[] = {
                         "",
-                        "G_Shades_Black";
+                        "G_Shades_Black",
                         "G_Shades_Blue",
                         "G_Shades_Red",
                         "G_Shades_Green",
@@ -436,10 +424,12 @@ class CfgTSSLoadout {
             };
             class night {
                 class vanace {
-                    {"ACE_IR_Strobe_Item", 1},
-                    {"ACE_Flashlight_XL50", 1},
-                    {"ACE_Chemlight_IR", 2},
-                    {"ACE_Chemlight_UltraHiOrange", 2}
+                    items[] = {
+                        {"ACE_IR_Strobe_Item", 1},
+                        {"ACE_Flashlight_XL50", 1},
+                        {"ACE_Chemlight_IR", 2},
+                        {"ACE_Chemlight_UltraHiOrange", 2}
+                    };
                 };
             };
             class both {
@@ -482,7 +472,7 @@ class CfgTSSLoadout {
                     };
                 };
             };
-            class both : day;
+            class both : day {};
         };
         class markervest {
             class day {

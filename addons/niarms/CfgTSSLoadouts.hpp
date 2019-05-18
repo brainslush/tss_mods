@@ -44,8 +44,8 @@ class CfgTSSLoadout {
                         "hlc_rifle_416D165_wdl"
                     };
                     defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG"};
-                }
-            }
+                };
+            };
         };
         class riflegl {
             class all {

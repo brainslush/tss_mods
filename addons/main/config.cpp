@@ -31,5 +31,4 @@ class CfgMods {
 #include "CfgEden.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicleClasses.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgEditorSubcategories.hpp"
