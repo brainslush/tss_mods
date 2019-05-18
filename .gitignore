@@ -2,3 +2,9 @@
 *.pbo
 
 *.cache
+
+*.bin
+
+*.bikey
+
+release/
