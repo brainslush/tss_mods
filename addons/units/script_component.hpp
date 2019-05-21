@@ -2,9 +2,9 @@
 #define COMPONENT_BEAUTIFIED Units
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define DEBUG_MODE_FULL
+#define DISABLE_COMPILE_CACHE
+#define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MAIN
     #define DEBUG_MODE_FULL
@@ -15,6 +15,12 @@
 #endif
 
 #include "\x\tss_mods\addons\main\script_macros.hpp"
+
+#ifdef DEBUG_MODE_FULL
+    #define IGNOREVERSIONCHECK true
+#else
+    #define IGNOREVERSIONCHECK false
+#endif
 
 #define VEHCLASS(var) \
     vehicleClass = var; \

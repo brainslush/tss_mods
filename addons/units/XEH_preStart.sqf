@@ -4,21 +4,21 @@
 
 // check if we got a new version
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON));
-private _savedVersion = GETPVAR(QGVAR(cachedClassesVersion),"");
-private _classes = GETPVAR(QGVAR(cachedClasses),[])
+private _savedVersion = GETPRVAR(GVAR(cachedClassesVersion),"");
+private _classes = GETPRVAR(GVAR(cachedClasses),[]);
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     {
-        if (_x kindOf "CAManBase") then {
+        if (_x isKindOf "CAManBase") then {
             private _type = typeOf _x;
-            private _split = [_type,"_"] call CBA_fnc_split;
-            _split params [["_prefix",""]];
+            private _split = [_type, "_"] call CBA_fnc_split;
+            _split params [["_prefix", ""]];
             if (_prefix != "tss") then {
                 _classes pushBack _x;
             };
         };
-    } forEach (configFile >> "CfgVehicles");
-    SETPVAR(QGVAR(cachedClassesVersion),_modVersion);
-    SETPVAR(QGVAR(cachedClasses),_classes)
+    } forEach ("true" configClasses (configFile >> "CfgVehicles"));
+    SETPRVAR(GVAR(cachedClassesVersion),_modVersion);
+    SETPRVAR(GVAR(cachedClasses),_classes)
 };
 {
     [_x, "init", {_this call FUNC(applyLoadout)}] call CBA_fnc_addClassEventHandler;

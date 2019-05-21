@@ -5,16 +5,15 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <BOOL> or <ARRAY>
+ * 1: Type <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_player, ["MyItem1", "MyItem2", "MyItemN"]] call tss_units_fnc_initPersonalBox
- * [_player, true] call ace_arsenal_fnc_initBox
+ * [_player, 0] call tss_mods_units_fnc_initArsenal
  *
- * Public: No
+ * Public: Yes
 */
 
 params[
@@ -32,14 +31,14 @@ switch (_type) do {
     };
     // magazine arsenal
     case 1: {
-        [_object, GETPVAR(QGVAR(magazineList),[])] call ace_arsenal_fnc_initBox; 
+        [_object, GETPRVAR(GVAR(magazineList),[])] call ace_arsenal_fnc_initBox; 
     };
     // tss arsenal
     case 2: {
-        private _list = GETPVAR(QGVAR(weaponList),[]);
-        _list append GETPVAR(QGVAR(gearList),[]);
-        _list append GETPVAR(QGVAR(itemList),[]);
-        _list append GETPVAR(QGVAR(magazineList),[]);
+        private _list = GETPRVAR(GVAR(weaponList),[]);
+        _list append GETPRVAR(GVAR(gearList),[]);
+        _list append GETPRVAR(GVAR(itemList),[]);
+        _list append GETPRVAR(GVAR(magazineList),[]);
         [_object, _list] call ace_arsenal_fnc_initBox;
     };
 };

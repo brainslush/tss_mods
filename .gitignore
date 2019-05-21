@@ -8,3 +8,5 @@
 *.bikey
 
 release/
+
+\.vscode/

@@ -11,8 +11,8 @@
  * None
  *
  * Example:
- * [_player, ["MyItem1", "MyItem2", "MyItemN"]] call tss_units_fnc_initPersonalBox
- * [_player, true] call tss_units_fnc_initPersonalBox
+ * [_player, ["MyItem1", "MyItem2", "MyItemN"]] call tss_mods_units_fnc_initPersonalBox
+ * [_player, true] call tss_mods_units_fnc_initPersonalBox
  *
  * Public: No
 */

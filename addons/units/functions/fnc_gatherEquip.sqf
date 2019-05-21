@@ -1,4 +1,19 @@
 #include "script_component.hpp"
+/*
+ * Author: brainslush
+ * Collect layout classes
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call tss_mods_units_fnc_gatherEquip
+ *
+ * Public: No
+*/
 
 private _magazineList = [];
 
@@ -20,7 +35,7 @@ private _collectConfig = {
             {
                 private _configPath = _x;
                 private _exclude = isNumber(_x >> "excludeOnAlternative") && {getNumber(_x >> "excludeOnAlternative")};
-                private _varContent = GETPVAR(_namespaceQ,[]);
+                private _varContent = profileNamespace getVariable [_namespaceQ,[]];
                 if (_varContent isEqualTo []) then {
                     if (_exclude) then {
                         _hasExcludent = true;
@@ -40,7 +55,7 @@ private _collectConfig = {
                         };
                     };
                 };
-                SETPVAR(_namespaceQ,_varContent);
+                profileNamespace setVariable [_namespaceQ,_varContent];
                 _list append _varContent;
                 // handle magazines
                 /*
@@ -72,7 +87,7 @@ private _collectConfig = {
                                 };
                             } forEach [_x] call CBA_fnc_compatibleMagazines;
                             _magazineList append _magazines;
-                            SETPVAR(["TSS_Magazines", _weapon, _forEachIndex] joinString "_", _magazines);
+                            profileNamespace setVariable [["TSS_Magazines", _weapon, _forEachIndex] joinString "_", _magazines];
                         } forEach (_x call CBA_fnc_getMuzzles);
                     } forEach _varContent;
                 };
@@ -81,13 +96,13 @@ private _collectConfig = {
                     private _varName = ["TSS", [_property, _x] joinString "", _collectionName, _type] joinString "_";
                     switch (true) do {
                         case isArray(_configPath >> _x) : {
-                            SETPVAR(_varName,getArray(_configPath >> _x));
+                            profileNamespace setVariable [_varName,getArray(_configPath >> _x)];
                         };
                         case isNumber(_configPath >> _x) : {
-                            SETPVAR(_varName,getNumber(_configPath >> _x));
+                            profileNamespace setVariable [_varName,getNumber(_configPath >> _x)];
                         };
                         case isText(_configPath >> _x) : {
-                            SETPVAR(_varName,getText(_configPath >> _x));
+                            profileNamespace setVariable [_varName,getText(_configPath >> _x)];
                         };
                         default {};
                     };
@@ -100,7 +115,7 @@ private _collectConfig = {
 
 // check if we got a new version
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON));
-private _savedVersion = GETPVAR(QGVAR(gearVersion),"");
+private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     // collect existing gear
     private _weaponList = [];
@@ -124,11 +139,11 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     _attachmentList append (["Bipods"] call _collectConfig);
     _itemList append (["Items"] call _collectionConfig);
 
-    SETPVAR(QGVAR(gearVersion),_modVersion);
-    SETPVAR(QGVAR(weaponList),_weaponList);
-    SETPVAR(QGVAR(gearList),_gearList);
-    SETPVAR(QGVAR(itemList),_itemList);
+    SETPRVAR(GVAR(gearVersion),_modVersion);
+    SETPRVAR(GVAR(weaponList),_weaponList);
+    SETPRVAR(GVAR(gearList),_gearList);
+    SETPRVAR(GVAR(itemList),_itemList);
 
     _magazineList = _magazineList arrayIntersect _magazineList;
-    SETPVAR(QGVAR(magazineList),_magazineList);
+    SETPRVAR(GVAR(magazineList),_magazineList);
 };

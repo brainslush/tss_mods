@@ -9,7 +9,8 @@ class CfgPatches {
         weapons[] = {};
         requiredAddons[] = {
             "tss_mods_main",
-            "ace_main"
+            "ace_main",
+            "ace_arsenal"
         };
     };
 };
@@ -18,3 +19,4 @@ class CfgPatches {
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"
 #include "CfgVehicles.hpp"
+#include "ui\RscAttributes.hpp"

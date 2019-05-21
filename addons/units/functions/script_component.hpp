@@ -1,7 +1,4 @@
 #include "\x\TSS_UNITS\addons\units\script_component.hpp"
 
-#ifdef DEBUG_MODE_FULL
-    #define IGNOREVERSION true
-#else
-    #define IGNOREVERSION false
-#endif
+#define SAVELAYOUT(saveVar,property,type,data) \
+    profileNamespace setVariable [ARR_2(QUOTE(##TSS##_##saveVar##_##property##_##type)),data)]
