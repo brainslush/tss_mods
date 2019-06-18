@@ -114,7 +114,7 @@ private _collectConfig = {
 };
 
 // check if we got a new version
-private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON));
+private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     // collect existing gear

@@ -2,82 +2,28 @@ class CfgEditorSubcategories {
     class no_category;
 
     // ranger
-    class tss_infantry_des: no_category {
-        displayname = "Desert";
-    };
-    class tss_infantry_jgl: no_category {
-        displayname = "Jungle";
-    };
-    class tss_infantry_wdl: no_category {
-        displayname = "Woodland";
-    };
-    class tss_infantry_mdt: no_category {
-        displayname = "Mediterain";
-    };
-    class tss_infantry_snow: no_category {
-        displayname = "Snow";
+    class tss_infantry: no_category {
+        displayname = "Combat";
     };
 
     // recon
-    class tss_recon_wdl: no_category {
-        displayname = "recon woodland";
-    };
-    class tss_recon_des: no_category {
-        displayname = "recon desert";
-    };
-    class tss_recon_mdt: no_category {
-        displayname = "recon mediterain";
-    };
-    class tss_recon_snow: no_category {
-        displayname = "recon snow";
-    };
-    class tss_recon_jgl: no_category {
-        displayname = "recon jungle";
+    class tss_recon: no_category {
+        displayname = "Recon";
     };
 
     // diver
-    class tss_recondiver_wdl: no_category {
-        displayname = "diver woodland";
-    };
-    class tss_recondiver_des: no_category {
-        displayname = "diver desert";
-    };
-    class tss_recondiver_mdt: no_category {
-        displayname = "diver mediterain";
-    };
-    class tss_recondiver_jgl: no_category {
-        displayname = "diver jungle";
+    class tss_recondiver: no_category {
+        displayname = "Diver";
     };
 
     // sniper spotter
-    class tss_recon_sniper_wdl: no_category {
-        displayname = "sniper/spotter woodland";
-    };
-    class tss_recon_sniper_mdt: no_category {
-        displayname = "sniper/spotter mediterain";
-    };
-    class tss_recon_sniper_des: no_category {
-        displayname = "sniper/spotter desert";
-    };
-    class tss_recon_sniper_snow: no_category {
-        displayname = "sniper/spotter snow";
+    class tss_recon_sniper: no_category {
+        displayname = "Sniper/Spotter";
     };
 
     // flight division
-    class tss_fd_heli_w: no_category {
-        displayname = "heli crew desert";
-    };
-    class tss_fd_heli_d: no_category {
-        displayname = "heli crew woodland";
-    };
-    class tss_fd_plane: no_category {
-        displayname = "plane pilots";
-    };
-    class tss_fd_log_des: no_category {
-        displayname = "logistics desert";
-    };
-    class tss_fd_log_wdl: no_category {
-        displayname = "logistics woodland";
+    class tss_fd_heli: no_category {
+        displayname = "Aviation/Logistics";
     };
 
     // general

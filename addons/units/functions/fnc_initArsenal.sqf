@@ -26,7 +26,7 @@ if (_object isEqualTo objNull) exitWith {};
 switch (_type) do {
     // unit arsenal
     case 0: {
-        private _list = GETMVAR("tss_arsenalList_user",[]);
+        private _list = GETMVAR(tss_arsenalList_user,[]);
         [_object, _list, false] call FUNC(initPersonalBox); 
     };
     // magazine arsenal

@@ -17,4 +17,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"

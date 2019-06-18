@@ -22,6 +22,7 @@ private _configPath = configFile >> "CfgVehicles" >> _type;
 ([_unit] call FUNC(getUnitParameters)) params [
     "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle"
 ];
+private _modset = parsingNamespace getVariable QGVARMAIN(Modset);
 
 private _primaryMagazines = "";
 private _primaryGrenades = "";
@@ -80,7 +81,7 @@ private _getData = {
     // check if item is in list, if not revert to default
     private _default = _availableList select 0;
     private _item = if (_saveVar != "") then {
-        private _savedGear = profileNamespace getVariable [["TSS", _saveVar, _property, _type] joinString "_",_default];
+        private _savedGear = profileNamespace getVariable [["TSS", _saveVar, _modset, _property, _type] joinString "_",_default];
         private _findId = _availableList find (toLower _savedGear);
         if (_findId == -1) then {
             [_default, _groupList select 0];

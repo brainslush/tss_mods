@@ -37,22 +37,22 @@ _loadout params [
 
 // primary
 _primaryArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT("primary",_camo,_unitc,_primaryArray select 0);
+SAVELAYOUT(primary,_camo,_unitc,_primaryArray select 0);
 
 // launcher
 _launcherArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT("launchers",_camo,_unitc,_weapon);
+SAVELAYOUT(launchers,_camo,_unitc,_weapon);
 
 // secondaries
 _handgunArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT("secondaries",_camo,_unitc,_handgunArray select 0);
+SAVELAYOUT(secondaries,_camo,_unitc,_handgunArray select 0);
 
 // containers
-SAVELAYOUT("uniforms",_camo,_unitc,_uniformArray select 0);
-SAVELAYOUT("vests",_camo,_unitc,_vestArray select 0);
-SAVELAYOUT("backpacks",_camo,_unitc,_backpackArray select 0);
+SAVELAYOUT(uniforms,_camo,_unitc,_uniformArray select 0);
+SAVELAYOUT(vests,_camo,_unitc,_vestArray select 0);
+SAVELAYOUT(backpacks,_camo,_unitc,_backpackArray select 0);
 
 // headgear
-SAVELAYOUT("helmets",_camo,_unitc,_headgear);
-SAVELAYOUT("glasses",_camo,_unitc,_glasses);
-SAVELAYOUT("nvgs",_camo,_unitc,_itemsArrayB select 5);
+SAVELAYOUT(helmets,_camo,_unitc,_headgear);
+SAVELAYOUT(glasses,_camo,_unitc,_glasses);
+SAVELAYOUT(nvgs,_camo,_unitc,_itemsArrayB select 5);

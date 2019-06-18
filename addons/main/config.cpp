@@ -29,6 +29,7 @@ class CfgMods {
 };
 
 #include "CfgEden.hpp"
+#include "CfgEditorSubcategories.hpp"
+#include "CfgEventhandlers.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicleClasses.hpp"
-#include "CfgEditorSubcategories.hpp"
