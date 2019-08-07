@@ -8,6 +8,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {
+            "tss_mods_main",
             "tss_mods_units",
             "hlcweapons_ar15",
             "hlcweapons_m14",

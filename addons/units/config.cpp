@@ -15,6 +15,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgAttributes.hpp"
 #include "CfgEden.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"

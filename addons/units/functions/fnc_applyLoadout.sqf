@@ -15,7 +15,7 @@
  * Public: No
 */
 
-params[["_unit",""]];
+params[["_unit", objNull]];
 
 private _type = typeOf _unit;
 private _configPath = configFile >> "CfgVehicles" >> _type;
@@ -23,6 +23,8 @@ private _configPath = configFile >> "CfgVehicles" >> _type;
     "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle"
 ];
 private _modset = parsingNamespace getVariable QGVARMAIN(Modset);
+
+TRACE_7("data",_configPath,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_modset);
 
 private _primaryMagazines = "";
 private _primaryGrenades = "";
@@ -37,24 +39,27 @@ private _getConfig = {
         "_type",
         ["_configType", ""]];
 
+    TRACE_4("",_configPath,_property,_type,_configType);
+
     private _availableList = [];
     private _groupList = [];
 
     private _configEntry = if (_configType isEqualTo "") then {
-        getArray(_configPath >> ["tss", _property] joinString "_");
+        getArray(_configPath >> (["tss", _property] joinString "_"));
     } else {
-        getArray(_configPath >> ["tss", _configType] joinString "_");
+        getArray(_configPath >> (["tss", _configType] joinString "_"));
     };
+    TRACE_1("",_configEntry);
     {
         if (_x isEqualType []) then {
             _x params ["_class", "_data"];
             private _varName = ["TSS", _property, _class, _type] joinString "_";
             _availableList append [(profileNamespace getVariable [_varName, []]), _data];
-            _groupList append _class;
+            _groupList pushBack _class;
         } else {
             private _varName = ["TSS", _property, _x, _type] joinString "_";
             _availableList append (profileNamespace getVariable [_varName, []]);
-            _groupList append _x;
+            _groupList pushBack _x;
         };
     } forEach _configEntry;
     [_availableList, _groupList];
@@ -69,6 +74,8 @@ private _getData = {
         ["_arsenalList", ""]];
 
     ([_configPath, _property, _type] call _getConfig) params ["_availableList", "_groupList"];
+    
+    TRACE_2("dataList",_availableList,_groupList);
 
     // append arsenal whitelist
     if (_arsenalList != "") then {
@@ -81,7 +88,7 @@ private _getData = {
     // check if item is in list, if not revert to default
     private _default = _availableList select 0;
     private _item = if (_saveVar != "") then {
-        private _savedGear = profileNamespace getVariable [["TSS", _saveVar, _modset, _property, _type] joinString "_",_default];
+        private _savedGear = profileNamespace getVariable [["TSS", _saveVar, _modset, _property, _type] joinString "_", _default];
         private _findId = _availableList find (toLower _savedGear);
         if (_findId == -1) then {
             [_default, _groupList select 0];
@@ -96,7 +103,12 @@ private _getData = {
 
 // weapon attachments sub function
 private _getAttachment = {
-    params ["_property"];
+    params [
+        "_configPath",
+        "_property",
+        "_daynight",
+        "_weaponGroup"
+    ];
     _property = toLower _property;
     private _subProperty = [_property, _x] joinString "";
     ([_configPath, _subProperty, _daynight, _weaponGroup, "unit"] call _getData) params ["_item"];
@@ -113,12 +125,14 @@ private _getWeapon = {
         "_muzzle",
         "_unitc"];
 
-    ([_configPath, _property, _camo, _unitc, "unit"] call _getData) params ["_weapon", "_weaponGroup"];
+    TRACE_6("getWeapon",_configPath,_property,_camo,_daynight,_muzzle,_unitc);
+
+    ([_configPath, _property, _camo, _unitc, "unit"] call _getData) params [["_weapon","",[""]], ["_weaponGroup","",[""]]];
     private _weaponArray = [_weapon];
     // get muzzles, optics, lasers modules
-    {
-        _weaponArray pushBack ([_x] call _getAttachment);
-    } forEach ["Muzzles", "Optics", "Lasers"];
+    _weaponArray pushBack ([_configPath, "Muzzles", _muzzle, _weaponGroup] call _getAttachment);
+    _weaponArray pushBack ([_configPath, "Optics", _daynight, _weaponGroup] call _getAttachment);
+    _weaponArray pushBack ([_configPath, "Lasers", _daynight, _weaponGroup] call _getAttachment);
     // get magazines
     for _i from 0 to 1 do {
         private _array = profileNamespace getVariable [["TSS_Magazines", _weapon, _index] joinString "_",[]];
@@ -130,7 +144,7 @@ private _getWeapon = {
             _weaponArray pushBack [];
         };
     };
-    _weaponArray pushBack (["Bipods"] call _getAttachment);
+    _weaponArray pushBack ([_configPath, "Bipods", _daynight, _weaponGroup] call _getAttachment);
     _weaponArray;
 };
 
@@ -138,6 +152,7 @@ private _getWeapon = {
 private _getContainerContent = {
     params ["_configPath", "_property", "_daynight", "_unitc"];
     ([_configPath, "Items", _daynight, [_property, "Content"] joinString "" ] call _getConfig) params ["_items", "_groupNames"];
+    TRACE_1("",_items);
     private _index = 0;
     private _items = _items apply {
         _x params [
@@ -215,21 +230,18 @@ private _getContainerContent = {
             [_item, _data];
         };
     };
+    TRACE_1("",_items);
+    _items;
 };
 
 private _getBackpack = {
     params ["_configPath", "_property", "_camo", "_size", "_arsenal", "_volume"];
-
-
 };
 
 private _getContainer = {
-    params ["_configPath", "_property", "_camo", "_daynight", "_size", "_arsenal"];
-
-    private _content = ([_configPath, _property, _daynight, _unitc] call _getContainerContent);
-    {
-
-    } forEach _content;
+    params ["_configPath", "_property", "_camo", "_daynight", "_size", "_arsenal", "_unitc"];
+    TRACE_7("getContainer",_configPath,_property,_camo,_daynight,_size,_arsenal,_unitc);
+    private _result = [_configPath, _property, _daynight, _unitc] call _getContainerContent;
 
     private _container = if (_property == "Backpacks") then {
         ([_configPath, _property, _size, _unitc, "unit"] call _getData) select 0;
@@ -237,23 +249,26 @@ private _getContainer = {
         ([_configPath, _property, _camo, _camo, "unit"]  call _getData) select 0;
     };
 
-    _container append _content;
+    private _return = [_container];
+    _return pushBack _result;
+    TRACE_1("",_return);
+    _return;
 };
 
 private _loadout = [];
 // rifle slot
-_loadout pushBack [_configPath, "Primaries", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon;
+_loadout pushBack ([_configPath, "Primaries", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon);
 // launcher slot
-_loadout pushBack [_configPath, "Launchers", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon;
+_loadout pushBack ([_configPath, "Launchers", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon);
 // pistol slot
-_loadout pushBack [_configPath, "Secondaries", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon;
+_loadout pushBack ([_configPath, "Secondaries", _3denCamo, _3denDaynight, _3denMuzzle, _unitc] call _getWeapon);
 // containers
-_loadout pushBack [_configPath, "Uniforms", _3denCamo, _3denDaynight, "", _unitc] call _getContainer;
-_loadout pushBack [_configPath, "Vests", _3denCamo, _3denDaynight, "", _unitc] call _getContainer;
-_loadout pushBack [_configPath, "Backpacks", _3denCamo, _3denDaynight, _3denBackpack, _unitc] call _getContainer;
-_loadout pushBack [_configPath, "Helmets", _3denCamo, _unitc, "unit"] call _getData;
-_loadout pushBack [_configPath, "Glasses", _3denCamo, _unitc, "unit"] call _getData;
-_loadout pushBack [([_configPath, "Binoculars", _3denDaynight] call _getData) select 0, "", "", "", [], [], ""];
+_loadout pushBack ([_configPath, "Uniforms", _3denCamo, _3denDaynight, "", _unitc, _unitc] call _getContainer);
+_loadout pushBack ([_configPath, "Vests", _3denCamo, _3denDaynight, "", _unitc, _unitc] call _getContainer);
+_loadout pushBack ([_configPath, "Backpacks", _3denCamo, _3denDaynight, _3denBackpack, _unitc, _unitc] call _getContainer);
+_loadout pushBack ([_configPath, "Helmets", _3denCamo, _unitc, "unit"] call _getData);
+_loadout pushBack ([_configPath, "Glasses", _3denCamo, _unitc, "unit"] call _getData);
+_loadout pushBack ([([_configPath, "Binoculars", _3denDaynight] call _getData) select 0, "", "", "", [], [], ""]);
 _loadout pushBack [
     ([_configPath, "Maps", _3denDaynight] call _getData) select 0, // Map
     ([_configPath, "GPS", _3denDaynight] call _getData) select 0, // GPS
@@ -262,5 +277,6 @@ _loadout pushBack [
     ([_configPath, "Watches", _3denDaynight] call _getData) select 0, // Watch
     ([_configPath, "NVGs", _3denDaynight, _unitc, "unit"] call _getData) select 0 // NVG
 ];
-
+TRACE_1("loadout",_loadout);
+// containers
 _unit setUnitLoadout _loadout;

@@ -1,4 +1,4 @@
-class CfgTSSLoadout {
+class CfgTSSLoadouts {
     class CfgUniforms {
         class infantry {
             class all {
@@ -9,6 +9,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class helipilot {
             class all {
@@ -18,6 +22,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgVests {
@@ -30,6 +38,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class helipilot {
             class all {
@@ -39,6 +51,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgBackpacks {
@@ -48,6 +64,10 @@ class CfgTSSLoadout {
                     backpacks[] = {"B_AssaultPack_blk"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class medium {
             class all {
@@ -55,6 +75,10 @@ class CfgTSSLoadout {
                     backpacks[] = {"B_Kitbag_rgr"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class large {
             class all {
@@ -62,6 +86,10 @@ class CfgTSSLoadout {
                     backpacks[] = {"B_Carryall_khk"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class darter {
             class all {
@@ -69,6 +97,10 @@ class CfgTSSLoadout {
                     backpacks[] = {};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgHelmets {
@@ -78,6 +110,10 @@ class CfgTSSLoadout {
                     helmets[] = {"H_HelmetB_snakeskin"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class recon {
             class all {
@@ -96,6 +132,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class helipilot {
             class all {
@@ -107,6 +147,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgGlasses {
@@ -128,6 +172,10 @@ class CfgTSSLoadout {
                     };
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgPrimaries {
@@ -142,6 +190,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class riflegl {
             class all {
@@ -153,6 +205,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","1Rnd_HE_Grenade_shell"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class lmg {
             class all {
@@ -161,6 +217,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"200Rnd_556x45_Box_Red_F"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class slmg {
             class all {
@@ -169,6 +229,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"150Rnd_556x45_Drum_Mag_Tracer_F"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class mmg {
             class all {
@@ -177,6 +241,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"150Rnd_762x54_Box_Tracer"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class dmr {
             class all {
@@ -185,6 +253,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"20Rnd_762x51_Mag"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class sniper {
             class all {
@@ -193,9 +265,13 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"ACE_10Rnd_338_300gr_HPBT_Mag"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
-    class CfgSecondary {
+    class CfgSecondaries {
         class pistol {
             class all {
                 class vanilla {
@@ -206,6 +282,10 @@ class CfgTSSLoadout {
                     defaultMagazine[] = {"16Rnd_9x21_Mag"};
                 };
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgLaunchers {
@@ -216,6 +296,10 @@ class CfgTSSLoadout {
                 };
                 defaultMagazine[] = {""};
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class at {
             class all {
@@ -224,6 +308,10 @@ class CfgTSSLoadout {
                 };
                 defaultMagazine[] = {"MRAWS_HEAT_F"};
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class gat {
             class all {
@@ -232,6 +320,10 @@ class CfgTSSLoadout {
                 };
                 defaultMagazine[] = {"Titan_AT"};
             };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
     };
     class CfgAttachments {

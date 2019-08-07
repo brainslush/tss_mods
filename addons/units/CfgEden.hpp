@@ -1,13 +1,14 @@
-#define combocamoentry(var1) \
+#define COMBOENTRY(var1) \
 class var1 { \
     name = #var1; \
     value = #var1; \
-};
-#define camoexpression(var1) expression = QUOTE(missionnamespace setVariable [ARR_3(QQGVARMAIN(var1),_value, true)]; if (is3DEN) then {call FUNC(reequipALL)});
+}
+#define CEXPRESSION(var1) expression = QUOTE(missionnamespace setVariable [ARR_3(QQGVARMAIN(var1),_value, true)]; if (is3DEN) then {call FUNC(reequipALL)})
 
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
+            /*
             class GVARMAIN(attributes) {
                 class Attributes {
                     class GVARMAIN(backpack) {
@@ -16,67 +17,35 @@ class Cfg3DEN {
                         control = "Combo";
                         displayName = "Custom Backpack";
                         tooltip = "Changes backpack to selection";
-                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBackpack),_value, true)]; _this spawn FUNC(equip));
-                        typeName = "NUMBER";
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBackpack),_value, true)]; _this spawn FUNC(applyLoadout));
+                        typeName = "STRING";
                         condition = "objectBrain";
-                        defaultValue = -1;
+                        defaultValue = "small";
                         class values {
-                            class DEFAULT {
-                                name = "$STR_3DEN_Attributes_Lock_Default_text";
-                                value = -1;
+                            class default {
+                                name = "All";
+                                value = "all";
                                 default = 1;
                             };
-                            class KEIN {
+                            class none {
                                 name = "Kein";
-                                value = 0;
+                                value = "";
                             };
-                            class ASSAULTPACK {
-                                name = "Assault Pack";
-                                value = 1;
+                            class assaultpack {
+                                name = "small";
+                                value = "small";
                             };
-                            class KITBAG {
-                                name = "Kitbag Pack";
-                                value = 2;
+                            class kitbag {
+                                name = "Medium";
+                                value = "medium";
                             };
-                            class CARRYALL {
-                                name = "Carryall";
-                                value = 3;
+                            class carryall {
+                                name = "Large";
+                                value = "large";
                             };
-                            class CRYERO {
-                                name = "Cryero";
-                                value = 4;
-                            };
-                            class DARTER {
+                            class darter {
                                 name = "Darter";
-                                value = 5;
-                            };
-                            class CRRC {
-                                name = "CRRC";
-                                value = 6;
-                            };
-                            class M3TRIPOD {
-                                name = "M3 Minitripod";
-                                value = 7;
-                            };
-                            class M2GUN {
-                                name = "M2 Gun";
-                                value = 8;
-                            };
-                            class MK19TRIPOD {
-                                name = "Mk19 Tripod";
-                                value = 9;
-                            };
-                            class MK19GUN {
-                                name = "Mk19 Gun";
-                                value = 10;
-                            };
-                            class ATROUNDCARRIER {
-                                name = "AT Round Carrier";
-                                value = 11;
-                            };
-                            class ANTENNABAG {
-                                name = "Antenna Bag";
-                                value = 12;
+                                value = "darter";
                             };
                         };
                     };
@@ -86,27 +55,19 @@ class Cfg3DEN {
                         control = "Combo";
                         displayName = "Custom Muzzle";
                         tooltip = "Changes muzzle to selection";
-                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenMuzzle),_value, true)]; _this spawn FUNC(equip));
-                        typeName = "NUMBER";
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenMuzzle),_value, true)]; _this spawn FUNC(applyLoadout));
+                        typeName = "STRING";
                         condition = "objectBrain";
-                        defaultValue = -1;
+                        defaultValue = "";
                         class values {
-                            class DEFAULT {
+                            class default {
                                 name = "$STR_3DEN_Attributes_Lock_Default_text";
-                                value = -1;
+                                value = "";
                                 default = 1;
                             };
-                            class PRIM {
-                                name = "Primär";
-                                value = 0;
-                            };
-                            class SEK {
-                                name = "Sekundär";
-                                value = 1;
-                            };
-                            class BOTH {
-                                name = "Beide";
-                                value = 1;
+                            class silenced {
+                                name = "Schalldämpfer";
+                                value = "silent";
                             };
                         };
                     };
@@ -116,24 +77,25 @@ class Cfg3DEN {
                         control = "Combo";
                         displayName = "Add Bipod";
                         tooltip = "Adds a Bipod";
-                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBipod),_value, true)]; _this spawn FUNC(equip));
-                        typeName = "NUMBER";
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBipod),_value, true)]; _this spawn FUNC(applyLoadout));
+                        typeName = "STRING";
                         condition = "objectBrain";
                         defaultValue = -1;
                         class values {
-                            class DEFAULT {
+                            class default {
                                 name = "$STR_3DEN_Attributes_Lock_Default_text";
-                                value = -1;
+                                value = "";
                                 default = 1;
                             };
-                            class BIPOD {
+                            class bipod {
                                 name = "Bipod";
-                                value = 0;
+                                value = "bipod";
                             };
                         };
                     };
                 };
             };
+            */
         };
     };
     class Mission {
@@ -143,39 +105,78 @@ class Cfg3DEN {
                     displayName = "TSS Units Atributes";
                     class Attributes {
                         class DisableNVG {
-                            displayName = "Deaktiviere NVG";
-                            property = QGVARMAIN(3den_disableNVG);
-                            control = "Checkbox";
-                            camoexpression(3den_disableNVG)
-                            defaultValue = "false";
-                            typeName = "BOOL";
-                            wikiType = "[[Bool]]";
-                        };
-                        class CamoRanger {
-                            displayName = "Ranger Camo";
-                            property = QGVARMAIN(3den_camoRanger);
+                            displayName = "Tag / Nacht";
+                            property = QGVARMAIN(3denDayNight);
                             control = "Combo";
-                            camoexpression(3den_camoRanger)
+                            CEXPRESSION(3denDayNight);
+                            defaultValue = "day";
+                            typeName = "STRING";
+                            wikiType = "[[String]]";
+                            class values {
+                                class DEFAULT {
+                                    name = "Tag";
+                                    value = "day";
+                                    default = 1;
+                                };
+                                COMBOENTRY(Night);
+                                COMBOENTRY(Both);
+                            };
+                        };
+                        class Camo {
+                            displayName = "Camo";
+                            property = QGVARMAIN(3denCamo);
+                            control = "Combo";
+                            CEXPRESSION(3denCamo);
+                            defaultValue = "mdt";
+                            typeName = "STRING";
+                            wikiType = "[[String]]";
+                            class values {
+                                class DEFAULT {
+                                    name = "Mdt";
+                                    value = "mdt";
+                                    default = 1;
+                                };
+                                COMBOENTRY(des);
+                                COMBOENTRY(wdl);
+                                COMBOENTRY(snw);
+                            };
+                        };
+                        class Backpack {
+                            displayName = "Backpack";
+                            property = QGVARMAIN(3denBackpack);
+                            control = "Combo";
+                            CEXPRESSION(3denBackpack);
                             defaultValue = "";
                             typeName = "STRING";
                             wikiType = "[[String]]";
                             class values {
                                 class DEFAULT {
-                                    name = "Wie gesetzt";
-                                    value = "";
+                                    name = "Alle";
+                                    value = "all";
                                     default = 1;
                                 };
-                                combocamoentry(DES1)
-                                combocamoentry(DES2)
-                                combocamoentry(WDL1)
-                                combocamoentry(WDL2)
-                                combocamoentry(JGL1)
-                                combocamoentry(JGL2)
-                                combocamoentry(MDT1)
-                                combocamoentry(MDT2)
-                                combocamoentry(MOUT)
-                                combocamoentry(SNOW)
-                                combocamoentry(BUAT)
+                                COMBOENTRY(small);
+                                COMBOENTRY(medium);
+                                COMBOENTRY(large);
+                            };
+                        };
+                        class Muzzle {
+                            displayName = "Muzzle";
+                            property = QGVARMAIN(3denMuzzle);
+                            control = "Combo";
+                            CEXPRESSION(3denMuzzle)
+                            defaultValue = "";
+                            typeName = "STRING";
+                            wikiType = "[[String]]";
+                            class values {
+                                class DEFAULT {
+                                    name = "Alle";
+                                    value = "all";
+                                    default = 1;
+                                };
+                                COMBOENTRY(small);
+                                COMBOENTRY(medium);
+                                COMBOENTRY(large);
                             };
                         };
                     };

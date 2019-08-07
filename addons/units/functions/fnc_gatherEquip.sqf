@@ -18,20 +18,20 @@
 private _magazineList = [];
 
 private _collectConfig = {
-    params[
-        ["_class", "", "String"],
-        ["_property", "", "String"]
-    ];
+    params[["_property", "", [""]]];
     private _class = ["Cfg", _property] joinString "";
     _property = toLower _property;
     private _hasExcludent = false;
     private _list = [];
+    TRACE_3("",_class,_property,_hasExcludent);
     // run through config and save into profilespace variables
     {
-        private _collectionName = className _x;
+        private _collectionName = configName _x;
         {
-            private _type = className _x;
+            private _type = configName _x;
             private _namespaceQ = ["TSS", _property, _collectionName, _type] joinString "_";
+            profileNamespace setVariable [_namespaceQ,[]];
+            private _test = configProperties [_x, "true", true];
             {
                 private _configPath = _x;
                 private _exclude = isNumber(_x >> "excludeOnAlternative") && {getNumber(_x >> "excludeOnAlternative")};
@@ -55,7 +55,8 @@ private _collectConfig = {
                         };
                     };
                 };
-                profileNamespace setVariable [_namespaceQ,_varContent];
+                TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
+                profileNamespace setVariable [_namespaceQ, _varContent];
                 _list append _varContent;
                 // handle magazines
                 /*
@@ -107,15 +108,17 @@ private _collectConfig = {
                         default {};
                     };
                 } forEach ["Muzzles", "Lasers", "Optics"];
-            } forEach _x;
-        } forEach _x;
-    } forEach configFile >> "CfgTSSLoadouts" >> _class;
+            } forEach configProperties [_x, "isClass(_x)", true];
+        } forEach configProperties [_x, "isClass(_x)", true];
+    } forEach configProperties [configFile >> "CfgTSSLoadouts" >> _class, "isClass(_x)", true];
     _list;
 };
 
 // check if we got a new version
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
+private _ignoreVersionCheck = IGNOREVERSIONCHECK;
+TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     // collect existing gear
     private _weaponList = [];

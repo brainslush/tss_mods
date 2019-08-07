@@ -26,7 +26,7 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
         if (_class isKindOf "CAManBase") then {
             private _split = [_class, "_"] call CBA_fnc_split;
             _split params [["_prefix", ""]];
-            if (_prefix != "tss") then {
+            if (_prefix == "tss") then {
                 _classes pushBack _class;
             };
         };
@@ -35,5 +35,8 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     SETPRVAR(GVAR(cachedClasses),_classes)
 };
 {
-    [_x, "init", {_this call FUNC(applyLoadout)}] call CBA_fnc_addClassEventHandler;
+    [_x, "init", {
+        _this call FUNC(applyLoadout);
+        (_this select 0) setVariable [QGVAR(IsTss), true];
+    }] call CBA_fnc_addClassEventHandler;
 } forEach _classes;

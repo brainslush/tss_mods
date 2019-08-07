@@ -1,5 +1,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define XEH_LOG(msg) if (!SLX_XEH_DisableLogging) then { diag_log [diag_frameNo, diag_tickTime, time, msg] }
+
 #define TSSAUTHOR \
     author = "Tactical Stealth Squad"; \
     dlc = "TSSMod";

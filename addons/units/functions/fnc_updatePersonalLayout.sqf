@@ -21,7 +21,7 @@ if (!GVAR(PersonalArsenalOpen)) exitWith {};
     "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle"
 ];
 
-private _loadout = getUnitLoadout ace_player;
+private _loadout = getUnitLoadout player;
 _loadout params [
     "_primaryArray",
     "_launcherArray",

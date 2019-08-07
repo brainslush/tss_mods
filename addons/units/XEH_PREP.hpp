@@ -1,6 +1,9 @@
 PREP(addInitEventhandlers);
 PREP(applyLoadout);
 PREP(gatherEquip);
+PREP(getUnitParameters);
 PREP(initArsenal);
 PREP(initPersonalBox);
+PREP(reequip3Den);
+PREP(setLoadoutVariable);
 PREP(updatePersonalLayout);
