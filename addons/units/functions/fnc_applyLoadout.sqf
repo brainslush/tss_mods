@@ -57,13 +57,10 @@ private _getConfig = {
                 private _content = profileNamespace getVariable [_varName, []];
                 private _size = count _content;
                 _availableList append _content;
-                for "_i" from 0 to _count-1 do {
-                    _groupList pushBack _x;
-                };
             };
         };
     } forEach _configEntry;
-    [_availableList, _groupList];
+    _availableList;
 };
 
 private _getData = {
@@ -95,6 +92,7 @@ private _getData = {
         ["", ""];
     } else {
         private _default = _availableList select 0;
+        TRACE_1("",);
         private _item = if (_saveVar != "") then {
             private _savedGear = if (tolower _saveVar == "itemgroup") then {
                 if (count _groupList == 1) then {
