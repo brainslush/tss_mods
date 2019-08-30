@@ -23,32 +23,70 @@
 #endif
 
 #define VEHCLASS(var) \
-    vehicleClass = var; \
-    editorSubcategory = var
+vehicleClass = var; \
+editorSubcategory = var
 
 #define EMPTYUNIT \
-    uniformClass = ""; \
-    backpack = ""; \
-    weapons[] = {}; \
-    magazines[] = {}; \
-    items[] = {}; \
-    linkedItems[] = {}; \
-    respawnWeapons[] = {}; \
-    respawnMagazines[] = {}; \
-    respawnItems[] = {}; \
-    respawnLinkedItems[] = {};
+uniformClass = ""; \
+backpack = ""; \
+weapons[] = {}; \
+magazines[] = {}; \
+items[] = {}; \
+linkedItems[] = {}; \
+respawnWeapons[] = {}; \
+respawnMagazines[] = {}; \
+respawnItems[] = {}; \
+respawnLinkedItems[] = {};
 
 #define INFUNITSETBASE \
-    faction = "tss_infantry"; \
-    VEHCLASS("tss_infantry"); \
-    EMPTYUNIT
+faction = "tss_infantry"; \
+VEHCLASS("tss_infantry"); \
+EMPTYUNIT
 
 #define RECUNITSETBASE \
-    faction = "tss_infantry"; \
-    VEHCLASS("tss_recon"); \
-    EMPTYUNIT
+faction = "tss_infantry"; \
+VEHCLASS("tss_recon"); \
+EMPTYUNIT
+
+#define SNIPERSETBASE \
+faction = "tss_infantry"; \
+VEHCLASS("tss_sniper"); \
+EMPTYUNIT
 
 #define DIVERUNITSETBASE \
-    faction = "tss_infantry"; \
-    VEHCLASS("tss_recondiver"); \
-    EMPTYUNIT
+faction = "tss_infantry"; \
+VEHCLASS("tss_diver"); \
+EMPTYUNIT
+
+#define PILOTSETBASE \
+faction = "tss_flightdivision"; \
+VEHCLASS("tss_recondiver"); \
+EMPTYUNIT
+
+#define MODSET \
+(parsingNamespace getVariable [QGVARMAIN(Modset),""])
+
+#define SAVEVAR(property,var,type) \
+"TSS_Savevar_" + \
+MODSET + "_" + \
+(property) + "_" + (var) + "_" + (type)
+
+#define LOADGEARITEM(property,var,type,default) \
+profileNamespace getVariable [ \
+    SAVEVAR(property,var,type), \
+    default \
+]
+
+#define SAVEGEARITEM(property,var,type,data) \
+profileNamespace setVariable [ \
+    SAVEVAR(property,var,type), \
+    data \
+]
+
+#define GETITEMGROUP(class) \
+profileNamespace getVariable [ \
+    "TSS_ItemGroup_" + \
+    MODSET + "_" + \
+    class, \
+    "" \
+]

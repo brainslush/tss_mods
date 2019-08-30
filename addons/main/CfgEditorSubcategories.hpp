@@ -12,17 +12,17 @@ class CfgEditorSubcategories {
     };
 
     // diver
-    class tss_recondiver: no_category {
+    class tss_diver: no_category {
         displayname = "Diver";
     };
 
     // sniper spotter
-    class tss_recon_sniper: no_category {
+    class tss_sniper: no_category {
         displayname = "Sniper/Spotter";
     };
 
     // flight division
-    class tss_fd_heli: no_category {
+    class tss_fd: no_category {
         displayname = "Aviation/Logistics";
     };
 

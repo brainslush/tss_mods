@@ -23,13 +23,14 @@ private _collectConfig = {
     _property = toLower _property;
     private _hasExcludent = false;
     private _list = [];
-    TRACE_3("",_class,_property,_hasExcludent);
+    //TRACE_3("",_class,_property,_hasExcludent);
     // run through config and save into profilespace variables
     {
         private _collectionName = configName _x;
+        private _configPath = _x;
         {
             private _type = configName _x;
-            private _namespaceQ = ["TSS", _property, _collectionName, _type] joinString "_";
+            private _namespaceQ = ["TSS", MODSET ,_property, _collectionName, _type] joinString "_";
             profileNamespace setVariable [_namespaceQ,[]];
             private _test = configProperties [_x, "true", true];
             {
@@ -55,15 +56,11 @@ private _collectConfig = {
                         };
                     };
                 };
-                TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
+                //TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
                 profileNamespace setVariable [_namespaceQ, _varContent];
                 _list append _varContent;
                 // handle magazines
-                /*
-                TODO: default magazine for different muzzles and
-                do the same for cba_fnc_compatibleMagazines
-                */
-                if (_property in ["primary", "secondary", "launcher"]) then {
+                if (_property in ["primaries", "secondaries", "launchers"]) then {
                     private _defaultMagazines = if (isArray(_configPath >> "DefaultMagazines")) then {
                         getArray(_configPath >> "DefaultMagazines");
                     } else {[]};
@@ -74,42 +71,59 @@ private _collectConfig = {
                     _allowed = _allowed apply {toLower _x};
                     {
                         // create magazine list per weapon
-                        private _weapon = _x;
-                        {
-                            private _magazines = if (!(_defaultMagazines isEqualTo [])) then {
-                                [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
-                            } else {[]};
+                        private _varNameWeapon = ["TSS_Magazines", MODSET, _x] joinString "_";
+                        private _weaponMagazines = profileNamespace getVariable [_varNameWeapon + "_0",""];
+                        private _weaponGrenades = profileNameSpace getVariable [_varNameWeapon + "_1", ""];
+                        if (_weaponMagazines isEqualTo "" || _weaponGrenades isEqualTo "") then {
+                            private _muzzles = [_x] call CBA_fnc_getMuzzles;
                             {
-                                private _dlc = if (isText(configFile >> "CfgMagazines" >> _x >> "dlc")) then {
-                                    getText(configFile >> "CfgMagazines" >> _x >> "dlc");
-                                } else {""};
-                                if (_allowed isEqualTo [] || {_dlc in _allowed}) then {
-                                    _magazines pushBackUnique _x;
-                                };
-                            } forEach [_x] call CBA_fnc_compatibleMagazines;
-                            _magazineList append _magazines;
-                            profileNamespace setVariable [["TSS_Magazines", _weapon, _forEachIndex] joinString "_", _magazines];
-                        } forEach (_x call CBA_fnc_getMuzzles);
+                                private _magazines = if (!(_defaultMagazines isEqualTo [])) then {
+                                    [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
+                                } else {[]};
+                                private _compatibleMagazines = [_x] call CBA_fnc_compatibleMagazines;
+                                //TRACE_1("",_compatibleMagazines);
+                                {
+                                    private _dlc = if (isText(configFile >> "CfgMagazines" >> _x >> "dlc")) then {
+                                        getText(configFile >> "CfgMagazines" >> _x >> "dlc");
+                                    } else {
+                                        if (isText(configFile >> "CfgMagazines" >> _x >> "author")) then {
+                                            getText(configFile >> "CfgMagazines" >> _x >> "author");
+                                        } else {
+                                            "";
+                                        };
+                                    };
+                                    //TRACE_2("",_x,_allowed);
+                                    if (_allowed isEqualTo [] || {_dlc in _allowed}) then {
+                                        _magazines pushBackUnique _x;
+                                    };
+                                } forEach _compatibleMagazines;
+                                _magazineList append _magazines;
+                                //TRACE_2("",_varName,_magazines);
+                                profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
+                            } forEach _muzzles;
+                        };
                     } forEach _varContent;
                 };
-                // handle allowed subproperties
+                // save item group
                 {
-                    private _varName = ["TSS", [_property, _x] joinString "", _collectionName, _type] joinString "_";
-                    switch (true) do {
-                        case isArray(_configPath >> _x) : {
-                            profileNamespace setVariable [_varName,getArray(_configPath >> _x)];
-                        };
-                        case isNumber(_configPath >> _x) : {
-                            profileNamespace setVariable [_varName,getNumber(_configPath >> _x)];
-                        };
-                        case isText(_configPath >> _x) : {
-                            profileNamespace setVariable [_varName,getText(_configPath >> _x)];
-                        };
-                        default {};
-                    };
-                } forEach ["Muzzles", "Lasers", "Optics"];
+                    private _varName = ["TSS_ItemGroup", MODSET, _x] joinString "_";
+                    profileNamespace setVariable [_varName, _collectionName];
+                } forEach _varContent;
             } forEach configProperties [_x, "isClass(_x)", true];
         } forEach configProperties [_x, "isClass(_x)", true];
+        // handle allowed subproperties
+        if (_property in ["primaries", "secondaries", "launchers"]) then {
+            {
+                //TRACE_2("",_configPath,_x);
+                private _isText = isText(_configPath >> _x); 
+                if (_isText) then {
+                    private _varName = ["TSS", MODSET,[_property, _x] joinString "", _collectionName] joinString "_";
+                    private _varContent = getText(_configPath >> _x);
+                    //TRACE_2("",_varName,_varContent);
+                    profileNamespace setVariable [_varName, _varContent];
+                };
+            } forEach ["muzzles", "lasers", "optics"];
+        };
     } forEach configProperties [configFile >> "CfgTSSLoadouts" >> _class, "isClass(_x)", true];
     _list;
 };
@@ -118,7 +132,7 @@ private _collectConfig = {
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 private _ignoreVersionCheck = IGNOREVERSIONCHECK;
-TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);
+//TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     // collect existing gear
     private _weaponList = [];
@@ -132,15 +146,18 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     _weaponList append (["Primaries"] call _collectConfig);
     _weaponList append (["Secondaries"] call _collectConfig);
     _weaponList append (["Launchers"] call _collectConfig);
-    _itemList append (["Belts"] call _collectConfig);
     _itemList append (["Glasses"] call _collectConfig);
-    _itemList append (["Nvgs"] call _collectConfig);
     _itemList append (["Binoculars"] call _collectConfig);
+    _itemList append (["Maps"] call _collectConfig);
+    _itemList append (["GPS"] call _collectConfig);
+    _itemList append (["Compass"] call _collectConfig);
+    _itemList append (["Watches"] call _collectConfig);
+    _itemList append (["Nvgs"] call _collectConfig);
     _attachmentList append (["Optics"] call _collectConfig);
     _attachmentList append (["Lasers"] call _collectConfig);
     _attachmentList append (["Muzzles"] call _collectConfig);
     _attachmentList append (["Bipods"] call _collectConfig);
-    _itemList append (["Items"] call _collectionConfig);
+    _itemList append (["Items"] call _collectConfig);
 
     SETPRVAR(GVAR(gearVersion),_modVersion);
     SETPRVAR(GVAR(weaponList),_weaponList);

@@ -2,25 +2,25 @@ class CfgVehicleClasses {
     class no_category;
     class tss_units_base: no_category {};
 
-    class tss_ra: tss_units_base {
-        displayname = "ranger";
-        abbreviation = "ra";
+    class tss_infantry: tss_units_base {
+        displayname = "Combat";
+        abbreviation = "Combat";
     };
     class tss_recon: tss_units_base {
-        displayname = "recon";
-        abbreviation = "re";
+        displayname = "Recon";
+        abbreviation = "Recon";
     };
     class tss_diver: tss_units_base {
-        displayname = "recon diver";
-        abbreviation = "red";
+        displayname = "Diver";
+        abbreviation = "Diver";
     };
     class tss_sniper: tss_units_base {
-        displayname = "sniper-spotter team";
-        abbreviation = "sst";
+        displayname = "Sniper/Spotter";
+        abbreviation = "Sniper/Spotter";
     };
     class tss_fd: tss_units_base {
-        displayname = "flight division";
-        abbreviation = "fd";
+        displayname = "Aviation/Logistics";
+        abbreviation = "Aviation/Logistics";
     };
 
     class tss_air: no_category {

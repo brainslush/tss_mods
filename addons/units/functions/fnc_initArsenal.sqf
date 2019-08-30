@@ -27,7 +27,9 @@ switch (_type) do {
     // unit arsenal
     case 0: {
         private _list = GETMVAR(tss_arsenalList_user,[]);
-        [_object, _list, false] call FUNC(initPersonalBox); 
+        //[_object, _list, false] call FUNC(initPersonalBox);
+        [player, player] call ace_arsenal_fnc_openBox;
+        [player, _list, false] call FUNC(addVirtualItems); 
     };
     // magazine arsenal
     case 1: {

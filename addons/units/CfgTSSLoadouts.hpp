@@ -29,7 +29,77 @@ class CfgTSSLoadouts {
         };
     };
     class CfgVests {
-        class infantry {
+        class rifleman {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_PlateCarrierIA1_dgtl",
+                        "V_PlateCarrier2_rgr_noflag_F"
+                    };
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class teamleader {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_PlateCarrierIA1_dgtl",
+                        "V_PlateCarrier2_rgr_noflag_F"
+                    };
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class machinegunner {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_PlateCarrierIA1_dgtl",
+                        "V_PlateCarrier2_rgr_noflag_F"
+                    };
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class grenadier {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_PlateCarrierIA1_dgtl",
+                        "V_PlateCarrier2_rgr_noflag_F"
+                    };
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class marksman {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_PlateCarrierIA1_dgtl",
+                        "V_PlateCarrier2_rgr_noflag_F"
+                    };
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class medic {
             class all {
                 class vanilla {
                     vests[] = {
@@ -91,6 +161,17 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
+        class xlarge {
+            class all {
+                class vanilla {
+                    backpacks[] = {"B_Bergen_mcamo"};
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
         class darter {
             class all {
                 class enhanced {
@@ -137,7 +218,7 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
-        class helipilot {
+        class caps {
             class all {
                 class vanilla {
                     helmets[] = {
@@ -194,6 +275,9 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
+            muzzles = "muzzle556";
+            lasers = "laser";
+            optics = "opticsRifle";
         };
         class riflegl {
             class all {
@@ -222,7 +306,7 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
-        class slmg {
+        class sar {
             class all {
                 class vanilla {
                     primaries[] = {"arifle_SPAR_02_blk_F"};
@@ -325,80 +409,143 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
+        class aa {
+            class all {
+                class vanilla {
+                    launchers[] = {"launch_O_Titan_F"};
+                };
+                defaultMagazine[] = {"Titan_AA"};
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
     };
-    class CfgAttachments {
+    class CfgMuzzles {
         class muzzle556 {
             class silent {
                 class vanilla {
-                    attachments[] = {};
+                    muzzles[] = {
+                        "muzzle_snds_m",
+                        "muzzle_snds_m_khk_f",
+                        "muzzle_snds_m_snd_f"
+                    };
                 };
             };
             class fire {
                 class ace {
-                    attachments[] = {};
+                    muzzles[] = {"ace_muzzle_mzls_l"};
                 };
             };
         };
         class muzzle762 {
             class silent {
                 class vanilla {
-                    attachments[] = {};
+                    muzzles[] = {
+                        "muzzle_snds_b",
+                        "muzzle_snds_b_arid_f",
+                        "muzzle_snds_b_khk_f",
+                        "muzzle_snds_b_lush_f",
+                        "muzzle_snds_b_snd_f"
+                    };
                 };
             };
             class fire {
                 class ace {
-                    attachments[] = {};
+                    muzzles[] = {"ace_muzzle_mzls_b"};
                 };
             };
         };
         class muzzle338 {
-            class all {
+            class silent {
                 class vanilla {
-                    attachments[] = {"muzzle_snds_338_black"};
+                    muzzles[] = {"muzzle_snds_338_black"};
                 };
             };
         };
+    };
+    class CfgOptics {
         class opticsRifle {
             class day {
                 class vanilla {
-                    attachments[] = {};
+                    optics[] = {
+                        "optic_yorris",
+                        "optic_aco_grn",
+                        "optic_aco",
+                        "optic_arco_blk_f",
+                        "optic_arco",
+                        "optic_holosight_blk_f",
+                        "optic_holosight_khk_f",
+                        "optic_holosight",
+                        "optic_mrco"
+                    };
                 };
             };
             class night {
+            };
+            class both {
+                class vanilla {
+                    optics[] = {
+                        "optic_yorris",
+                        "optic_aco_grn",
+                        "optic_aco",
+                        "optic_arco_blk_f",
+                        "optic_arco",
+                        "optic_holosight_blk_f",
+                        "optic_holosight_khk_f",
+                        "optic_holosight",
+                        "optic_mrco"
+                    };
+                };
             };
         };
         class opticsMmg {
             class day {
                 class vanilla {
-                    attachments[] = {};
+                    optics[] = {
+                        "optic_yorris"
+                    };
                 };
             };
         };
         class opticsDmr {
             class day {
                 class vanilla {
-                    attachments[] = {};
+                    optics[] = {
+                        "optic_dms",
+                        "optic_dms_ghex_f"
+                    };
                 };
             };
         };
         class opticsSniper {
             class day {
                 class vanilla {
-                    attachments[] = {};
+                    optics[] = {
+                        "optic_lrps",
+                        "optic_lrps_tna_f"
+                    };
                 };
             };
         };
+    };
+    class CfgLasers {
         class laser {
             class night {
                 class vanilla {
-                    attachments[] = {};
+                    lasers[] = {"acc_pointer_ir"};
                 };
             };
             class day {
                 class ace {
-                    attachments[] = {};
+                    lasers[] = {};
                 };
             };
+        };
+    };
+    class CfgBipods {
+        class bipod {
         };
     };
     class CfgNVGs {
@@ -461,22 +608,100 @@ class CfgTSSLoadouts {
         };
     };
     class CfgGPS {
+        class gps {
+            class all {
+                class ace {
+                    gps[] = {};
+                };
+            };
+        };
         class android {
             class all {
-                class ctab {
+                class ace {
                     gps[] = {};
                 };
             };
         };
         class tablet {
             class all {
-                class ctab {
+                class ace {
                     gps[] = {};
+                };
+            };
+        };
+        class uavterminalB {
+            class all {
+                class vanilla {
+                    gps[] = {"B_UavTerminal"};
+                };
+            };
+        };
+        class uavterminalO {
+            class all {
+                class vanilla {
+                    gps[] = {"O_UavTerminal"};
+                };
+            };
+        };
+        class uavterminalI {
+            class all {
+                class vanilla {
+                    gps[] = {"I_UavTerminal"};
                 };
             };
         };
     };
     class CfgItems {
+        class primarymagazines {
+            class all {
+                class base {
+                    items[] = {"primarymagazines"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class primarygrenades {
+            class all {
+                class base {
+                    items[] = {"primarygrenades"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class secondarymagazines {
+            class all {
+                class base {
+                    items[] = {"secondarymagazines"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class launchermagazines {
+            class all {
+                class base {
+                    items[] = {"launchermagazines"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class tablet {
+            class all {
+                class vanilla {
+                    items[] = {};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
         class fak {
             class all {
                 class ace {
@@ -490,6 +715,9 @@ class CfgTSSLoadouts {
                     };
                 };
             };
+            class day : all {};
+            class night : all {};
+            class both : all {};
         };
         class clskit {
             class all {
@@ -505,13 +733,60 @@ class CfgTSSLoadouts {
                     };
                 };
             };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class ptmkit {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_tourniquet", 5},
+                        {"ACE_packingBandage", 30},
+                        {"ACE_elasticBandage", 30},
+                        {"ACE_quikclot", 30},
+                        {"ACE_morphine", 10},
+                        {"ACE_epinephrine", 10},
+                        {"ACE_salineIV_250", 10}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class ptdkit {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_tourniquet", 5},
+                        {"ACE_packingBandage", 30},
+                        {"ACE_elasticBandage", 30},
+                        {"ACE_quikclot", 30},
+                        {"ACE_morphine", 10},
+                        {"ACE_epinephrine", 10},
+                        {"ACE_salineIV_250", 10}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class maptool {
+            class all {
+                class ace {
+                    items[] = {"ACE_MapTools"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
         };
         class markers {
             class day {
                 class vanace {
-                    items[] = {
-                        {"SmokeShellPurple", 2}
-                    };
+                    items[] = {{"SmokeShellPurple", 2}};
                 };
             };
             class night {
@@ -536,15 +811,17 @@ class CfgTSSLoadouts {
                 };
             };
         };
-        class guidancetools {
+        class cableties {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_CableTie", 2},
-                        {"ACE_MapTools", 1}
+                        {"ACE_CableTie", 2}
                     };
                 };
             };
+            class day : all {};
+            class night : all {};
+            class both : all {};
         };
         class grenades {
             class day {
@@ -564,14 +841,20 @@ class CfgTSSLoadouts {
                     };
                 };
             };
-            class both : day {};
+            class both {
+                class ace {
+                    items[] = {
+                        {"SmokeShell", 2},
+                        {"ACE_M84", 2},
+                        {"HandGrenade", 2}
+                    };
+                };
+            };
         };
         class markervest {
             class day {
                 class vanace {
-                    items[] = {
-                        {"SmokeShellPurple", 1}
-                    };
+                    items[] = {{"SmokeShellPurple", 1}};
                 };
             };
             class night {
@@ -592,6 +875,36 @@ class CfgTSSLoadouts {
                     };
                 };
             };
+        };
+        class anprc117 {
+            class all {
+                class acre {
+                    items[] = {"ACRE_PRC117F"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class anprc148 {
+            class all {
+                class acre {
+                    items[] = {"ACRE_PRC148"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class anprc152 {
+            class all {
+                class acre {
+                    items[] = {"ACRE_PRC152"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
         };
     };
 };

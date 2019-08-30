@@ -6,4 +6,5 @@ PREP(initArsenal);
 PREP(initPersonalBox);
 PREP(reequip3Den);
 PREP(setLoadoutVariable);
+PREP(updateArsenalControls);
 PREP(updatePersonalLayout);

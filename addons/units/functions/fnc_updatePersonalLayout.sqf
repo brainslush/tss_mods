@@ -17,8 +17,8 @@
 
 if (!GVAR(PersonalArsenalOpen)) exitWith {};
 
-([_unit] call FUNC(getUnitParameters)) params [
-    "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle"
+([player] call FUNC(getUnitParameters)) params [
+    "_unitg", "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod"
 ];
 
 private _loadout = getUnitLoadout player;
@@ -35,24 +35,53 @@ _loadout params [
     "_itemsArrayB"
 ];
 
+TRACE_1("",_loadout);
+
 // primary
-_primaryArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT(primary,_camo,_unitc,_primaryArray select 0);
+_primaryArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
+private _weaponGroup = GETITEMGROUP(_weapon);
+
+private _test = SAVEVAR("Primaries",_weaponGroup,_3denCamo);
+private _modset = MODSET;
+TRACE_5("",_test,_modset,_weapongroup,_3denCamo,_weapon);
+
+SAVEGEARITEM("Primaries",_weaponGroup,_3denCamo,_weapon);
+SAVEGEARITEM("PrimariesMuzzles",_weaponGroup,_3denDaynight,_muzzle);
+SAVEGEARITEM("PrimariesLasers",_weaponGroup,_3denDaynight,_pointer);
+SAVEGEARITEM("PrimariesOptics",_weaponGroup,_3denDaynight,_optic);
 
 // launcher
-_launcherArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT(launchers,_camo,_unitc,_weapon);
+_launcherArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
+_weaponGroup = GETITEMGROUP(_weapon);
+SAVEGEARITEM("Launchers",_weaponGroup,_3denCamo,_weapon);
+SAVEGEARITEM("LaunchersMuzzles",_weaponGroup,_3denDaynight,_muzzle);
+SAVEGEARITEM("LaunchersLasers",_weaponGroup,_3denDaynight,_pointer);
+SAVEGEARITEM("LaunchersOptics",_weaponGroup,_3denDaynight,_optic);
 
-// secondaries
-_handgunArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
-SAVELAYOUT(secondaries,_camo,_unitc,_handgunArray select 0);
+// secondary
+_handgunArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
+_weaponGroup = GETITEMGROUP(_weapon);
+SAVEGEARITEM("Launchers",_weaponGroup,_3denCamo,_weapon);
+SAVEGEARITEM("LaunchersMuzzles",_weaponGroup,_3denDaynight,_muzzle);
+SAVEGEARITEM("LaunchersLasers",_weaponGroup,_3denDaynight,_pointer);
+SAVEGEARITEM("LaunchersOptics",_weaponGroup,_3denDaynight,_optic);
 
-// containers
-SAVELAYOUT(uniforms,_camo,_unitc,_uniformArray select 0);
-SAVELAYOUT(vests,_camo,_unitc,_vestArray select 0);
-SAVELAYOUT(backpacks,_camo,_unitc,_backpackArray select 0);
+// uniform
+SAVEGEARITEM("Uniforms",_unitc,_3denCamo,_uniformArray select 0);
+
+// vest
+SAVEGEARITEM("Vests",_unitc,_3denCamo,_vestArray select 0);
+
+// backpack
+SAVEGEARITEM("Backpacks",_unitc,_3denCamo,_backpackArray select 0);
 
 // headgear
-SAVELAYOUT(helmets,_camo,_unitc,_headgear);
-SAVELAYOUT(glasses,_camo,_unitc,_glasses);
-SAVELAYOUT(nvgs,_camo,_unitc,_itemsArrayB select 5);
+SAVEGEARITEM("helmets",_unitc,_3denCamo,_headgear);
+
+// glasses
+SAVEGEARITEM("glasses",_unitc,_3denCamo,_glasses);
+
+// nvg
+SAVEGEARITEM("nvgs",_unitc,_3denCamo,_itemsArrayB select 5);
+
+GVAR(PersonalArsenalOpen) = false;

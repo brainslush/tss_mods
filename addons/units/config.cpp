@@ -20,4 +20,4 @@ class CfgPatches {
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"
 #include "CfgVehicles.hpp"
-//#include "ui\RscAttributes.hpp"
+#include "CfgMagazines.hpp"

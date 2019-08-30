@@ -14,6 +14,7 @@ class CfgVehicles {
     class B_soldier_SL_F;
     class B_soldier_TL_F;
     class B_soldier_repair_F;
+    class B_soldier_UAV_F;
     class B_medic_F;
 
     class B_recon_TL_F;

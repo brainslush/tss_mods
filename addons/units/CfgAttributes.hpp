@@ -16,7 +16,7 @@ class Attributes {
                 default = 1;
             };
             class none {
-                name = "Kein";
+                name = "none";
                 value = "";
             };
             class assaultpack {
@@ -50,7 +50,7 @@ class Attributes {
         class values {
             class default {
                 name = "$STR_3DEN_Attributes_Lock_Default_text";
-                value = "";
+                value = "fire";
                 default = 1;
             };
             class silenced {
@@ -72,7 +72,7 @@ class Attributes {
         class values {
             class default {
                 name = "$STR_3DEN_Attributes_Lock_Default_text";
-                value = "";
+                value = "none";
                 default = 1;
             };
             class bipod {

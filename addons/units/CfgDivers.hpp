@@ -1,4 +1,4 @@
-class tss_diver_soldier: tss_recon_soldier {
+class tss_diver_operator: tss_recon_operator {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
@@ -14,7 +14,7 @@ class tss_diver_ws: tss_recon_ws {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
-class tss_diver_wsm27: tss_recon_wsm27 {
+class tss_diver_wsm27: tss_recon_ar {
     TSSAUTHOR
     DIVERUNITSETBASE
 };
