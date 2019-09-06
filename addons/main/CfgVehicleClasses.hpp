@@ -22,6 +22,10 @@ class CfgVehicleClasses {
         displayname = "Aviation/Logistics";
         abbreviation = "Aviation/Logistics";
     };
+    class tss_pmc: tss_units_base {
+        displayname = "PMC";
+        abbreviation = "PMC";
+    };
 
     class tss_air: no_category {
         displayname = "=tss= air";

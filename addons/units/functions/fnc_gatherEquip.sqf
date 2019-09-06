@@ -59,29 +59,51 @@ private _collectConfig = {
                 //TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
                 profileNamespace setVariable [_namespaceQ, _varContent];
                 _list append _varContent;
+
                 // handle magazines
                 if (_property in ["primaries", "secondaries", "launchers"]) then {
+                    // get default magazine
                     private _defaultMagazines = if (isArray(_configPath >> "DefaultMagazines")) then {
                         getArray(_configPath >> "DefaultMagazines");
                     } else {[]};
                     private _defaultMagazinesCount = count _defaultMagazines;
+
+                    // get magazines ammo count range
+                    private _magazineRanges = if (isArray(_configPath >> "magazineRange")) then {
+                        getArray(_configPath >> "magazineRange");
+                    } else {[]};
+                    private _magazineRangesCount = count _magazineRanges;
+                    //TRACE_2("",_configPath,_magazineRanges);
+
+                    // get allowed magazineMods
                     private _allowed = if (isArray(_configPath >> "AllowedMagazineMods")) then {
                         getArray(_configPath >> "AllowedMagazineMods");
                     } else {[]};
+
                     _allowed = _allowed apply {toLower _x};
                     {
                         // create magazine list per weapon
-                        private _varNameWeapon = ["TSS_Magazines", MODSET, _x] joinString "_";
-                        private _weaponMagazines = profileNamespace getVariable [_varNameWeapon + "_0",""];
-                        private _weaponGrenades = profileNameSpace getVariable [_varNameWeapon + "_1", ""];
-                        if (_weaponMagazines isEqualTo "" || _weaponGrenades isEqualTo "") then {
+                        private _weapon = _x;
+                        private _varNameWeapon = ["TSS_Magazines", MODSET, _collectionName, _x] joinString "_";
+                        private _weaponMagazines = profileNamespace getVariable (_varNameWeapon + "_0");
+                        private _weaponGrenades = profileNameSpace getVariable (_varNameWeapon + "_1");
+
+                        if (VERSIONCHECK || {isNil "_weaponMagazines" || {isNil "_weaponGrenades"}}) then {
                             private _muzzles = [_x] call CBA_fnc_getMuzzles;
+
                             {
+                                private _muzzle = _x;
                                 private _magazines = if (!(_defaultMagazines isEqualTo [])) then {
                                     [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
                                 } else {[]};
                                 private _compatibleMagazines = [_x] call CBA_fnc_compatibleMagazines;
                                 //TRACE_1("",_compatibleMagazines);
+
+                                private _minRange = if (_forEachIndex < _magazineRangesCount) then {(_magazineRanges select _forEachIndex) select 0} else {0};
+                                private _maxRange = if (_forEachIndex < _magazineRangesCount) then {(_magazineRanges select _forEachIndex) select 1} else {9999};
+                                private _index = _forEachIndex;
+                                //TRACE_2("",_minRange,_maxRange);
+
                                 {
                                     private _dlc = if (isText(configFile >> "CfgMagazines" >> _x >> "dlc")) then {
                                         getText(configFile >> "CfgMagazines" >> _x >> "dlc");
@@ -92,13 +114,15 @@ private _collectConfig = {
                                             "";
                                         };
                                     };
-                                    //TRACE_2("",_x,_allowed);
                                     if (_allowed isEqualTo [] || {_dlc in _allowed}) then {
-                                        _magazines pushBackUnique _x;
+                                        private _ammoCount = getNumber(configFile >> "CfgMagazines" >> _x >> "count");
+                                        if (_minRange <= _ammoCount && {_ammoCount <= _maxRange}) then {
+                                            _magazines pushBackUnique _x;
+                                        };
                                     };
                                 } forEach _compatibleMagazines;
                                 _magazineList append _magazines;
-                                //TRACE_2("",_varName,_magazines);
+                                //TRACE_3("",_varNameWeapon,_forEachIndex,_magazines);
                                 profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
                             } forEach _muzzles;
                         };
@@ -122,7 +146,7 @@ private _collectConfig = {
                     //TRACE_2("",_varName,_varContent);
                     profileNamespace setVariable [_varName, _varContent];
                 };
-            } forEach ["muzzles", "lasers", "optics"];
+            } forEach ["muzzles", "lasers", "optics", "bipods"];
         };
     } forEach configProperties [configFile >> "CfgTSSLoadouts" >> _class, "isClass(_x)", true];
     _list;

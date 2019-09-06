@@ -55,51 +55,10 @@ if (GVAR(PersonalArsenalOpen)) then {
             _this
         ] call CBA_fnc_execNextFrame;
     } else {
-        TRACE_1("",_lctrl);
         if (_lctrl in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) then {
             [
                 {
                     params["_display"];
-                    /*{
-                        private _ctrl = _display displayCtrl _x;
-                        _ctrl ctrlEnable false;
-                        _ctrl ctrlSetFade 1;
-                        _ctrl ctrlCommit 0;
-                    } forEach [
-                        IDC_blockRightFrame,
-                        IDC_blockRighttBackground,
-                        IDC_loadIndicator,
-                        IDC_loadIndicatorBar,
-                        IDC_rightTabContent,
-                        IDC_rightTabContentListnBox,
-                        IDC_rightSearchbar,
-                        IDC_rightSearchbarButton,
-                        IDC_iconBackgroundOptic,
-                        IDC_buttonOptic,
-                        IDC_iconBackgroundItemAcc,
-                        IDC_buttonItemAcc,
-                        IDC_iconBackgroundMuzzle,
-                        IDC_buttonMuzzle,
-                        IDC_iconBackgroundBipod,
-                        IDC_buttonBipod,
-                        IDC_iconBackgroundCurrentMag,
-                        IDC_buttonCurrentMag,
-                        IDC_iconBackgroundCurrentMag2,
-                        IDC_buttonCurrentMag2,
-                        IDC_iconBackgroundMag,
-                        IDC_buttonMag,
-                        IDC_iconBackgroundMagALL,
-                        IDC_buttonMagALL,
-                        IDC_iconBackgroundThrow,
-                        IDC_buttonThrow,
-                        IDC_iconBackgroundPut,
-                        IDC_buttonPut,
-                        IDC_iconBackgroundMisc,
-                        IDC_buttonMisc,
-                        IDC_buttonRemoveAllSelected,
-                        IDC_buttonRemoveAll 
-                    ];
-                    */
                     TOGGLE_RIGHT_PANEL_HIDE
                 },
                 _this

@@ -49,6 +49,7 @@ SAVEGEARITEM("Primaries",_weaponGroup,_3denCamo,_weapon);
 SAVEGEARITEM("PrimariesMuzzles",_weaponGroup,_3denDaynight,_muzzle);
 SAVEGEARITEM("PrimariesLasers",_weaponGroup,_3denDaynight,_pointer);
 SAVEGEARITEM("PrimariesOptics",_weaponGroup,_3denDaynight,_optic);
+SAVEGEARITEM("PrimariesMagazines",_weapon,"",_magazine select 0);
 
 // launcher
 _launcherArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
@@ -57,14 +58,16 @@ SAVEGEARITEM("Launchers",_weaponGroup,_3denCamo,_weapon);
 SAVEGEARITEM("LaunchersMuzzles",_weaponGroup,_3denDaynight,_muzzle);
 SAVEGEARITEM("LaunchersLasers",_weaponGroup,_3denDaynight,_pointer);
 SAVEGEARITEM("LaunchersOptics",_weaponGroup,_3denDaynight,_optic);
+SAVEGEARITEM("LaunchersMagazines",_weapon,"",_magazine select 0);
 
 // secondary
 _handgunArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
 _weaponGroup = GETITEMGROUP(_weapon);
-SAVEGEARITEM("Launchers",_weaponGroup,_3denCamo,_weapon);
-SAVEGEARITEM("LaunchersMuzzles",_weaponGroup,_3denDaynight,_muzzle);
-SAVEGEARITEM("LaunchersLasers",_weaponGroup,_3denDaynight,_pointer);
-SAVEGEARITEM("LaunchersOptics",_weaponGroup,_3denDaynight,_optic);
+SAVEGEARITEM("Secondaries",_weaponGroup,_3denCamo,_weapon);
+SAVEGEARITEM("SecondariesMuzzles",_weaponGroup,_3denDaynight,_muzzle);
+SAVEGEARITEM("SecondariesLasers",_weaponGroup,_3denDaynight,_pointer);
+SAVEGEARITEM("SecondariesOptics",_weaponGroup,_3denDaynight,_optic);
+SAVEGEARITEM("SecondariesMagazines",_weapon,"",_magazine select 0);
 
 // uniform
 SAVEGEARITEM("Uniforms",_unitc,_3denCamo,_uniformArray select 0);
@@ -73,7 +76,7 @@ SAVEGEARITEM("Uniforms",_unitc,_3denCamo,_uniformArray select 0);
 SAVEGEARITEM("Vests",_unitc,_3denCamo,_vestArray select 0);
 
 // backpack
-SAVEGEARITEM("Backpacks",_unitc,_3denCamo,_backpackArray select 0);
+SAVEGEARITEM("Backpacks",_unitc,_3denBackpack,_backpackArray select 0);
 
 // headgear
 SAVEGEARITEM("helmets",_unitc,_3denCamo,_headgear);

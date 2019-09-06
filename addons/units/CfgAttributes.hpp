@@ -5,7 +5,7 @@ class Attributes {
         control = "Combo";
         displayName = "Custom Backpack";
         tooltip = "Changes backpack to selection";
-        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBackpack),_value, true)]; _this spawn FUNC(applyLoadout));
+        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBackpack),_value, true)]; [_this] call FUNC(applyLoadout));
         typeName = "STRING";
         condition = "objectBrain";
         defaultValue = "small";
@@ -43,7 +43,7 @@ class Attributes {
         control = "Combo";
         displayName = "Custom Muzzle";
         tooltip = "Changes muzzle to selection";
-        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenMuzzle),_value, true)]; _this spawn FUNC(applyLoadout));
+        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenMuzzle),_value, true)]; [_this] call FUNC(applyLoadout));
         typeName = "STRING";
         condition = "objectBrain";
         defaultValue = "";
@@ -65,7 +65,7 @@ class Attributes {
         control = "Combo";
         displayName = "Add Bipod";
         tooltip = "Adds a Bipod";
-        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBipod),_value, true)]; _this spawn FUNC(applyLoadout));
+        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(EdenBipod),_value, true)]; [_this] call FUNC(applyLoadout));
         typeName = "STRING";
         condition = "objectBrain";
         defaultValue = -1;

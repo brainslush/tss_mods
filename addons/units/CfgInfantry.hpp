@@ -10,7 +10,7 @@ class tss_infantry_soldier: B_soldier_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -20,10 +20,10 @@ class tss_infantry_soldier: B_soldier_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -59,11 +59,11 @@ class tss_infantry_sc: B_soldier_SL_F {
         "anprc152",
         {"primarymagazines",9},
         {"primarygrenades",4},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"primarygrenades",4}
     };
 
@@ -101,11 +101,11 @@ class tss_infantry_2ic: B_soldier_TL_F {
         "anprc152",
         {"primarymagazines",9},
         {"primarygrenades",4},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"primarygrenades",4}
     };
 
@@ -125,7 +125,7 @@ class tss_infantry_ar: B_soldier_AR_F {
     _generalMacro = "B_soldier_AR_F";
     displayName = "Automatic Rifleman 5.56";
 
-    tss_primaries[] = {"lmg"};
+    tss_primaries[] = {"ar"};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {""};
 
@@ -139,11 +139,11 @@ class tss_infantry_ar: B_soldier_AR_F {
     };
     tss_vestsContent[] = {
         "anprc148",
-        {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"primarymagazines",6},
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -176,10 +176,10 @@ class tss_infantry_lmg: B_soldier_AR_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -212,10 +212,10 @@ class tss_infantry_mmg: B_soldier_AR_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -248,11 +248,11 @@ class tss_infantry_gl: B_soldier_GL_F {
     };
     tss_vestsContent[] = {
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"primarygrenades",4}
     };
 
@@ -277,7 +277,7 @@ class tss_infantry_gat: B_soldier_AT_F {
     tss_launchers[] = {"gat"};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "anprc148",
@@ -287,11 +287,11 @@ class tss_infantry_gat: B_soldier_AT_F {
     };
     tss_vestsContent[] = {
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"launchermagazines", 2}
     };
 
@@ -309,15 +309,15 @@ class tss_infantry_at: B_soldier_AT_F {
     INFUNITSETBASE
     #include "CfgAttributes.hpp"
     _generalMacro = "B_soldier_AT_F";
-    displayName = "Rifleman AT";
+    displayName = "AT-Specialist Unguided";
 
     tss_primaries[] = {"rifle"};
     tss_secondaries[] = {"pistol"};
-    tss_launchers[] = {"singleUse"};
+    tss_launchers[] = {"at"};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_vests[] = {"rifleman"};
+    tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         "anprc148",
         "fak",
@@ -326,11 +326,11 @@ class tss_infantry_at: B_soldier_AT_F {
     };
     tss_vestsContent[] = {
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"launchermagazines", 2}
     };
 
@@ -348,14 +348,14 @@ class tss_infantry_lat: B_soldier_AT_F {
     INFUNITSETBASE
     #include "CfgAttributes.hpp"
     _generalMacro = "B_soldier_AT_F";
-    displayName = "AT-Specialist Unguided";
+    displayName = "Rifleman AT";
 
     tss_primaries[] = {"rifle"};
     tss_secondaries[] = {"pistol"};
-    tss_launchers[] = {"at"};
+    tss_launchers[] = {"singleUse"};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "anprc148",
@@ -365,10 +365,10 @@ class tss_infantry_lat: B_soldier_AT_F {
     };
     tss_vestsContent[] = {
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -391,8 +391,8 @@ class tss_infantry_aa: B_soldier_AA_F {
     tss_launchers[] = {"aa"};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_vests[] = {"rifleman"};
+    tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         "fak",
         "markers",
@@ -401,11 +401,11 @@ class tss_infantry_aa: B_soldier_AA_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",2},
+        {"grenades",1},
         {"launchermagazines", 2}
     };
 
@@ -430,7 +430,7 @@ class tss_infantry_aar: B_soldier_AAR_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -440,10 +440,10 @@ class tss_infantry_aar: B_soldier_AAR_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",9},
-        {"grenades",2},
-        {"markervest",2}
+        {"grenades",1},
+        {"markervest",1}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {{"grenades",1}};
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -475,9 +475,9 @@ class tss_infantry_dm: B_soldier_M_F {
     };
     tss_vestsContent[] = {
         "anprc148",
-        {"primarymagazines",5},
-        {"grenades",2},
-        {"markervest",2}
+        {"primarymagazines",9},
+        {"grenades",1},
+        {"markervest",1}
     };
     tss_backpacksContent[] = {};
 
@@ -541,7 +541,7 @@ class tss_infantry_exp: B_soldier_exp_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -554,7 +554,10 @@ class tss_infantry_exp: B_soldier_exp_F {
         {"grenades",2},
         {"markervest",2}
     };
-    tss_backpacksContent[] = {{"grenades",2}};
+    tss_backpacksContent[] = {
+        "breacherkit",
+        "detector"
+    };
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
@@ -570,12 +573,21 @@ class tss_infantry_paf: tss_infantry_exp {
     INFUNITSETBASE
     _generalMacro = "B_soldier_exp_F";
     displayName = "EOD Path Finder";
+
+    tss_backpacksContent[] = {
+        "detector"
+    };
 };
 class tss_infantry_def: tss_infantry_exp {
     TSSAUTHOR
     INFUNITSETBASE
     _generalMacro = "B_soldier_exp_F";
     displayName = "EOD Technician";
+
+    tss_backpacksContent[] = {
+        "defkit",
+        "detector"
+    };
 };
 class tss_infantry_aat: B_soldier_AAT_F {
     TSSAUTHOR
@@ -589,7 +601,7 @@ class tss_infantry_aat: B_soldier_AAT_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -625,7 +637,7 @@ class tss_infantry_gaat: B_soldier_AAT_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -661,7 +673,7 @@ class tss_infantry_aaa: B_soldier_AAA_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -697,7 +709,7 @@ class tss_infantry_jtac: B_recon_jtac_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -734,7 +746,7 @@ class tss_infantry_ptl: B_officer_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -805,7 +817,7 @@ class tss_infantry_dropn: B_soldier_UAV_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -847,7 +859,7 @@ class tss_infantry_repair: B_soldier_repair_F {
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",

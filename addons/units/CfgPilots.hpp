@@ -139,8 +139,8 @@ class tss_fd_pilot : B_Pilot_F {
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {};
 
-    tss_uniforms[] = {"helipilot"};
-    tss_vests[] = {"helipilot"};
+    tss_uniforms[] = {"planepilot"};
+    tss_vests[] = {};
     tss_backpacks[] = {};
     tss_uniformsContent[] = {
         "fak",

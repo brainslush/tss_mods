@@ -17,6 +17,7 @@
 
 params[["_unit", objNull]];
 
+if (!(local _unit)) exitWith {};
 private _type = typeOf _unit;
 private _configPath = configFile >> "CfgVehicles" >> _type;
 ([_unit] call FUNC(getUnitParameters)) params [
@@ -24,7 +25,7 @@ private _configPath = configFile >> "CfgVehicles" >> _type;
 ];
 private _modset = MODSET;
 
-//TRACE_7("data",_configPath,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_modset);
+TRACE_8("data",_unitg,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_3denBipod,_modset);
 
 // gather config groups
 private _getConfig = {
@@ -44,7 +45,6 @@ private _getConfig = {
     } else {
         getArray(_configPath >> (["tss", _configType] joinString "_"));
     };
-    //TRACE_1("",_configEntry);
     {
         if (!(_x isEqualTo "")) then {
             if (_x isEqualType []) then {
@@ -57,10 +57,14 @@ private _getConfig = {
                 private _content = profileNamespace getVariable [_varName, []];
                 private _size = count _content;
                 _availableList append _content;
+                for [{_i = 0}, {_i < _size}, {_i = _i + 1}] do {
+                    _groupList pushBack _x;
+                };
             };
         };
     } forEach _configEntry;
-    _availableList;
+    //TRACE_2("",_availableList, _groupList);
+    [_availableList, _groupList];
 };
 
 private _getData = {
@@ -71,45 +75,43 @@ private _getData = {
         ["_saveVar", "", [""]],
         ["_arsenalList", "", [""]]];
 
-    ([_configPath, _property, _type] call _getConfig) params [
-        ["_availableList", [], [[]]],
-        ["_groupList", [], [[]]]
-    ];
+    ([_configPath, _property, _type] call _getConfig) params [["_availableList", [], [[]]],["_groupList", [], [[]]]];
     
-    //TRACE_2("dataList",_availableList,_groupList);
-
     // append arsenal whitelist
     if (_arsenalList != "") then {
         private _varName = ["tss_arsenalList", _arsenalList] joinString "_";
         private _whitelist = missionNamespace getVariable [_varName,[]];
         _whitelist append _availableList;
-        missionNamespace setVariable [_varNAme,_whiteList];
+        missionNamespace setVariable [_varName,_whiteList];
     };
-    _availableList = _availableList apply {toLower _x};
+    //_availableList = _availableList apply {toLower _x};
 
     // check if item is in list, if not revert to default
     if (_availableList isEqualTo []) then {
         ["", ""];
     } else {
-        private _default = _availableList select 0;
-        TRACE_1("",);
+        private _default = selectRandom _availableList;
         private _item = if (_saveVar != "") then {
             private _savedGear = if (tolower _saveVar == "itemgroup") then {
-                if (count _groupList == 1) then {
-                    TRACE_2("",_property,_groupList select 0);
-                    LOADGEARITEM(_property,_groupList select 0,_type,_default);
+                private _groupTest = _groupList arrayIntersect _groupList;
+                private _return = if (count _groupTest == 1) then {
+                    private _return = LOADGEARITEM(_property,_groupList select 0,_type,_default);
+                    _return;
                 } else {
                     _default;
+                    ERROR_WITH_TITLE("Loadoutkonfiguration","Itemgroup kann nicht mit mehreren Gruppen verwendet werden");
                 };
+                _return;
             } else {
-                LOADGEARITEM(_property,_saveVar,_type,_default);
+                private _return = LOADGEARITEM(_property,_saveVar,_type,_default);
+                _return;
             };
-            private _findId = _availableList find (toLower _savedGear);
-            TRACE_4("",_findId,_savedGear,_availableList,_groupList);
-            if (_findId == -1) then {
-                [_default, _groupList select 0];
-            } else {
+            private _findId = _availableList find _savedGear;
+            //TRACE_4("",_findId,_savedGear,_availableList,_groupList);
+            if (_findId != -1) then {
                 [_savedGear, _groupList select _findId];
+            } else {
+                [_default, _groupList select 0];
             };
         } else {
             [_default, _groupList select 0];
@@ -144,8 +146,8 @@ private _getAttachment = {
     } else {
         private _default =  _availableList select 0;
         private _item = if (_weaponGroup != "") then {
-            private _savedGear = LOADGEARITEM(_weaponGroup,_combinedProperty,_type,_default);
-            private _findId = _availableList find (toLower _savedGear);
+            private _savedGear = LOADGEARITEM(_combinedProperty,_weaponGroup,_type,_default);
+            private _findId = _availableList find (/*tolower*/ _savedGear);
             if (_findId == -1) then {
                 _default;
             } else {
@@ -182,24 +184,35 @@ private _getWeapon = {
     // get magazines
     
     {
-        private _varName = ["TSS_Magazines", MODSET, _weapon, _forEachIndex] joinString "_";
+        private _varName = ["TSS_Magazines", MODSET, _weaponGroup, _weapon, _forEachIndex] joinString "_";
         private _array = profileNamespace getVariable [_varName, []];
         private _forEachName = _x;
-        TRACE_2("Magazine",_varName,_array);
         if (_array isEqualTo []) then {
             _weaponArray pushBack [];
         } else {
-            private _magazine = _array select 0;
+            // add magazines to arsenal list
+            if (_x == "Magazines") then {
+                //TRACE_1("",_x);
+                private _whitelist = GETMVAR(tss_arsenalList_unit,[]);
+                _whitelist append _array;
+                SETMVAR(tss_arsenalList_unit,_whiteList);
+            };
+            // determine magazine
+            private _default = _array select 0;
+            //TRACE_3("",_property,_x,_weapon);
+            private _magazine = LOADGEARITEM((_property + _x),_weapon,"",_default);
+            //TRACE_2("",_magazine,_array);
+            if (!(_magazine in _array)) then {_magazine = _default;};
             private _count = getNumber(configFile >> "CfgMagazines" >> _magazine >> "count");
             _weaponArray pushBack [_magazine, _count];
-            private _varName = [QUOTE(ADDON), _property, _forEachName] joinString "_";
-            TRACE_1("",_varName);
+            private _varName = [QUOTE(ADDON), _property, _x] joinString "_";
+            //TRACE_2("",_varName,_magazine);
             missionNamespace setVariable [
                 _varName, _magazine
             ];
         };
     } forEach ["Magazines","Grenades"];
-    _weaponArray pushBack ([_property, "Bipods", _daynight, _weaponGroup] call _getAttachment);
+    _weaponArray pushBack ([_property, "Bipods", _3denBipod, _weaponGroup] call _getAttachment);
     _weaponArray;
 };
 
@@ -211,6 +224,7 @@ private _getContainerContent = {
     private _index = 0;
     private _completeList = [];
     {
+        //TRACE_1("",_x);
         _x params [
             ["_itemlist", [], [[],""]],
             ["_data", ""]
@@ -219,24 +233,28 @@ private _getContainerContent = {
             {
                 private _item = _x;
                 if (_item isEqualType "") then {
-                    _item = toLower _item;
-                    switch (_item) do {
+                    //TRACE_1("",_item);
+                    switch (toLower _item) do {
                         case "primarymagazines": {
+                            //TRACE_1("",_item);
                             _item = missionNamespace getVariable [
                                 QUOTE(ADDON) + "_primaries_Magazines", ""
                             ];
                         };
                         case "primarygrenades": {
+                            //TRACE_1("",_item);
                             _item = missionNamespace getVariable [
                                 QUOTE(ADDON) + "_primaries_Grenades", ""
                             ];
                         };
                         case "secondarymagazines": {
+                            //TRACE_1("",_item);
                             _item = missionNamespace getVariable [
                                 QUOTE(ADDON) + "_secondaries_Magazines", ""
                             ];
                         };
                         case "launchermagazines": {
+                            //TRACE_1("",_item);
                             _item = missionNamespace getVariable [
                                 QUOTE(ADDON) + "_launchers_Magazines", ""
                             ];
@@ -246,7 +264,7 @@ private _getContainerContent = {
                 private _multiplier = 1;
                 if (_item isEqualType []) then {
                     _item params ["_itemtype", "_count"];
-                    _item = toLower _itemtype;
+                    _item = _itemtype;
                     _multiplier = _count;
                 };
                 private _dataR = if (_data isEqualType []) then {
@@ -300,6 +318,7 @@ private _getContainerContent = {
                         0;
                     };
                 };
+                //TRACE_1("",_item);
                 private _return = if (isNumber(configFile >> "CfgMagazines" >> _item >> "count")) then {
                     private _count = getNumber(configFile >> "CfgMagazines" >> _item >> "count");
                     [_item, _dataR, _count];
@@ -324,12 +343,14 @@ private _getContainer = {
     private _container = if (_property == "Backpacks") then {
         ([_configPath, _property, _size, _unitc, "unit"] call _getData) select 0;
     } else {
-        ([_configPath, _property, _camo, _camo, "unit"]  call _getData) select 0;
+        ([_configPath, _property, _camo, _unitc, "unit"]  call _getData) select 0;
     };
 
     private _return = [_container];
-    _return pushBack _result;
-    //TRACE_1("",_return);
+    if (!(_container isEqualTo "")) then {
+        _return pushBack _result;
+    };
+    // TODO Check if all the gear fits.
     _return;
 };
 
@@ -356,5 +377,6 @@ _loadout pushBack [
     ([_configPath, "NVGs", _3denDaynight, _unitc, "unit"] call _getData) select 0 // NVG
 ];
 TRACE_1("loadout",_loadout);
+//TRACE_1("arsenal",GETMVAR(tss_arsenalList_unit,[]));
 // containers
 _unit setUnitLoadout _loadout;

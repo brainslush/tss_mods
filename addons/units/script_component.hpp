@@ -22,21 +22,8 @@
     #define IGNOREVERSIONCHECK false
 #endif
 
-#define VEHCLASS(var) \
-vehicleClass = var; \
-editorSubcategory = var
-
-#define EMPTYUNIT \
-uniformClass = ""; \
-backpack = ""; \
-weapons[] = {}; \
-magazines[] = {}; \
-items[] = {}; \
-linkedItems[] = {}; \
-respawnWeapons[] = {}; \
-respawnMagazines[] = {}; \
-respawnItems[] = {}; \
-respawnLinkedItems[] = {};
+#define VERSIONCHECK \
+(getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") != GETPRVAR(GVAR(gearVersion),"") || {IGNOREVERSIONCHECK})
 
 #define INFUNITSETBASE \
 faction = "tss_infantry"; \
@@ -60,7 +47,7 @@ EMPTYUNIT
 
 #define PILOTSETBASE \
 faction = "tss_flightdivision"; \
-VEHCLASS("tss_recondiver"); \
+VEHCLASS("tss_fd"); \
 EMPTYUNIT
 
 #define MODSET \

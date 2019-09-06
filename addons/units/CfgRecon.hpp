@@ -149,7 +149,7 @@ class tss_recon_ar: B_recon_F {
     RECUNITSETBASE
     displayName = "Recon Weapon Specialist (Silenced AR)";
 
-    tss_primaries[] = {"sar"};
+    tss_primaries[] = {"ar"};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {""};
 

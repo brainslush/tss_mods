@@ -3,7 +3,7 @@ class var1 { \
     name = #var1; \
     value = #var1; \
 }
-#define CEXPRESSION(var1) expression = QUOTE(missionnamespace setVariable [ARR_3(QQGVARMAIN(var1),_value, true)]; if (is3DEN) then {call FUNC(reequipALL)})
+#define CEXPRESSION(var1) expression = QUOTE(missionnamespace setVariable [ARR_3(QQGVARMAIN(var1),_value, true)]; call FUNC(reequip3Den);)
 
 class Cfg3DEN {
     class Mission {

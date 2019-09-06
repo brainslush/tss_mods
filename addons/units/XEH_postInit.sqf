@@ -1,5 +1,6 @@
 #include "script_component.hpp"
 
+/*
 if (player getVariable [QGVAR(isTss),false]) then {
     private _action = [
         QGVAR(Loadout),
@@ -22,10 +23,11 @@ if (player getVariable [QGVAR(isTss),false]) then {
     private _items = GETMVAR(tss_arsenalList_unit,[]);
     [player, _items, false] call ace_arsenal_fnc_addVirtualItems;
 };
+*/
 
 // rerun postinit with equip to ensure that units are equiped when you return from mission test
-/*TRACE_1("", is3DEN);
+TRACE_1("", is3DEN);
 if (is3DEN) then {
     call FUNC(reequip3Den);
 };
-*/
+

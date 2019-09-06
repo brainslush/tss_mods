@@ -3,12 +3,12 @@ class tss_recon_snp: B_sniper_F {
     TSSAUTHOR
     SNIPERSETBASE
 
-    tss_primaries[] = {"rifle"};
+    tss_primaries[] = {"sniper"};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -18,9 +18,9 @@ class tss_recon_snp: B_sniper_F {
     };
     tss_vestsContent[] = {
         "anprc148",
-        {"primarymagazines",5},
-        {"grenades",2},
-        {"markervest",2}
+        {"primarymagazines",7},
+        "sniperkit",
+        {"markervest",1}
     };
     tss_backpacksContent[] = {};
 
@@ -38,12 +38,12 @@ class tss_recon_spt: B_spotter_F {
     TSSAUTHOR
     SNIPERSETBASE
 
-    tss_primaries[] = {"rifle"};
+    tss_primaries[] = {"dmr"};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {""};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"infantry"};
+    tss_vests[] = {"rifleman"};
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         "fak",
@@ -53,9 +53,9 @@ class tss_recon_spt: B_spotter_F {
     };
     tss_vestsContent[] = {
         "anprc148",
-        {"primarymagazines",5},
-        {"grenades",2},
-        {"markervest",2}
+        {"primarymagazines",7},
+        "sniperkit",
+        {"markervest",1}
     };
     tss_backpacksContent[] = {};
 

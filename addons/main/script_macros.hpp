@@ -49,3 +49,19 @@ class TransportItems {};\
 class TransportWeapons {};\
 class TransportMagazines {};\
 class TransportBackpacks {};
+
+#define VEHCLASS(var) \
+vehicleClass = var; \
+editorSubcategory = var
+
+#define EMPTYUNIT \
+uniformClass = ""; \
+backpack = ""; \
+weapons[] = {}; \
+magazines[] = {}; \
+items[] = {}; \
+linkedItems[] = {}; \
+respawnWeapons[] = {}; \
+respawnMagazines[] = {}; \
+respawnItems[] = {}; \
+respawnLinkedItems[] = {};

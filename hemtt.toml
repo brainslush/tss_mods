@@ -1,0 +1,16 @@
+name = "TSS Units"
+prefix = "tss_mods"
+author = "TAC Units Team"
+files = [
+    "mod.cpp",
+    "README.md",
+    "LICENSE",
+    "logo.paa"
+]
+modname = "tss_mods"
+keyname = "{{prefix}}_{{version}}"
+signame = "{{prefix}}_{{version}}"
+
+releasebuild = [
+    #"@zip tss_mods_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+]
