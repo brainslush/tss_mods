@@ -7,10 +7,10 @@ class Cfg3DEN {
                 displayName = "=TSS= Teleporter";
                 collapsed = 1;
                 class Attributes {
-                    class GVAR(MedKitClsAlpha) {
+                    class GVAR(3denSetting) {
                         displayName = "Teleporter Interaktion";
                         tooltip = "Fügt ACE Teleporter Interaktion zum Objekt hinzu.";
-                        property = QGVAR(3denGetMedicAlpha);
+                        property = QGVAR(3denSetting);
                         control = "Checkbox";
                         expression = QUOTE(if(_value) then {[ARR_2(QQGVAR(addTeleporter), [_this])] call CBA_fnc_globalEventJIP});
                         defaultValue = "(false)";
