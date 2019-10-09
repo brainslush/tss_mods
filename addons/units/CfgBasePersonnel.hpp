@@ -1,25 +1,67 @@
-class tss_fd_helipilot : B_Helipilot_F {
+class tss_bp_atc: tss_infantry_ptl {
     TSSAUTHOR
-    PILOTSETBASE
-    displayName = "Helicopter Pilot";
+    BASESETBASE
+    displayName = "Air Trafic Controller";
 
-    tss_primaries[] = {"rifle"};
+    tss_primaries[] = {};
+    tss_secondaries[] = {"pistol"};
+    tss_launchers[] = {};
+
+    tss_uniforms[] = {"infantry"};
+    tss_vests[] = {"belt"};
+    tss_backpacks[] = {"large"};
+    tss_uniformsContent[] = {
+        "sheetbook",
+        "fak",
+        "maptool",
+        "markers"
+    };
+    tss_vestsContent[] = {
+        {"secondarymagazines",2}
+    };
+    tss_backpacksContent[] = {
+        "anprc148",
+        "anprc152",
+        {"anprc117", 2}
+    };
+
+    tss_helmets[] = {"caps"};
+    tss_glasses[] = {"glasses"};
+    tss_binoculars[] = {"binocs"};
+    tss_maps[] = {"map"};
+    tss_gps[] = {"tablet"};
+    tss_compass[] = {"compass"};
+    tss_watches[] = {"watch"};
+    tss_nvgs[] = {"nvg"};
+};
+class tss_bp_col: tss_bp_atc {
+    BASESETBASE
+    displayName = "Chief of Logistics";
+};
+/*
+class tss_bp_log: tss_infantry_engineer {
+    TSSAUTHOR
+    BASESETBASE
+    engineer = 1;
+    displayName = "Logistician/Engineer";
+
+    tss_primaries[] = {};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {};
 
     tss_uniforms[] = {"helipilot"};
-    tss_vests[] = {"helipilot"};
-    tss_backpacks[] = {};
+    tss_vests[] = {"belt"};
+    tss_backpacks[] = {"large"};
     tss_uniformsContent[] = {
-        UNIFORMCONTENT,
-        "microdagr"
+        "sheetbook",
+        "fak",
+        "maptool",
+        "markers"
     };
     tss_vestsContent[] = {
         "anprc148",
         "anprc152",
-        {"primarymagazines",2},
-        {"secondarymagazines",2},
-        "eplrs"
+        {"secondarymagazines",2}
     };
     tss_backpacksContent[] = {};
 
@@ -32,60 +74,31 @@ class tss_fd_helipilot : B_Helipilot_F {
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
 };
-class tss_fd_helicrew : B_helicrew_F {
-    TSSAUTHOR
-    PILOTSETBASE
-    displayName = "Helicopter Crew";
-
-    tss_primaries[] = {"rifle"};
-    tss_secondaries[] = {"pistol"};
-    tss_launchers[] = {};
-
-    tss_uniforms[] = {"helipilot"};
-    tss_vests[] = {"helipilot"};
-    tss_backpacks[] = {};
-    tss_uniformsContent[] = {
-        UNIFORMCONTENT
-    };
-    tss_vestsContent[] = {
-        {"primarymagazines",2},
-        {"secondarymagazines",2},
-        "anprc148"
-    };
-    tss_backpacksContent[] = {};
-
-    tss_helmets[] = {"caps"};
-    tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {};
-    tss_maps[] = {"map"};
-    tss_gps[] = {};
-    tss_compass[] = {"compass"};
-    tss_watches[] = {"watch"};
-    tss_nvgs[] = {"nvg"};
-};
-class tss_fd_pilot : B_Pilot_F {
-    TSSAUTHOR
-    PILOTSETBASE
-    displayName = "Jet Pilot";
+*/
+class tss_bp_ptd: tss_infantry_ptd {
+    BASESETBASE
 
     tss_primaries[] = {};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {};
 
-    tss_uniforms[] = {"planepilot"};
-    tss_vests[] = {};
-    tss_backpacks[] = {};
+    tss_uniforms[] = {"infantry"};
+    tss_vests[] = {"belt"};
+    tss_backpacks[] = {"small","medium"};
     tss_uniformsContent[] = {
-        UNIFORMCONTENT,
-        "microdagr"
+        "sheetbook",
+        "fak",
+        "maptool",
+        "markers"
     };
     tss_vestsContent[] = {
-        {"secondarymagazines",2},
         "anprc148",
         "anprc152",
-        "eplrs"
+        {"secondarymagazines",2}
     };
-    tss_backpacksContent[] = {};
+    tss_backpacksContent[] = {
+        "medkitptdbase"
+    };
 
     tss_helmets[] = {"caps"};
     tss_glasses[] = {"glasses"};

@@ -30,3 +30,18 @@ EMPTYUNIT
 faction = "tss_opforInfantry"; \
 VEHCLASS("tss_sniper"); \
 EMPTYUNIT
+
+#define DIVERUNITSETBASE \
+faction = "tss_opforInfantry"; \
+VEHCLASS("tss_diver"); \
+EMPTYUNIT
+
+#define PILOTSETBASE \
+faction = "tss_opforFlightdivision"; \
+VEHCLASS("tss_fd"); \
+EMPTYUNIT
+
+#define BASESETBASE \
+faction = "tss_opforFlightdivision"; \
+VEHCLASS("tss_bp"); \
+EMPTYUNIT

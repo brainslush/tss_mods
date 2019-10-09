@@ -50,6 +50,11 @@ faction = "tss_flightdivision"; \
 VEHCLASS("tss_fd"); \
 EMPTYUNIT
 
+#define BASESETBASE \
+faction = "tss_flightdivision"; \
+VEHCLASS("tss_bp"); \
+EMPTYUNIT
+
 #define MODSET \
 (parsingNamespace getVariable [QGVARMAIN(Modset),""])
 
@@ -75,5 +80,11 @@ profileNamespace getVariable [ \
     "TSS_ItemGroup_" + \
     MODSET + "_" + \
     class, \
-    "" \
+    [] \
 ]
+
+#define UNIFORMCONTENT \
+"cheatbook", \
+"fak", \
+"maptool", \
+"dagr"

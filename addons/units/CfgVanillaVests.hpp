@@ -11,7 +11,7 @@ class all {
     };
 };
 class des: all {
-    class vanilla {
+    class vanilla: vanilla {
         vests[] += {
             "V_MU_PlateCarrier1_cbr",
             "V_MU_PlateCarrier1_khk",
@@ -21,7 +21,7 @@ class des: all {
     };
 };
 class jgl: all {
-    class vanilla {
+    class vanilla: vanilla {
         vests[] += {
             "V_PlateCarrier1_tna_F",
             "V_PlateCarrier2_tna_F"
@@ -29,7 +29,7 @@ class jgl: all {
     };
 };
 class mdt: all {
-    class vanilla {
+    class vanilla: vanilla {
         vests[] += {
             "V_MU_PlateCarrier1_khk",
             "V_MU_PlateCarrier2_khk"

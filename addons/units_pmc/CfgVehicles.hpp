@@ -10,8 +10,11 @@ class CfgVehicles {
     class I_G_Soldier_M_F;
     class I_G_Soldier_LAT_F;
     class I_G_Soldier_A_F;
+    class I_Helipilot_F;
+    class I_sniper_F;
+    class I_spotter_F;
 
     #include "CfgInfantry.hpp"
     #include "CfgPilots.hpp"
-    #include "CfgSniper.hpp"
+    #include "CfgSnipers.hpp"
 };

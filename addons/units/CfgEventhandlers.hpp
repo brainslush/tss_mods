@@ -13,3 +13,8 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(_this call COMPILE_FILE(XEH_postInit));
     };
 };
+class Extended_DisplayLoad_EventHandlers {
+    class Display3DEN {
+        ADDON = QUOTE(call FUNC(reequip3Den));
+    };
+};

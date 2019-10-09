@@ -1,5 +1,4 @@
 class CfgTSSLoadouts {
-
     class CfgPrimaries {
         class rifleOpfor {
             class all {

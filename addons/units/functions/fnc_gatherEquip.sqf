@@ -92,11 +92,15 @@ private _collectConfig = {
                             private _muzzles = [_x] call CBA_fnc_getMuzzles;
 
                             {
-                                private _muzzle = _x;
+                                private _muzzleCfg = configFile >> "CfgWeapons" >> _weapon >> _x;
+                                if (isClass (configFile >> "CfgWeapons" >> _x)) then {
+                                    _muzzleCfg = configFile >> "CfgWeapons" >> _x;
+                                };
+
                                 private _magazines = if (!(_defaultMagazines isEqualTo [])) then {
                                     [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
                                 } else {[]};
-                                private _compatibleMagazines = [_x] call CBA_fnc_compatibleMagazines;
+                                private _compatibleMagazines = [_muzzleCfg] call CBA_fnc_compatibleMagazines;
                                 //TRACE_1("",_compatibleMagazines);
 
                                 private _minRange = if (_forEachIndex < _magazineRangesCount) then {(_magazineRanges select _forEachIndex) select 0} else {0};
@@ -121,8 +125,9 @@ private _collectConfig = {
                                         };
                                     };
                                 } forEach _compatibleMagazines;
+
                                 _magazineList append _magazines;
-                                //TRACE_3("",_varNameWeapon,_forEachIndex,_magazines);
+                                //TRACE_5("",_varNameWeapon,_x,_forEachIndex,_muzzleCfg,_magazines);
                                 profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
                             } forEach _muzzles;
                         };
@@ -131,7 +136,10 @@ private _collectConfig = {
                 // save item group
                 {
                     private _varName = ["TSS_ItemGroup", MODSET, _x] joinString "_";
-                    profileNamespace setVariable [_varName, _collectionName];
+                    private _itemGroupArray = profileNamespace getVariable [_varName, []];
+                    if (_itemGroupArray isEqualType "") then {_itemGroupArray = []};
+                    _itemGroupArray pushBack _collectionName;
+                    profileNamespace setVariable [_varName, _itemGroupArray];
                 } forEach _varContent;
             } forEach configProperties [_x, "isClass(_x)", true];
         } forEach configProperties [_x, "isClass(_x)", true];
@@ -187,6 +195,7 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     SETPRVAR(GVAR(weaponList),_weaponList);
     SETPRVAR(GVAR(gearList),_gearList);
     SETPRVAR(GVAR(itemList),_itemList);
+    SETPRVAR(GVAR(attachmentList),_attachmentList);
 
     _magazineList = _magazineList arrayIntersect _magazineList;
     SETPRVAR(GVAR(magazineList),_magazineList);

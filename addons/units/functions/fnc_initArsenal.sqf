@@ -18,29 +18,43 @@
 
 params[
     ["_object", objNull],
-    ["_type", 0]
+    ["_type", "", [""]]
 ];
 
 if (_object isEqualTo objNull) exitWith {};
 
-switch (_type) do {
-    // unit arsenal
-    case 0: {
-        private _list = GETMVAR(tss_arsenalList_user,[]);
-        //[_object, _list, false] call FUNC(initPersonalBox);
-        [player, player] call ace_arsenal_fnc_openBox;
-        [player, _list, false] call FUNC(addVirtualItems); 
-    };
+switch (toLower _type) do {
     // magazine arsenal
-    case 1: {
-        [_object, GETPRVAR(GVAR(magazineList),[])] call ace_arsenal_fnc_initBox; 
+    case "magazines": {
+        private _action = [
+            QGVAR(MagazineArsenal), "Magazine Arsenal", "", {
+                [player, _target] call FUNC(cacheVirtualItems);
+
+                private _items = GETPRVAR(GVAR(magazineList),[]);
+                [_target, _items, false] call ace_arsenal_fnc_addVirtualItems;
+
+                GVAR(ArsenalTypeOpen) = "magazines";
+                [_target, player] call ace_arsenal_fnc_openBox;
+            }, {true}
+        ] call ACE_interact_menu_fnc_createAction;
+        [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     };
     // tss arsenal
-    case 2: {
-        private _list = GETPRVAR(GVAR(weaponList),[]);
-        _list append GETPRVAR(GVAR(gearList),[]);
-        _list append GETPRVAR(GVAR(itemList),[]);
-        _list append GETPRVAR(GVAR(magazineList),[]);
-        [_object, _list] call ace_arsenal_fnc_initBox;
+    case "tss": {
+        private _action = [
+            QGVAR(TSSArsenal), "TSS Arsenal", "", {
+                [player, _target] call FUNC(cacheVirtualItems);
+
+                private _list = GETPRVAR(GVAR(weaponList),[]);
+                _list append GETPRVAR(GVAR(gearList),[]);
+                _list append GETPRVAR(GVAR(itemList),[]);
+                _list append GETPRVAR(GVAR(magazineList),[]);
+                _list append GETPRVAR(GVAR(attachmentList),[]);
+                [_target, _list, false] call ace_arsenal_fnc_addVirtualItems;
+
+                [_target, player] call ace_arsenal_fnc_openBox;
+            }, {true}
+        ] call ACE_interact_menu_fnc_createAction;
+        [_object, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
     };
 };

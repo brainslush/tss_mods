@@ -35,5 +35,6 @@ class CfgVehicles {
     #include "CfgRecon.hpp"
     #include "CfgSnipers.hpp"
     #include "CfgDivers.hpp"
+    #include "CfgBasePersonnel.hpp"
     #include "CfgPilots.hpp"
 };

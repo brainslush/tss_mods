@@ -15,10 +15,15 @@
  * Public: No
 */
 
-if (!is3DEN) exitWith {};
+TEST = 1;
+TRACE_1("",TEST);
+TRACE_1("",allUnits);
+
 {
-    ([typeOf _x, "_"] call CBA_fnc_split) params [["_prefix", ""]];
-    if (_prefix == "tss" && {_x isKindOf "CAManBase"}) then {
-        [_x] call FUNC(applyLoadout);
+    if (_x isKindOf "CAManBase") then {
+        ([typeOf _x, "_"] call CBA_fnc_split) params [["_prefix", ""]];
+        if (_prefix == "tss") then {
+            [_x] call FUNC(applyLoadout);
+        };
     };
 } forEach allUnits;

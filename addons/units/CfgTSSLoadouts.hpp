@@ -67,6 +67,20 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
+        class wetsuit {
+            class all {
+                class vanilla {
+                    uniforms[] = {
+                        "U_B_Wetsuit"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
     };
     class CfgVests {
         class rifleman {
@@ -92,6 +106,35 @@ class CfgTSSLoadouts {
                 class vanilla {
                     vests[] = {
                         "V_TacVest_oli"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class belt {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_Rangemaster_belt"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class rebreather {
+            class all {
+                class vanilla {
+                    vests[] = {
+                        "V_RebreatherB",
+                        "V_RebreatherIA"
                     };
                 };
             };
@@ -267,10 +310,13 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
-        class darter {
+        class gunbag {
             class all {
-                class vanilla {
-                    backpacks[] = {"B_UAV_01_backpack_F"};
+                class ace {
+                    backpacks[] = {
+                        "ace_gunbag",
+                        "ace_gunbag_tan"
+                    };
                 };
             };
             class des: all {};
@@ -424,6 +470,20 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
+        class diver {
+            class all {
+                class vanilla {
+                    glasses[] = {
+                        "G_B_Diving"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
     };
     class CfgPrimaries {
         class rifle {
@@ -502,6 +562,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     primaries[] = {"arifle_SPAR_02_blk_F"};
                     defaultMagazine[] = {"150Rnd_556x45_Drum_Mag_Tracer_F"};
+                    magazineRange[] = {{30,150}};
                 };
             };
             class des: all {};
@@ -533,7 +594,20 @@ class CfgTSSLoadouts {
         class dmr {
             class all {
                 class vanilla {
-                    primaries[] = {"srifle_EBR_F"};
+                    primaries[] = {
+                        "srifle_EBR_F",
+                        "srifle_DMR_01_F",
+                        "srifle_DMR_03_F",
+                        "srifle_DMR_03_multicam_F",
+                        "srifle_DMR_03_khaki_F",
+                        "srifle_DMR_03_tan_F",
+                        "srifle_DMR_03_woodland_F",
+                        "srifle_DMR_06_camo_F",
+                        "srifle_DMR_06_olive_F",
+                        "arifle_SPAR_03_blk_F",
+                        "arifle_SPAR_03_khk_F",
+                        "arifle_SPAR_03_snd_F"
+                    };
                     defaultMagazine[] = {"20Rnd_762x51_Mag"};
                 };
             };
@@ -900,6 +974,16 @@ class CfgTSSLoadouts {
             class night: all {};
             class both: all {};
         };
+        class yardage {
+            class all {
+                class vanilla {
+                    binoculars[] = {"ACE_Yardage450"};
+                };
+            };
+            class day: all {};
+            class night: all {};
+            class both: all {};
+        };
     };
     class CfgMaps {
         class map {
@@ -986,6 +1070,16 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
+        class primaryaltmagazines {
+            class all {
+                class base {
+                    items[] = {"primaryaltmagazines"};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
         class primarygrenades {
             class all {
                 class base {
@@ -1016,10 +1110,60 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
+        class dummymagazine {
+            class all {
+                class base {
+                    items[] = {{QGVAR(dummymagazine),1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class dummymissile {
+            class all {
+                class base {
+                    items[] = {{QGVAR(dummymissile),1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
         class tablet {
             class all {
                 class vanilla {
                     items[] = {};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class dagr {
+            class all {
+                class ace {
+                    items[] = {{"ACE_DAGR", 1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class microdagr {
+            class all {
+                class ace {
+                    items[] = {{"ACE_microDAGR", 1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class eplrs {
+            class all {
+                class ace {
+                    items[] = {{"ITC_EPLRS", 1}};
                 };
             };
             class day : all {};
@@ -1031,11 +1175,11 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 2},
-                        {"ACE_packingBandage", 8},
-                        {"ACE_elasticBandage", 8},
-                        {"ACE_quikclot", 5},
-                        {"ACE_morphine", 2},
-                        {"ACE_epinephrine", 2}
+                        {"ACE_packingBandage", 5},
+                        {"ACE_elasticBandage", 3},
+                        {"ACE_quikclot", 3},
+                        {"ACE_morphine", 1},
+                        {"ACE_epinephrine", 1}
                     };
                 };
             };
@@ -1043,17 +1187,18 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class clskit {
+        class medkitclsalpha {
             class all {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 30},
-                        {"ACE_elasticBandage", 30},
-                        {"ACE_quikclot", 30},
-                        {"ACE_morphine", 10},
-                        {"ACE_epinephrine", 10},
-                        {"ACE_salineIV_250", 10}
+                        {"ACE_packingBandage", 10},
+                        {"ACE_elasticBandage", 7},
+                        {"ACE_quikclot", 7},
+                        {"ACE_morphine", 5},
+                        {"ACE_epinephrine", 5},
+                        {"ACE_salineIV_500", 6},
+                        {"ACE_bodyBag", 1}
                     };
                 };
             };
@@ -1061,17 +1206,18 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class ptmkit {
+        class medkitclsbravo {
             class all {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 30},
-                        {"ACE_elasticBandage", 30},
-                        {"ACE_quikclot", 30},
+                        {"ACE_packingBandage", 15},
+                        {"ACE_elasticBandage", 10},
+                        {"ACE_quikclot", 10},
                         {"ACE_morphine", 10},
                         {"ACE_epinephrine", 10},
-                        {"ACE_salineIV_250", 10}
+                        {"ACE_salineIV", 7},
+                        {"ACE_bodyBag", 3}
                     };
                 };
             };
@@ -1079,18 +1225,69 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class ptdkit {
+        class medkitptm {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_tourniquet", 10},
+                        {"ACE_packingBandage", 30},
+                        {"ACE_elasticBandage", 20},
+                        {"ACE_quikclot", 20},
+                        {"ACE_morphine", 15},
+                        {"ACE_epinephrine", 15},
+                        {"ACE_salineIV_500", 10},
+                        {"ACE_salineIV", 5},
+                        {"ACE_bodyBag", 3}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class medkitptd {
             class all {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 30},
-                        {"ACE_elasticBandage", 30},
-                        {"ACE_quikclot", 30},
+                        {"ACE_packingBandage", 20},
+                        {"ACE_elasticBandage", 15},
+                        {"ACE_quikclot", 15},
                         {"ACE_morphine", 10},
-                        {"ACE_epinephrine", 10},
-                        {"ACE_salineIV_250", 10}
+                        {"ACE_epinephrine", 15},
+                        {"ACE_salineIV_500", 10},
+                        {"ACE_salineIV", 5},
+                        {"ACE_surgicalKit",7},
+                        {"ACE_bodyBag", 3}
                     };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class medkitptdbase {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_tourniquet", 5},
+                        {"ACE_packingBandage", 15},
+                        {"ACE_elasticBandage", 10},
+                        {"ACE_quikclot", 10},
+                        {"ACE_morphine", 5},
+                        {"ACE_epinephrine", 5},
+                        {"ACE_surgicalKit",2}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class sheetbook {
+            class all {
+                class tss {
+                    items[] = {};
                 };
             };
             class day : all {};
@@ -1110,16 +1307,14 @@ class CfgTSSLoadouts {
         class markers {
             class day {
                 class vanace {
-                    items[] = {{"SmokeShellPurple", 2}};
+                    items[] = {};
                 };
             };
             class night {
                 class vanace {
                     items[] = {
                         {"ACE_IR_Strobe_Item", 1},
-                        {"ACE_Flashlight_XL50", 1},
-                        {"ACE_Chemlight_IR", 2},
-                        {"ACE_Chemlight_UltraHiOrange", 2}
+                        {"ACE_Flashlight_XL50", 1}
                     };
                 };
             };
@@ -1127,10 +1322,7 @@ class CfgTSSLoadouts {
                 class vanace {
                     items[] = {
                         {"ACE_IR_Strobe_Item", 1},
-                        {"ACE_Flashlight_XL50", 1},
-                        {"ACE_Chemlight_IR", 1},
-                        {"ACE_Chemlight_UltraHiOrange", 1},
-                        {"SmokeShellPurple", 1}
+                        {"ACE_Flashlight_XL50", 1}
                     };
                 };
             };
@@ -1138,7 +1330,7 @@ class CfgTSSLoadouts {
         class cableties {
             class all {
                 class ace {
-                    items[] = {{"ACE_CableTie", 2}};
+                    items[] = {{"ACE_CableTie", 1}};
                 };
             };
             class day : all {};
@@ -1149,31 +1341,62 @@ class CfgTSSLoadouts {
             class day {
                 class ace {
                     items[] = {
-                        {"SmokeShell", 2},
-                        {"ACE_M84", 2},
-                        {"HandGrenade", 2}
+                        {"SmokeShell", 1},
+                        {"HandGrenade", 1}
                     };
                 };
             };
             class night {
                 class ace {
                     items[] = {
-                        {"ACE_M84", 2},
-                        {"HandGrenade", 2}
+                        {"SmokeShell", 1},
+                        {"HandGrenade", 1}
                     };
                 };
             };
             class both {
                 class ace {
                     items[] = {
-                        {"SmokeShell", 2},
-                        {"ACE_M84", 2},
-                        {"HandGrenade", 2}
+                        {"SmokeShell", 1},
+                        {"HandGrenade", 1}
                     };
                 };
             };
         };
-        class markervest {
+        class smokewhite {
+            class all {
+                class ace {
+                    items[] = {{"SmokeShell", 1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class markerred {
+            class day {
+                class vanace {
+                    items[] = {{"SmokeShellRed", 1}};
+                };
+            };
+            class night {
+                class vanace {
+                    items[] = {
+                        {"ACE_Chemlight_HiRed", 1},
+                        {"SmokeShellRed", 1}
+                    };
+                };
+            };
+            class both {
+                class vanace {
+                    items[] = {
+                        {"ACE_Chemlight_HiRed", 1},
+                        {"SmokeShellRed", 1}
+                    };
+                };
+            };
+        };
+        class markerevac {
             class day {
                 class vanace {
                     items[] = {{"SmokeShellPurple", 1}};
@@ -1182,21 +1405,40 @@ class CfgTSSLoadouts {
             class night {
                 class vanace {
                     items[] = {
-                        {"ACE_Chemlight_IR", 1},
-                        {"ACE_Chemlight_UltraHiOrange", 1},
-                        {"SmokeShellPurple", 1}
+                        {"ACE_HandFlare_Green", 1},
+                        {"ACE_Chemlight_HiGreen", 1}
                     };
                 };
             };
             class both {
                 class vanace {
                     items[] = {
-                        {"ACE_Chemlight_IR", 1},
-                        {"ACE_Chemlight_UltraHiOrange", 1},
+                        {"ACE_HandFlare_Green", 1},
+                        {"ACE_Chemlight_HiGreen", 1},
                         {"SmokeShellPurple", 1}
                     };
                 };
             };
+        };
+        class huntirmonitor {
+            class all {
+                class acre {
+                    items[] = {{"ACE_HuntIR_monitor",1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class huntirgrenade {
+            class all {
+                class acre {
+                    items[] = {{"ACE_HuntIR_M203",1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
         };
         class anprc117 {
             class all {
@@ -1259,9 +1501,21 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_Kestrel4500",1},
-                        {"ACE_ATragMX",1},
-                        {"ACE_RangeCard",1}
+                        {"ACE_SpottingScope",1},
+                        {"ACE_Tripod",1},
+                        {"",1}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class jtackit {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_Kestrel4500",1}
                     };
                 };
             };
@@ -1296,20 +1550,6 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class pafkit {
-            class all {
-                class ace {
-                    items[] = {
-                        {"ACE_DefusalKit",1},
-                        {"ACE_EntrenchingTool",1},
-                        {"ACE_SpraypaintRed",1}
-                    };
-                };
-            };
-            class day : all {};
-            class night : all {};
-            class both : all {};
-        };
         class defkit {
             class all {
                 class ace {
@@ -1317,7 +1557,48 @@ class CfgTSSLoadouts {
                         {"ACE_DefusalKit",1},
                         {"ACE_EntrenchingTool",1},
                         {"ACE_M26_Clacker",1},
-                        {"DemoCharge_Remote_Mag",4}
+                        {"DemoCharge_Remote_Mag",5}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class engineerkit {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_EntrenchingTool",1},
+                        {"ToolKit",1},
+                        {"ACE_Sandbag_empty",5},
+                        {"ACE_key_lockpick",20}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class darterBlufor {
+            class all {
+                class itc {
+                    items[] = {
+                        {"ITC_Land_B_AR2i_Packed",1},
+                        {"ACE_UAVBattery",2}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class darterRedfor {
+            class all {
+                class itc {
+                    items[] = {
+                        {"ITC_Land_O_AR2i_Packed",1},
+                        {"ACE_UAVBattery",2}
                     };
                 };
             };
