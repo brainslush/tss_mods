@@ -1,27 +1,37 @@
 #include "script_component.hpp"
+/*
+ * Author: brainslush
+ * Teleport unit to team member
+ *
+ * Arguments:
+ * 0: Object <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [myObject] call tss_mods_units_fnc_addTeleporter
+ *
+ * Public: No
+*/
 
 params["_object"];
 
 private _action = [
     QGVAR(teleport), "Zun Team teleportieren", "", {
-        private _playerGrp = ACE_player;
-        if (_playerGrp == ACE_player || {!alive _playerGrp}) then {
-            _playerGrp = {
-                if (alive _x && {_x != ACE_player}) exitWith {_x};
-                _x;
-            } forEach units group ACE_player;
-        };
-        if (_playerGrp == ACE_player) then {
+        _playerGrp = (units group ACE_player) select {alive _x && {_x != ACE_player}}; {
+        if (_playerGrp isEqualTo []) then {
             ["Konnte nicht teleportieren."] call CBA_fnc_notify;
         } else {
-            if (vehicle _playerGrp == _playerGrp) then {
-                private _dir = getDir _playerGrp - 180;
-                ACE_player setpos (getPos _playerGrp) vectorAdd [3 * sin _dir, 3 * cos _dir, 0];
+            _playerGrp params ["_target"];
+            if (vehicle _target == _target) then {
+                private _dir = getDir _target - 180;
+                ACE_player setpos (getPos _target) vectorAdd [3 * sin _dir, 3 * cos _dir, 0];
             } else {
-                if ((vehicle _playerGrp) emptyPositions "cargo" == 0) then {
+                if ((vehicle _target) emptyPositions "cargo" == 0) then {
                     ["Kein Platz im Fahrzeug"] call CBA_fnc_notify;
                 } else {
-                    ACE_player moveincargo vehicle _playerGrp;
+                    ACE_player moveincargo vehicle _target;
                 };
             };
         };
