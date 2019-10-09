@@ -26,6 +26,11 @@ class CfgEditorSubcategories {
         displayname = "Aviation/Logistics";
     };
 
+    // base personnel
+    class tss_bp: no_category {
+        displayname = "Base Personnel";
+    };
+
     // general
     class tss_air: no_category {
         displayname = "=tss= air";

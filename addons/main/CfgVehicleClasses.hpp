@@ -26,6 +26,10 @@ class CfgVehicleClasses {
         displayname = "PMC";
         abbreviation = "PMC";
     };
+    class tss_bp: tss_units_base {
+        displayname = "Base Personnel";
+        abbreviation = "BP";
+    };
 
     class tss_air: no_category {
         displayname = "=tss= air";
