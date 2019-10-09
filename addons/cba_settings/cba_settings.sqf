@@ -11,6 +11,7 @@ force force ace_advanced_fatigue_enabled = true;
 force force ace_advanced_fatigue_loadFactor = 1;
 force force ace_advanced_fatigue_performanceFactor = 1;
 force force ace_advanced_fatigue_recoveryFactor = 1;
+force force ace_advanced_fatigue_swayFactor = 1;
 force force ace_advanced_fatigue_terrainGradientFactor = 1;
 
 // ACE Advanced Throwing
@@ -56,6 +57,7 @@ force force ace_frag_spallEnabled = false;
 
 // ACE Goggles
 force force ace_goggles_effects = 2;
+ace_goggles_showInThirdPerson = false;
 
 // ACE Hearing
 force force ace_hearing_autoAddEarplugsToUnits = false;
@@ -72,11 +74,14 @@ force ace_interaction_enableTeamManagement = true;
 
 // ACE Logistics
 force force ace_cargo_enable = true;
+ace_cargo_loadTimeCoefficient = 5;
 ace_cargo_paradropTimeCoefficent = 4;
-ace_refuel_hoseLength = 20;
+ace_rearm_level = 2;
+ace_rearm_supply = 1;
+ace_refuel_hoseLength = 30;
 force force ace_refuel_rate = 0.519893;
 ace_repair_addSpareParts = true;
-force force ace_repair_autoShutOffEngineWhenStartingRepair = falses;
+force force ace_repair_autoShutOffEngineWhenStartingRepair = false;
 force force ace_repair_consumeItem_toolKit = 0;
 force ace_repair_engineerSetting_fullRepair = 2;
 force force ace_repair_engineerSetting_repair = 1;
@@ -116,6 +121,7 @@ force force ace_medical_bleedingCoefficient = 3;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_consumeItem_PAK = 1;
 force force ace_medical_consumeItem_SurgicalKit = 1;
+force force ace_medical_convertItems = 1;
 force ace_medical_delayUnconCaptive = 3;
 force force ace_medical_enableAdvancedWounds = true;
 force force ace_medical_enableFor = 1;
@@ -159,14 +165,16 @@ ace_mk6mortar_useAmmoHandling = true;
 // ACE Nightvision
 force force ace_nightvision_aimDownSightsBlur = 2;
 force force ace_nightvision_disableNVGsWithSights = true;
-ace_nightvision_effectScaling = 0.1s;
-ace_nightvision_fogScaling = 0.0;
+ace_nightvision_effectScaling = 0.1;
+ace_nightvision_fogScaling = 0;
 ace_nightvision_noiseScaling = 0.1;
 ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
 force force ace_overheating_enabled = true;
 force force ace_overheating_overheatingDispersion = true;
+ace_overheating_showParticleEffects = true;
+ace_overheating_showParticleEffectsForEveryone = true;
 force force ace_overheating_unJamFailChance = 0.199049;
 force ace_overheating_unJamOnreload = false;
 
@@ -176,7 +184,8 @@ force force ace_finger_indicatorForSelf = true;
 force force ace_finger_maxRange = 5;
 
 // ACE Pylons
-force force ace_pylons_enabled = true;
+force ace_pylons_enabledForZeus = true;
+force ace_pylons_enabledFromAmmoTrucks = true;
 force ace_pylons_rearmNewPylons = false;
 force ace_pylons_requireEngineer = false;
 force ace_pylons_requireToolkit = false;
@@ -186,10 +195,6 @@ force ace_pylons_timePerPylon = 5;
 // ACE Quick Mount
 force force ace_quickmount_distance = 3;
 force force ace_quickmount_speed = 2;
-
-// ACE Rearm
-force force ace_rearm_level = 2;
-force force ace_rearm_supply = 1;
 
 // ACE Scopes
 force force ace_scopes_correctZeroing = true;
@@ -209,10 +214,16 @@ force ace_spectator_enableAI = false;
 force ace_spectator_restrictModes = 0;
 force ace_spectator_restrictVisions = 0;
 
+// ACE Tagging
+ace_tagging_quickTag = 1;
+
 // ACE Uncategorized
+force ace_fastroping_requireRopeItems = true;
 force force ace_gforces_enabledFor = 2;
 force force ace_laser_dispersionCount = 2;
 force ace_microdagr_mapDataAvailable = 2;
+force ace_microdagr_waypointPrecision = 2;
+ace_optionsmenu_showNewsOnMainMenu = true;
 force force ace_overpressure_distanceCoefficient = 1;
 
 // ACE User Interface
@@ -242,6 +253,7 @@ force force ace_winddeflection_vehicleEnabled = true;
 
 // ACE Zeus
 force force ace_zeus_autoAddObjects = false;
+force force ace_zeus_canCreateZeus = 1;
 force force ace_zeus_radioOrdnance = false;
 force force ace_zeus_remoteWind = false;
 force force ace_zeus_revealMines = 0;
@@ -252,12 +264,30 @@ force force ace_zeus_zeusBird = false;
 force acex_sitting_enable = true;
 
 // ACRE2
+acre_sys_core_automaticAntennaDirection = true;
 force force acre_sys_core_fullDuplex = false;
-acre_sys_core_ignoreAntennaDirection = true;
-force force acre_sys_core_interference = true;
-force force acre_sys_core_revealToAI = true;
-acre_sys_core_terrainLoss = 0.5;
+force acre_sys_core_ignoreAntennaDirection = true;
+acre_sys_core_interference = false;
+force force acre_sys_core_revealToAI = 1;
+force acre_sys_core_terrainLoss = 0.5;
 force force acre_sys_core_ts3ChannelSwitch = false;
+acre_sys_core_unmuteClients = true;
+force acre_sys_signal_signalModel = 2;
 
-// NIArms
-force force niarms_magSwitch = false;
+// CBA Weapons
+force cba_disposable_replaceDisposableLauncher = true;
+
+// ITC Air
+force itc_air_drop_force = true;
+force itc_air_paveway_realism = true;
+
+// ITC Land
+ITC_LAND_CIWS = true;
+
+// Metis Marker
+mts_markers_saveLastSelection = true;
+mts_markers_showPresetsUI = false;
+
+// Zeus Enhanced
+force zen_common_autoAddObjects = false;
+force zen_common_disableGearAnim = false;
