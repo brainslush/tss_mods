@@ -2,8 +2,6 @@
 
 params["_object"];
 
-TRACE_1("",_object);
-
 private _action = [
     QGVAR(teleport), "Zun Team teleportieren", "", {
         private _playerGrp = ACE_player;
