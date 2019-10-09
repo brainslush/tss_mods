@@ -19,7 +19,7 @@ params["_object"];
 
 private _action = [
     QGVAR(teleport), "Zun Team teleportieren", "", {
-        _playerGrp = (units group ACE_player) select {alive _x && {_x != ACE_player}}; {
+        _playerGrp = (units group ACE_player) select {alive _x && {_x != ACE_player}};
         if (_playerGrp isEqualTo []) then {
             ["Konnte nicht teleportieren."] call CBA_fnc_notify;
         } else {
