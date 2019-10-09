@@ -68,7 +68,7 @@ private _action = [
                     _children pushBack [_action, [], _target];
                 } forEach [_x] call CBA_fnc_compatibleMagazines;
             } forEach [_x] call CBA_fnc_getMuzzles;
-        } forEach [(primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
+        } forEach [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
         _children
     }
 ] call ACE_interact_menu_fnc_createAction;
