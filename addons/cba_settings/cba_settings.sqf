@@ -271,7 +271,6 @@ acre_sys_core_interference = false;
 force force acre_sys_core_revealToAI = 1;
 force acre_sys_core_terrainLoss = 0.5;
 force force acre_sys_core_ts3ChannelSwitch = false;
-acre_sys_core_unmuteClients = true;
 force acre_sys_signal_signalModel = 2;
 
 // CBA Weapons
