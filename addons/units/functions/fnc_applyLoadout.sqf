@@ -95,9 +95,7 @@ private _getContainerContent = {
                             private _mass = getNumber(configFile >> "CfgMagazines" >> _item >> "mass");
                             private _count = floor(_value / _mass);
                             _count;
-                        } else {
-                            1;
-                        };
+                        } else {1};
                     } else {
                         private _str = [
                             "In Class ",
@@ -135,6 +133,9 @@ private _getContainerContent = {
                 };
             };
             //TRACE_1("",_item);
+            if (_item in [QGVAR(dummymagazine), QGVAR(dummymissile)]) then {
+                ["Denke daran die Dummymagazine umzuwandeln."] call CBA_fnc_notify;
+            };
             private _return = if (isNumber(configFile >> "CfgMagazines" >> _item >> "count")) then {
                 private _count = getNumber(configFile >> "CfgMagazines" >> _item >> "count");
                 [_item, _dataR, _count];
