@@ -32,50 +32,50 @@ class CfgVehicleClasses {
     };
 
     class tss_air: no_category {
-        displayname = "=tss= air";
+        displayname = "Air";
     };
     class tss_cars: no_category {
-        displayname = "=tss= cars";
+        displayname = "Cars";
     };
     class tss_boats: no_category {
-        displayname = "=tss= boats";
+        displayname = "Boats";
     };
     class tss_support: no_category {
-        displayname = "=tss= support";
+        displayname = "Support";
     };
     class tss_objects: no_category {
-        displayname = "=tss= objects";
+        displayname = "Objects";
     };
     class tss_autonomous: no_category {
-        displayname = "=tss= autonomous";
+        displayname = "Autonomous";
     };
     class tss_static: no_category {
-        displayname = "=tss= static";
+        displayname = "Static";
     };
 
     // boxes
     class tss_boxes_ammo556: no_category {
-        displayname="=tss= ammo 5.56";
+        displayname="Ammo 5.56";
     };
     class tss_boxes_ammo762: no_category {
-        displayname="=tss= ammo 7.62";
+        displayname="Ammo 7.62";
     };
     class tss_boxes_ammoexp: no_category {
-        displayname="=tss= ordnance";
+        displayname="Ordnance";
     };
     class tss_boxes: no_category {
-        displayname="=tss= boxes";
+        displayname="Boxes";
     };
     class tss_boxes_launcher: no_category {
-        displayname="=tss= launcher";
+        displayname="Launcher";
     };
     class tss_boxes_support: no_category {
-        displayname="=tss= support boxes";
+        displayname="Support boxes";
     };
     class tss_boxes_weapons: no_category {
-        displayname="=tss= weapon boxes";
+        displayname="Weapon boxes";
     };
     class tss_boxes_supply: no_category {
-        displayname="=tss= supply boxes";
+        displayname="Supply boxes";
     };
 };
