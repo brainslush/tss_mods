@@ -55,7 +55,8 @@ class Cfg3DEN {
                             property = QGVARMAIN(3denLoadoutRange);
                             control = "EditShort";
                             CEXPRESSION2(3denLoadoutRange);
-                            defaultValue = 30;
+                            defaultValue = "30";
+                            validate = "number";
                             typeName = "NUMBER";
                             wikiType = "[[NUMBER]]";
                         };
@@ -64,7 +65,8 @@ class Cfg3DEN {
                             property = QGVARMAIN(3denLoadoutTimeout);
                             control = "EditShort";
                             CEXPRESSION2(3denLoadoutTimeout);
-                            defaultValue = 600;
+                            defaultValue = "600";
+                            validate = "number";
                             typeName = "NUMBER";
                             wikiType = "[[NUMBER]]";
                         };
