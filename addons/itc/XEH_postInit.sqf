@@ -9,13 +9,13 @@
             params ["_args","_pfID"];
 
             disableSerialization; 
-            private _display = uiNamespace getVariable ["ITC_Land_AR2I_RscOptics_UAV_gunner",displayNull];	
+            private _display = uiNamespace getVariable ["ITC_Land_AR2I_RscOptics_UAV_gunner",displayNull];
             if (isNull _display) exitWith {};
 
             private _uavControlPos =  [ACE_Player] call ace_common_fnc_getUavControlPosition;
             //hide control group if the camera is anything but GUNNER or the player is no longer controlling the turret
             //also remove PFH in this case.
-            if ( (cameraView != "GUNNER") || (_uavControlPos != "GUNNER") ) then {			
+            if ( (cameraView != "GUNNER") || (_uavControlPos != "GUNNER") ) then {
                 if (cameraView != "GUNNER") then {
                     (_display displayCtrl 75001) ctrlShow false; 
                 };
