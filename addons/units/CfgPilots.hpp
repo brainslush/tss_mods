@@ -18,7 +18,7 @@ class tss_fd_helipilot : B_Helipilot_F {
         "anprc148",
         "anprc152",
         {"primarymagazines",2},
-        {"secondarymagazines",2},
+        {"secondarymagazines",1},
         "eplrs"
     };
     tss_backpacksContent[] = {};
@@ -49,7 +49,7 @@ class tss_fd_helicrew : B_helicrew_F {
     };
     tss_vestsContent[] = {
         {"primarymagazines",2},
-        {"secondarymagazines",2},
+        {"secondarymagazines",1},
         "anprc148"
     };
     tss_backpacksContent[] = {};
@@ -80,7 +80,7 @@ class tss_fd_pilot : B_Pilot_F {
         "microdagr"
     };
     tss_vestsContent[] = {
-        {"secondarymagazines",2},
+        {"secondarymagazines",1},
         "anprc148",
         "anprc152",
         "eplrs"

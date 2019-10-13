@@ -20,9 +20,9 @@ class tss_recon_snp: B_sniper_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primaryaltmagazines",5},
+        {"secondarymagazines",1},
         "sniperkit",
-        {"primarymagazines",2},
-        {"grenades",1}
+        {"primarymagazines",2}
     };
     tss_backpacksContent[] = {
         {"primarymagazines",4},
@@ -65,8 +65,8 @@ class tss_recon_spt: B_spotter_F {
     tss_vestsContent[] = {
         "anprc148",
         {"primarymagazines",7},
-        "sniperkit",
-        {"grenades",1}
+        {"secondarymagazines",1},
+        "sniperkit"
     };
     tss_backpacksContent[] = {
         "spotterkit",
