@@ -11,7 +11,6 @@ class CfgDifficultyPresets {
         levelAI = QGVVAR(TSS);
         // aiLevelPreset defines AI skill level and is counted from 0 and can have following values: 0 (Low), 1 (Normal), 2 (High), 3 (Custom).
         // when 3 (Custom) is chosen, values of skill and precision are taken from the class CustomAILevel.
-        levelAI = 3;
 
         class Options {
             /* Simulation */
