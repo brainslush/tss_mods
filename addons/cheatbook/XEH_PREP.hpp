@@ -1,1 +1,1 @@
-PREP(dlg_sheets_load);
+PREP(dlgLoadSheets);
