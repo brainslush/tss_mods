@@ -15,7 +15,7 @@ class tss_infantry_soldier: B_soldier_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -58,7 +58,7 @@ class tss_infantry_sc: B_soldier_SL_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"teamleader"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -104,7 +104,7 @@ class tss_infantry_2ic: B_soldier_TL_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"teamleader"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -149,7 +149,7 @@ class tss_infantry_ar: B_soldier_AR_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"machinegunner"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -278,7 +278,7 @@ class tss_infantry_gl: B_soldier_GL_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"grenadier"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -409,7 +409,7 @@ class tss_infantry_lat: B_soldier_AT_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -538,7 +538,7 @@ class tss_infantry_dm: B_soldier_M_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"marksman"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -773,7 +773,7 @@ class tss_infantry_ptl: B_officer_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}

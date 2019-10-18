@@ -1,6 +1,6 @@
 class RSCDisplayTSSSheets {
     idd = TSS_DLG_SHEETS;
-    onLoad = QUOTE(_this call FUNC(dlg_sheets_load));
+    onLoad = QUOTE(_this call FUNC(dlgLoadSheets));
 
     class controls {
         class RscPicture_1200: RscPicture {
@@ -12,7 +12,7 @@ class RSCDisplayTSSSheets {
             h = 45 * GUI_GRID_H;
         };
         class RscButton_1600: RscButton {
-            onMouseButtonClick = QUOTE([1] call FUNC(dlg_sheets_load));
+            onMouseButtonClick = QUOTE([1] call FUNC(dlgLoadSheets));
             idc = IDC_SHEETS_RSCBUTTON_1600;
             text = ">>>"; //--- ToDo: Localize;
             x = 63.5 * GUI_GRID_W + GUI_GRID_X;
@@ -21,7 +21,7 @@ class RSCDisplayTSSSheets {
             h = 1.5 * GUI_GRID_H;
         };
         class RscButton_1601: RscButton {
-            onMouseButtonClick = QUOTE([-1] call FUNC(dlg_sheets_load));
+            onMouseButtonClick = QUOTE([-1] call FUNC(dlgLoadSheets));
             idc = IDC_SHEETS_RSCBUTTON_1601;
             text = "<<<"; //--- ToDo: Localize;
             x = -27.5 * GUI_GRID_W + GUI_GRID_X;

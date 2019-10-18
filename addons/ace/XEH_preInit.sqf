@@ -1,0 +1,4 @@
+#include "script_component.hpp"
+
+ace_medical_fnc_treatmentAdvanced_surgicalKit_onProgress = COMPILE_FILE(functions\fnc_treatmentAdvanced_surgicalKit_onProgress);
+ace_medical_fnc_handleUnitVitals = COMPILE_FILE(functions\fnc_handleUnitVitals);
