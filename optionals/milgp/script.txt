@@ -1,0 +1,1 @@
+myclass = "";{mass = getNumber(_x >> "ItemInfo" >> "mass"); myclass = myclass + "class " + configName(_x) + " : ItemCore { class ItemInfo : VestItem { mass = " + str(if(mass==40) then {40} else {mass + 80}) + ";};};"} forEach ("abc = [configName(_x),'_'] call CBA_fnc_split; abc select 0 == 'milgp' && abc select 1 == 'v'" configClasses (configFile >> "CfgWeapons")); 
