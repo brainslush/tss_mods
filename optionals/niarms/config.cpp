@@ -8,7 +8,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {
-            "tss_mods_main"
+            QGVARMAIN(main),
+            QGVARMAIN(units)
         };
     };
 };
