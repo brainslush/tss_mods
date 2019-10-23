@@ -8,10 +8,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {
-            "tss_mods_main"
+            QGVARMAIN(main),
+            QGVARMAIN(units),
+            "JAS_GPNVG18"
         };
     };
 };
 
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"
+#include "CfgWeapons.hpp"
