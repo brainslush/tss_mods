@@ -12,6 +12,7 @@ class CfgTSSLoadouts {
                         "U_B_CTRG_3",
                         "U_B_CTRG_1"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -45,6 +46,7 @@ class CfgTSSLoadouts {
                     uniforms[] = {
                         "U_B_HeliPilotCoveralls"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -59,6 +61,7 @@ class CfgTSSLoadouts {
                     uniforms[] = {
                         "U_B_PilotCoveralls"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -73,6 +76,7 @@ class CfgTSSLoadouts {
                     uniforms[] = {
                         "U_B_Wetsuit"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -107,6 +111,7 @@ class CfgTSSLoadouts {
                     vests[] = {
                         "V_TacVest_oli"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -121,6 +126,7 @@ class CfgTSSLoadouts {
                     vests[] = {
                         "V_Rangemaster_belt"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -136,6 +142,7 @@ class CfgTSSLoadouts {
                         "V_RebreatherB",
                         "V_RebreatherIA"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -336,6 +343,7 @@ class CfgTSSLoadouts {
                         "H_HelmetB_light_snakeskin",
                         "H_MU_HelmetB_light2_snakeskin"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {
@@ -499,6 +507,7 @@ class CfgTSSLoadouts {
                     };
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag"};
                     magazineRange[] = {{0,30},{0,0}};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -530,6 +539,7 @@ class CfgTSSLoadouts {
                     };
                     defaultMagazine[] = {"ACE_30Rnd_556x45_Stanag_Mk318_mag","1Rnd_HE_Grenade_shell"};
                     magazineRange[] = {{0,30},{0,1}};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -546,6 +556,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     primaries[] = {"LMG_03_F"};
                     defaultMagazine[] = {"200Rnd_556x45_Box_Red_F"};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -563,6 +574,7 @@ class CfgTSSLoadouts {
                     primaries[] = {"arifle_SPAR_02_blk_F"};
                     defaultMagazine[] = {"150Rnd_556x45_Drum_Mag_Tracer_F"};
                     magazineRange[] = {{30,150}};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -580,6 +592,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     primaries[] = {"LMG_Zafir_F"};
                     defaultMagazine[] = {"150Rnd_762x54_Box_Tracer"};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -609,6 +622,7 @@ class CfgTSSLoadouts {
                         "arifle_SPAR_03_snd_F"
                     };
                     defaultMagazine[] = {"20Rnd_762x51_Mag"};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -626,6 +640,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     primaries[] = {"srifle_DMR_02_F"};
                     defaultMagazine[] = {"ACE_10Rnd_338_300gr_HPBT_Mag"};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -648,6 +663,7 @@ class CfgTSSLoadouts {
                         "hgun_Rook40_F"
                     };
                     defaultMagazine[] = {"16Rnd_9x21_Mag"};
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -655,6 +671,9 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
+            muzzles = "muzzlePistol";
+            lasers = "laserPistol";
+            optics = "opticsPistol";
         };
     };
     class CfgLaunchers {
@@ -662,8 +681,9 @@ class CfgTSSLoadouts {
             class all {
                 class vanilla {
                     launchers[] = {"launch_NLAW_F"};
+                    defaultMagazine[] = {""};
+                    excludeOnAlternative = 1;
                 };
-                defaultMagazine[] = {""};
             };
             class des: all {};
             class jgl: all {};
@@ -675,8 +695,9 @@ class CfgTSSLoadouts {
             class all {
                 class vanilla {
                     launchers[] = {"launch_MRAWS_green_rail_F"};
+                    defaultMagazine[] = {"MRAWS_HEAT_F"};
+                    excludeOnAlternative = 1;
                 };
-                defaultMagazine[] = {"MRAWS_HEAT_F"};
             };
             class des: all {};
             class jgl: all {};
@@ -688,8 +709,9 @@ class CfgTSSLoadouts {
             class all {
                 class vanilla {
                     launchers[] = {"launch_O_Titan_short_F"};
+                    defaultMagazine[] = {"Titan_AT"};
+                    excludeOnAlternative = 1;
                 };
-                defaultMagazine[] = {"Titan_AT"};
             };
             class des: all {};
             class jgl: all {};
@@ -701,8 +723,9 @@ class CfgTSSLoadouts {
             class all {
                 class vanilla {
                     launchers[] = {"launch_O_Titan_F"};
+                    defaultMagazine[] = {"Titan_AA"};
+                    excludeOnAlternative = 1;
                 };
-                defaultMagazine[] = {"Titan_AA"};
             };
             class des: all {};
             class jgl: all {};
@@ -750,6 +773,13 @@ class CfgTSSLoadouts {
             class silent {
                 class vanilla {
                     muzzles[] = {"muzzle_snds_338_black"};
+                };
+            };
+        };
+        class muzzlePistol {
+            class silent {
+                class vanilla {
+                    muzzles[] = {"muzzle_snds_l"};
                 };
             };
         };
@@ -934,11 +964,13 @@ class CfgTSSLoadouts {
             class night {
                 class vanilla {
                     nvgs[] = {"ACE_NVG_Gen4"};
+                    excludeOnAlternative = 1;
                 };
             };
             class both {
                 class vanilla {
                     nvgs[] = {"ACE_NVG_Gen4"};
+                    excludeOnAlternative = 1;
                 };
             };
         };
@@ -1026,14 +1058,14 @@ class CfgTSSLoadouts {
         class android {
             class all {
                 class ace {
-                    gps[] = {};
+                    gps[] = {"ItemAndroid"};
                 };
             };
         };
         class tablet {
             class all {
                 class ace {
-                    gps[] = {};
+                    gps[] = {"ItemcTab"};
                 };
             };
         };
@@ -1133,7 +1165,7 @@ class CfgTSSLoadouts {
         class tablet {
             class all {
                 class vanilla {
-                    items[] = {};
+                    items[] = {"ItemcTab"};
                 };
             };
             class day : all {};
