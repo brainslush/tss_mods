@@ -56,6 +56,25 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_fleece_khk_g3_field_pants_rgr : Uniform_Base {
+        author = "Adacas";
+        scope = 2;
+        displayName = "Fleece + G3 Field Pants (KHK+RGR)";
+        picture = "\milgp_uniforms\ui\icon_u_fleece_g3_field_pants_grey_rgr_ca.paa";
+        model = "\A3\Characters_F\Common\Suitpacks\suitpack_original_F.p3d";
+        hiddenSelections[] = {"camo","camo1","camo2","insignia","clan"};
+        hiddenSelectionsTextures[] = {
+            "milgp_uniforms\textures\u_fleece_khk_co.paa",
+            "milgp_uniforms\textures\u_g3_field_pants_rgr_co.paa",
+            "milgp_uniforms\textures\u_equipment_khk_co.paa"
+        };
+        class ItemInfo : UniformItem {
+            uniformModel = "-";
+            uniformClass = "milgp_u_fleece_khk_g3_field_pants_rgr";
+            containerClass = "Supply80";
+            mass = 40;
+        };
+    };
     class milgp_u_fleece_rgr_g3_field_pants_rgr : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";

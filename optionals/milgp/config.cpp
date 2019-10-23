@@ -6,9 +6,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         VERSION_CONFIG;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"milgp_u_fleece_khk_g3_field_pants_rgr"};
         requiredAddons[] = {
-            "tss_units_main",
+            QGVARMAIN(main),
+            QGVARMAIN(units),
+            "milgp_uniforms_cfg",
             "milgp_vests_cfg"
         };
     };
@@ -16,4 +18,5 @@ class CfgPatches {
 
 #include "CfgEventhandlers.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgTSSLoadouts.hpp"
