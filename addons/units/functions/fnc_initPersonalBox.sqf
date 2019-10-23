@@ -23,9 +23,9 @@ if (isNull _object) exitWith {};
 private _action = [
     QGVAR(Loadout), "Loadout", "", {
         [true] call FUNC(handleSniperBackpack);
-        //GVAR(PersonalArsenalOpen) = true;
         GVAR(ArsenalTypeOpen) = "personal";
         [player, player] call ace_arsenal_fnc_openBox;
     }, {_player == player}
 ] call ACE_interact_menu_fnc_createAction;
+
 [_target, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;

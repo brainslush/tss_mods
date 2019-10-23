@@ -16,6 +16,7 @@
 */
 
 private _magazineList = [];
+private _initStartTime = diag_tickTime;
 
 private _collectConfig = {
     params[["_property", "", [""]]];
@@ -27,7 +28,7 @@ private _collectConfig = {
     // run through config and save into profilespace variables
     {
         private _collectionName = configName _x;
-        private _configPath = _x;
+        private _configPathA = _x;
         {
             private _type = configName _x;
             private _namespaceQ = ["TSS", MODSET ,_property, _collectionName, _type] joinString "_";
@@ -35,7 +36,7 @@ private _collectConfig = {
             private _test = configProperties [_x, "true", true];
             {
                 private _configPath = _x;
-                private _exclude = isNumber(_x >> "excludeOnAlternative") && {getNumber(_x >> "excludeOnAlternative")};
+                private _exclude = isNumber(_x >> "excludeOnAlternative") && {getNumber(_x >> "excludeOnAlternative") == 1};
                 private _varContent = profileNamespace getVariable [_namespaceQ,[]];
                 if (_varContent isEqualTo []) then {
                     if (_exclude) then {
@@ -63,8 +64,8 @@ private _collectConfig = {
                 // handle magazines
                 if (_property in ["primaries", "secondaries", "launchers"]) then {
                     // get default magazine
-                    private _defaultMagazines = if (isArray(_configPath >> "DefaultMagazines")) then {
-                        getArray(_configPath >> "DefaultMagazines");
+                    private _defaultMagazines = if (isArray(_configPath >> "defaultMagazines")) then {
+                        getArray(_configPath >> "defaultMagazines");
                     } else {[]};
                     private _defaultMagazinesCount = count _defaultMagazines;
 
@@ -76,11 +77,18 @@ private _collectConfig = {
                     //TRACE_2("",_configPath,_magazineRanges);
 
                     // get allowed magazineMods
-                    private _allowed = if (isArray(_configPath >> "AllowedMagazineMods")) then {
-                        getArray(_configPath >> "AllowedMagazineMods");
+                    private _allowed = if (isArray(_configPath >> "allowedMagazineMods")) then {
+                        getArray(_configPath >> "allowedMagazineMods");
+                    } else {[]};
+
+                    // get allowed greandeMods
+                    private _allowedGrenades = if (isArray(_configPath >> "allowedGrenadeMods")) then {
+                        getArray(_configPath >> "allowedGrenadeMods");
                     } else {[]};
 
                     _allowed = _allowed apply {toLower _x};
+                    _allowedGrenades = _allowedGrenades apply {toLower _x};
+                    private _allowedArray = [_allowed, _allowedGrenades];
                     {
                         // create magazine list per weapon
                         private _weapon = _x;
@@ -92,6 +100,8 @@ private _collectConfig = {
                             private _muzzles = [_x] call CBA_fnc_getMuzzles;
 
                             {
+                                private _muzzleIndex = _forEachIndex;
+
                                 private _muzzleCfg = configFile >> "CfgWeapons" >> _weapon >> _x;
                                 if (isClass (configFile >> "CfgWeapons" >> _x)) then {
                                     _muzzleCfg = configFile >> "CfgWeapons" >> _x;
@@ -118,7 +128,11 @@ private _collectConfig = {
                                             "";
                                         };
                                     };
-                                    if (_allowed isEqualTo [] || {_dlc in _allowed}) then {
+                                    if (
+                                        (_allowedArray select _muzzleIndex) isEqualTo [] || 
+                                        {_dlc in (_allowedArray select _muzzleIndex) || 
+                                        {toLower (([_x, "_"] call CBA_fnc_split) select 0) in (_allowedArray select _muzzleIndex)}}
+                                    ) then {
                                         private _ammoCount = getNumber(configFile >> "CfgMagazines" >> _x >> "count");
                                         if (_minRange <= _ammoCount && {_ammoCount <= _maxRange}) then {
                                             _magazines pushBackUnique _x;
@@ -127,7 +141,6 @@ private _collectConfig = {
                                 } forEach _compatibleMagazines;
 
                                 _magazineList append _magazines;
-                                //TRACE_5("",_varNameWeapon,_x,_forEachIndex,_muzzleCfg,_magazines);
                                 profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
                             } forEach _muzzles;
                         };
@@ -147,10 +160,10 @@ private _collectConfig = {
         if (_property in ["primaries", "secondaries", "launchers"]) then {
             {
                 //TRACE_2("",_configPath,_x);
-                private _isText = isText(_configPath >> _x); 
+                private _isText = isText(_configPathA >> _x); 
                 if (_isText) then {
                     private _varName = ["TSS", MODSET,[_property, _x] joinString "", _collectionName] joinString "_";
-                    private _varContent = getText(_configPath >> _x);
+                    private _varContent = getText(_configPathA >> _x);
                     //TRACE_2("",_varName,_varContent);
                     profileNamespace setVariable [_varName, _varContent];
                 };
@@ -165,6 +178,7 @@ private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "ver
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 private _ignoreVersionCheck = IGNOREVERSIONCHECK;
 //TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);
+private _gather = _modVersion != _savedVersion || {IGNOREVERSIONCHECK};
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     // collect existing gear
     private _weaponList = [];
@@ -200,3 +214,5 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     _magazineList = _magazineList arrayIntersect _magazineList;
     SETPRVAR(GVAR(magazineList),_magazineList);
 };
+
+INFO_2("Finished loadout config initialization in %1 seconds [Cached: %2]", (diag_tickTime - _initStartTime) toFixed 2, !_gather);

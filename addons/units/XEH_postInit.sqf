@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-
 // add ace menu entry for personal loadout customizer
 if (player getVariable [QGVAR(isTss),false] && {hasInterface}) then {
     player setVariable [QGVAR(canAccessLoadout), true];
@@ -8,7 +7,6 @@ if (player getVariable [QGVAR(isTss),false] && {hasInterface}) then {
         private _action = [
             QGVAR(Loadout), "Loadout", "", {
                 [true] call FUNC(handleSniperBackpack);
-                //GVAR(PersonalArsenalOpen) = true;
                 GVAR(ArsenalTypeOpen) = "personal";
                 [player, player] call ace_arsenal_fnc_openBox;
             }, {
@@ -23,9 +21,9 @@ if (player getVariable [QGVAR(isTss),false] && {hasInterface}) then {
     };
 
     // hide interaction when out of range or beyond
-    TRACE_2("Adding Arsenal restriction",getClientStateNumber,isMultiplayer);
+    //TRACE_2("Adding Arsenal restriction",getClientStateNumber,isMultiplayer);
     [{getClientStateNumber >= 10 || {!isMultiplayer}}, {
-        TRACE_2("We are in the right state",getClientStateNumber,isMultiplayer);
+        //TRACE_2("We are in the right state",getClientStateNumber,isMultiplayer);
         player setVariable [QGVARMAIN(spawnPos), getPos player];
         [
             "Loadoutkonfigurator für " +

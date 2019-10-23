@@ -17,7 +17,7 @@
 
 private _target = GVAR(currArsenalBox);
 
-if (isNil "_target") then {
+if (isNil "_target" && {GVAR(ArsenalTypeOpen) != "personal"}) then {
     ERROR("No cached arsenal box");
 } else {
     private _cachedItems = _target getVariable [QGVAR(aceArsenalCache), []];

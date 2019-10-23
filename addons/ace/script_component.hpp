@@ -1,4 +1,4 @@
-#define COMPONENT ace  
+#define COMPONENT ace
 #define COMPONENT_BEAUTIFIED Ace
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 

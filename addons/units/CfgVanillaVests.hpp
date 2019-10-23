@@ -8,6 +8,7 @@ class all {
             "V_PlateCarrier2_rgr",
             "V_PlateCarrier2_rgr_noflag_F"
         };
+        excludeOnAlternative = 1;
     };
 };
 class des: all {

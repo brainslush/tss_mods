@@ -25,9 +25,10 @@ _loadout params ["_primaryArray", "_launcherArray", "_secondaryArray", "_uniform
     _x params [["_weapon", ""], ["_silencer", ""], ["_pointer", ""], ["_optic", ""], "", "", ["_bipod", ""]];
     if (_weapon != "") then {
         private _compatibleList = [_weapon] call CBA_fnc_compatibleItems;
+        _compatibleList = _compatibleList apply {toLower _x};
         private _loadoutIndex = _forEachIndex;
         {
-            if (_x != "" && {!(configName (configFile >> "CfgWeapons" >> _x) in _compatibleList)}) then {
+            if (_x != "" && {!(toLower _x in _compatibleList)}) then {
                 (_loadout select _loadoutIndex) set [_forEachIndex + 1, ""];
             };
         } forEach [_silencer, _pointer, _optic, "", "", _bipod];
