@@ -7,6 +7,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(ArsenalTypeOpen) = "";
+
 [] call FUNC(addInitEventhandlers);
 [] call FUNC(gatherEquip);
 ["ace_arsenal_displayClosed", FUNC(updatePersonalLayout)] call CBA_fnc_addEventHandler;
@@ -15,7 +17,7 @@ PREP_RECOMPILE_END;
 ["ace_arsenal_displayOpened", FUNC(updateArsenalControls)] call CBA_fnc_addEventHandler;
 ["ace_arsenal_displayOpened", {
     [{
-        if (GVAR(ArsenalTypeOpen) == "magazines") then {
+        if (!isNil QGVAR(ArsenalTypeOpen) || {GVAR(ArsenalTypeOpen) == "magazines"}) then {
             private _display = findDisplay IDD_ace_arsenal;
             private _lctrl = _display displayCtrl IDC_buttonUniform;
             private _rctrl = _display displayCtrl IDC_buttonMag;

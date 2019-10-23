@@ -15,7 +15,7 @@
  * Public: No
 */
 
-if (!GVAR(PersonalArsenalOpen)) exitWith {};
+if (isNil QGVAR(ArsenalTypeOpen) || {GVAR(ArsenalTypeOpen) != "personal"}) exitWith {GVAR(ArsenalTypeOpen) = "";};
 
 ([ACE_player] call FUNC(getUnitParameters)) params [
     "_unitg", "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod"
@@ -86,6 +86,4 @@ SAVEGEARITEM("glasses",_unitc,_3denCamo,_glasses);
 // nvg
 SAVEGEARITEM("nvgs",_unitc,_3denCamo,_itemsArrayB select 5);
 
-//GVAR(PersonalArsenalOpen) = false;
-GVAR(ArsenalTypeOpen) = "";
 [{[ACE_player] call FUNC(applyLoadout)}] call CBA_fnc_execNextFrame;
