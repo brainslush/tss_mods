@@ -35,7 +35,7 @@ private _currPrimaryGroup = [_unit, "Primaries", _currprimary] call FUNC(getWeap
 private _backpackPrimaryGroup = [_unit, "Primaries", _backpackPrimaryArray select 0, "tss_recon_operator"] call FUNC(getWeaponGroup);
 
 // get sniper rifle out of or into backpack when personal arsenal is opened
-TRACE_1("",_currPrimaryGroup);
+//TRACE_1("",_currPrimaryGroup);
 if (_arsenalOpened && {(-1 == (_currPrimaryGroup find "sniper")) ||
     {!_arsenalOpened && {-1 != (_currPrimaryGroup find "sniper")}}}) then {
     _unit removeWeapon _currPrimary;

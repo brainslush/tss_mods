@@ -52,8 +52,8 @@ private _getAttachment = {
         private _default =  _availableList select 0;
         private _item = if (_weaponGroup != "") then {
             private _savedGear = LOADGEARITEM(_combinedProperty,_weaponGroup,_type,_default);
-            //TRACE_5("",_combinedProperty,_weaponGroup,_type,_savedGear,_availableList);
             private _findId = _availableList find (tolower _savedGear);
+            //TRACE_6("",_combinedProperty,_weaponGroup,_type,_findId,tolower _savedGear,_availableList);
             if (_findId == -1) then {
                 _default;
             } else {

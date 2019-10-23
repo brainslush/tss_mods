@@ -137,6 +137,3 @@ switch (GVAR(ArsenalTypeOpen)) do {
         };
     };
 };
-if (GVAR(PersonalArsenalOpen)) then {
-    
-};

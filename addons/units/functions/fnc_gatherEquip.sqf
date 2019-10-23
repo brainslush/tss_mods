@@ -127,7 +127,6 @@ private _collectConfig = {
                                 } forEach _compatibleMagazines;
 
                                 _magazineList append _magazines;
-                                //TRACE_5("",_varNameWeapon,_x,_forEachIndex,_muzzleCfg,_magazines);
                                 profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
                             } forEach _muzzles;
                         };

@@ -19,7 +19,7 @@ PREP_RECOMPILE_END;
             private _display = findDisplay IDD_ace_arsenal;
             private _lctrl = _display displayCtrl IDC_buttonUniform;
             private _rctrl = _display displayCtrl IDC_buttonMag;
-            TRACE_4("",_display,_lctrl,_rctrl,IDD_ace_arsenal);
+            //TRACE_4("",_display,_lctrl,_rctrl,IDD_ace_arsenal);
             [_display, _lctrl] call ace_arsenal_fnc_fillLeftPanel;
             [_display, _rctrl] call ace_arsenal_fnc_fillRightPanel;
         };
