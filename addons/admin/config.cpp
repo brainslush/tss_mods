@@ -11,6 +11,7 @@ class CfgPatches {
     };
 };
 
+delete enableDebugConsole; 
 enableDebugConsole[] = {
     "76561197975429107", // brain
     "76561198082336346", // masterT00L
