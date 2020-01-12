@@ -116,7 +116,7 @@ force force ace_medical_ai_enabledFor = 2;
 force force ace_medical_AIDamageThreshold = 1;
 force force ace_medical_allowLitterCreation = true;
 force ace_medical_allowUnconsciousAnimationOnTreatment = true;
-force ace_medical_amountOfReviveLives = -1;
+ace_medical_amountOfReviveLives = -1;
 force force ace_medical_bleedingCoefficient = 3;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_consumeItem_PAK = 1;
@@ -126,7 +126,7 @@ force ace_medical_delayUnconCaptive = 3;
 force force ace_medical_enableAdvancedWounds = true;
 force force ace_medical_enableFor = 1;
 force force ace_medical_enableOverdosing = true;
-force force ace_medical_enableRevive = 0;
+ace_medical_enableRevive = 0;
 force force ace_medical_enableScreams = true;
 ace_medical_enableUnconsciousnessAI = 1;
 force force ace_medical_enableVehicleCrashes = true;
@@ -290,3 +290,28 @@ mts_markers_showPresetsUI = false;
 // Zeus Enhanced
 force zen_common_autoAddObjects = false;
 force zen_common_disableGearAnim = false;
+
+// KAT SETTINGS:
+// KAT - ACE Airway
+kat_aceAirway_checkbox_puking_sound = true
+kat_aceAirway_deathTimer = 600
+kat_aceAirway_enable = true
+kat_aceAirway_probability_obstruction = 19.9049
+kat_aceAirway_probability_occluded = 14.7059
+kat_aceAirway_string_exit = ""
+
+// KAT - ACE Breathing
+kat_aceBreathing_death_timer_enable = true
+kat_aceBreathing_enable = true
+kat_aceBreathing_pneumothorax = 10.2495
+kat_aceBreathing_spo2_big_value = 6.53596
+kat_aceBreathing_spo2_small_value = 5.05054
+
+// KAT - ACE Circulation
+kat_aceCirculation_bloodgroup = "B"
+kat_aceCirculation_enable = true
+
+// KAT - ACE Misc
+kat_aceMisc_enable = true
+kat_aceMisc_limitWounds_condition = 0
+kat_aceMisc_limitWounds_enable = true
