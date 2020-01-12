@@ -18,4 +18,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgEVenthandlers.hpp"
 //#include "CfgVehicles.hpp"

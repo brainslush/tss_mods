@@ -1,4 +1,4 @@
-#define COMPONENT acre  
+#define COMPONENT acre
 #define COMPONENT_BEAUTIFIED Acre
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
