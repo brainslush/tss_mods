@@ -41,13 +41,14 @@ class Cfg3DEN {
                             wikiType = "[[String]]";
                             class values {
                                 class DEFAULT {
-                                    name = "Mdt";
+                                    name = "mdt";
                                     value = "mdt";
                                     default = 1;
                                 };
                                 COMBOENTRY(des);
                                 COMBOENTRY(wdl);
                                 COMBOENTRY(snw);
+                                COMBOENTRY(jgl);
                             };
                         };
                         class LoadoutRange {
