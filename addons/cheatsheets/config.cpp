@@ -11,5 +11,6 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventhandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "gui\RscDisplays.hpp"

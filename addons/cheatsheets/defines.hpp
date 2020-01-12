@@ -1,6 +1,3 @@
-////////////////////////////////////////////////////////
-// GUI EDITOR OUTPUT START (by brainslush, v1.063, #Jihuho)
-////////////////////////////////////////////////////////
 
 #define TSS_DLG_SHEETS            162110
 
@@ -14,11 +11,6 @@
 #define GUI_GRID_H  (0.04)
 #define GUI_GRID_WAbs  (1)
 #define GUI_GRID_HAbs  (1)
-
-
-///////////////////////////////////////////////////////////////////////////
-/// Styles
-///////////////////////////////////////////////////////////////////////////
 
 // Control types
 #define CT_STATIC           0
@@ -135,6 +127,7 @@
         ["CAS_T2T.paa",1] \
     ], \
     [ \
+        ["LOG_mist.paa",1], \
         ["LOG_7MEC.paa",1], \
         ["LOG_9PU.paa",1], \
         ["LOG_5log.paa",2] \

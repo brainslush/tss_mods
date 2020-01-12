@@ -3,8 +3,8 @@ class CfgWeapons {
     class GVAR(item): ACE_ItemCore {
         TSSAUTHOR
         scope = 2;
-        displayName = "TSS Cheatbook";
-        descriptionShort = "TSS Cheatbook";
+        displayName = "TSS Cheatsheets";
+        descriptionShort = "TSS Cheatsheets";
         picture = QPATHTOF(data\ui\icon_sheets.paa);
         icon = "iconObject_circle";
     };

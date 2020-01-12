@@ -3,6 +3,7 @@
 disableSerialization;
 params["_ctrl"];
 
+TRACE_1("_ctrl",_ctrl);
 private _dir = 0;
 if (_ctrl isEqualType displayNull) then {
     GVAR(page) = 0;

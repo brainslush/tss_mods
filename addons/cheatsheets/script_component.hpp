@@ -1,6 +1,7 @@
-#define COMPONENT cheatbook
-#define COMPONENT_BEAUTIFIED Cheatbook
+#define COMPONENT cheatsheets
+#define COMPONENT_BEAUTIFIED Cheatsheets
 #include "\x\tss_mods\addons\main\script_mod.hpp"
+#include "defines.hpp"
 
 //#define DEBUG_MODE_FULL
 //#define DISABLE_COMPILE_CACHE
