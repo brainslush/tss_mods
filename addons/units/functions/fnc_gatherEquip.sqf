@@ -96,7 +96,7 @@ private _collectConfig = {
                         private _weaponMagazines = profileNamespace getVariable (_varNameWeapon + "_0");
                         private _weaponGrenades = profileNameSpace getVariable (_varNameWeapon + "_1");
 
-                        if (VERSIONCHECK || {isNil "_weaponMagazines" || {isNil "_weaponGrenades"}}) then {
+                        if (/*VERSIONCHECK ||*/ isNil "_weaponMagazines" || {isNil "_weaponGrenades"}) then {
                             private _muzzles = [_x] call CBA_fnc_getMuzzles;
 
                             {
@@ -174,7 +174,7 @@ private _collectConfig = {
 };
 
 // check if we got a new version
-private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") + MODSET;
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 private _ignoreVersionCheck = IGNOREVERSIONCHECK;
 //TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);

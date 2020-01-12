@@ -16,7 +16,7 @@
 */
 
 // check if we got a new version
-private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") + MODSET;
 private _savedVersion = GETPRVAR(GVAR(cachedClassesVersion),"");
 private _classes = GETPRVAR(GVAR(cachedClasses),[]);
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
@@ -47,6 +47,15 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
 
     // add init post eventhandlers
     [_x, "initPost", {
+        params ["_unit"];
+        // apply laodout
+        if (local _unit) then {
+            _this call FUNC(applyLoadout);
+        };
+    }] call CBA_fnc_addClassEventHandler;
+
+    // add respawn eventhandler
+    [_x, "respawn", {
         params ["_unit"];
         // apply laodout
         if (local _unit) then {
