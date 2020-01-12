@@ -1,43 +1,83 @@
 class CfgTSSLoadouts {
     class CfgPrimaries {
+        #define RifleB \
+            "hlc_rifle_RU556",\
+            "hlc_rifle_RU5562",\
+            "hlc_rifle_bcmjack",\
+            "hlc_rifle_bcmblackjack",\
+            "hlc_rifle_M4",\
+            "hlc_rifle_CQBR",\
+            "hlc_rifle_416D10",\
+            "hlc_rifle_416D10_st6",\
+            "hlc_rifle_416D10_ptato",\
+            "hlc_rifle_416D10_RAHG",\
+            "hlc_rifle_416D10_geissele",\
+            "hlc_rifle_416D10C",\
+            "hlc_rifle_416D145",\
+            "hlc_rifle_416D145_CAG",\
+            "hlc_rifle_416D145C",\
+            "hlc_rifle_416D165",\
+            "hlc_rifle_416C",\
+            "hlc_rifle_416N",\
+            "hlc_rifle_mk18mod0",\
+            "hlc_rifle_SAMR",\
+            "hlc_rifle_samr2",\
+            "hlc_rifleACR_SBR_cliffhanger",\
+            "hlc_rifle_ACR_carb_black",\
+            "hlc_rifle_ACR_carb_green",\
+            "hlc_rifle_ACR_carb_tan",\
+            "hlc_rifle_ACR_SBR_black",\
+            "hlc_rifle_ACR_SBR_green",\
+            "hlc_rifle_ACR_SBR_tan",\
+            "hlc_rifle_ACR_Full_black",\
+            "hlc_rifle_ACR_Full_green",\
+            "hlc_rifle_ACR_Full_tan",\
+            "hlc_rifle_ACR_MID_black",\
+            "hlc_rifle_ACR_MID_green",\
+            "hlc_rifle_ACR_MID_tan"
+        #define RifleBDes\
+            "hlc_rifle_416D10_tan",\
+            "hlc_rifle_416D145_tan",\
+            "hlc_rifle_416D165_tan",\
+            "hlc_rifle_ACR_GL_SBR_cliffhanger",\
+            "hlc_rifle_ACR_GL_Carb_black",\
+            "hlc_rifle_ACR_GL_Carb_green",\
+            "hlc_rifle_ACR_GL_Carb_tan",\
+            "hlc_rifle_ACR_GL_SBR_black",\
+            "hlc_rifle_ACR_GL_SBR_green",\
+            "hlc_rifle_ACR_GL_SBR_tan",\
+            "hlc_rifle_ACR_GL_mid_black",\
+            "hlc_rifle_ACR_GL_mid_green",\
+            "hlc_rifle_ACR_GL_mid_tan"
+        #define RifleBWdl\
+            "hlc_rifle_416D10_wdl",\
+            "hlc_rifle_416D145_wdl",\
+            "hlc_rifle_416D165_wdl"
+        #define RifleGlB\
+            "hlc_rifle_m4m203",\
+            "hlc_rifle_416D10_gl",\
+            "hlc_rifle_416D145_gl",\
+            "hlc_rifle_416D165_gl",\
+            "hlc_rifle_416N_gl"
+        #define LmgB\
+            "hlc_m249_SQuantoon",\
+            "hlc_m249_pip4",\
+            "hlc_lmg_mk46",\
+            "hlc_lmg_mk46mod1"
+        #define ArB\
+            "hlc_rifle_M27IAR"
+        #define MmgB\
+            "hlc_lmg_mk48mod1",\
+            "hlc_lmg_mk48"
+        #define DmrB\
+            "hlc_rifle_m14sopmod",\
+            "hlc_rifle_M14dmr_Rail"
+
         class rifle {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_RU556",
-                        "hlc_rifle_RU5562",
-                        "hlc_rifle_bcmjack",
-                        "hlc_rifle_bcmblackjack",
-                        "hlc_rifle_M4",
-                        "hlc_rifle_CQBR",
-                        "hlc_rifle_416D10",
-                        "hlc_rifle_416D10_st6",
-                        "hlc_rifle_416D10_ptato",
-                        "hlc_rifle_416D10_RAHG",
-                        "hlc_rifle_416D10_geissele",
-                        "hlc_rifle_416D10C",
-                        "hlc_rifle_416D145",
-                        "hlc_rifle_416D145_CAG",
-                        "hlc_rifle_416D145C",
-                        "hlc_rifle_416D165",
-                        "hlc_rifle_416C",
-                        "hlc_rifle_416N",
-                        "hlc_rifle_mk18mod0",
-                        "hlc_rifle_SAMR",
-                        "hlc_rifle_samr2",
-                        "hlc_rifleACR_SBR_cliffhanger",
-                        "hlc_rifle_ACR_carb_black",
-                        "hlc_rifle_ACR_carb_green",
-                        "hlc_rifle_ACR_carb_tan",
-                        "hlc_rifle_ACR_SBR_black",
-                        "hlc_rifle_ACR_SBR_green",
-                        "hlc_rifle_ACR_SBR_tan",
-                        "hlc_rifle_ACR_Full_black",
-                        "hlc_rifle_ACR_Full_green",
-                        "hlc_rifle_ACR_Full_tan",
-                        "hlc_rifle_ACR_MID_black",
-                        "hlc_rifle_ACR_MID_green",
-                        "hlc_rifle_ACR_MID_tan"
+                        RifleB
                     };
                     defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG"};
                     magazineRange[] = {{0,30},{0,0}};
@@ -47,33 +87,27 @@ class CfgTSSLoadouts {
             class des: all {
                 class COMPONENT: COMPONENT {
                     primaries[] += {
-                        "hlc_rifle_416D10_tan",
-                        "hlc_rifle_416D145_tan",
-                        "hlc_rifle_416D165_tan",
-                        "hlc_rifle_ACR_GL_SBR_cliffhanger",
-                        "hlc_rifle_ACR_GL_Carb_black",
-                        "hlc_rifle_ACR_GL_Carb_green",
-                        "hlc_rifle_ACR_GL_Carb_tan",
-                        "hlc_rifle_ACR_GL_SBR_black",
-                        "hlc_rifle_ACR_GL_SBR_green",
-                        "hlc_rifle_ACR_GL_SBR_tan",
-                        "hlc_rifle_ACR_GL_mid_black",
-                        "hlc_rifle_ACR_GL_mid_green",
-                        "hlc_rifle_ACR_GL_mid_tan"
+                        RifleBDes
                     };
                     defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG"};
                     allowedMagazineMods[] = {"hlc"};
                 };
             };
-            class jgl: all {};
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleBWdl
+                    };
+                    defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG"};
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
             class mdt: all {};
             class snw: all {};
             class wdl: all {
                 class COMPONENT: COMPONENT {
                     primaries[] += {
-                        "hlc_rifle_416D10_wdl",
-                        "hlc_rifle_416D145_wdl",
-                        "hlc_rifle_416D165_wdl"
+                        RifleBWdl
                     };
                     defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG"};
                     allowedMagazineMods[] = {"hlc"};
@@ -84,11 +118,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_m4m203",
-                        "hlc_rifle_416D10_gl",
-                        "hlc_rifle_416D145_gl",
-                        "hlc_rifle_416D165_gl",
-                        "hlc_rifle_416N_gl"
+                        RifleGlB
                     };
                     defaultMagazine[] = {"hlc_30rnd_556x45_SOST_EMAG", "1Rnd_HE_Grenade_shell"};
                     magazineRange[] = {{0,30},{0,1}};
@@ -105,10 +135,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_m249_SQuantoon",
-                        "hlc_m249_pip4",
-                        "hlc_lmg_mk46",
-                        "hlc_lmg_mk46mod1"
+                        LmgB
                     };
                     defaultMagazine[] = {"hlc_200rnd_556x45_M_SAW"};
                     magazineRange[] = {{200,200},{0,0}};
@@ -125,7 +152,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_M27IAR"
+                        ArB
                     };
                     defaultMagazine[] = {"hlc_50rnd_556x45_EPR"};
                     magazineRange[] = {{40,150},{0,0}};
@@ -142,8 +169,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_lmg_mk48mod1",
-                        "hlc_lmg_mk48"
+                        MmgB
                     };
                     defaultMagazine[] = {"hlc_200Rnd_762x51_Barrier_M60E4"};
                     magazineRange[] = {{100,200},{0,0}};
@@ -160,8 +186,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_m14sopmod",
-                        "hlc_rifle_M14dmr_Rail"
+                        DmrB
                     };
                     defaultMagazine[] = {"hlc_20Rnd_762x51_mk316_M14"};
                     magazineRange[] = {{0,20},{0,0}};
@@ -174,17 +199,24 @@ class CfgTSSLoadouts {
             class wdl: all {};
         };
 
+        #define RifleO\
+            "hlc_rifle_ak12",\
+            "hlc_rifle_aku12",\
+            "hlc_rifle_ak74_MTK",\
+            "hlc_rifle_aks74_MTK",\
+            "hlc_rifle_aks74u_MTK",\
+            "hlc_rifle_aek971_mtk"
+        #define RfileGlO\
+            "hlc_rifle_ak12GL"
+        #define ArO\
+            "hlc_rifle_RPK12"
+
         // redfor weapons
         class rifleOpfor {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_ak12",
-                        "hlc_rifle_aku12",
-                        "hlc_rifle_ak74_MTK",
-                        "hlc_rifle_aks74_MTK",
-                        "hlc_rifle_aks74u_MTK",
-                        "hlc_rifle_aek971_mtk"
+                        RifleO
                     };
                     allowedMagazineMods[] = {"hlc"};
                 };
@@ -199,7 +231,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_ak12GL"
+                        RfileGlO
                     };
                     allowedMagazineMods[] = {"hlc"};
                 };
@@ -214,9 +246,73 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "hlc_rifle_RPK12"
+                        ArO
                     };
                     allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class riflePMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleB,
+                        RifleO
+                    };
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class rifleGlPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlB,
+                        RfileGlO
+                    };
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class mgPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        LmgB,
+                        MmgB,
+                        ArB,
+                        ArO
+                    };
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class dmrPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        DmrB
+                    };
                 };
             };
             class des: all {};
@@ -256,43 +352,14 @@ class CfgTSSLoadouts {
         };
     };
     class CfgMuzzles {
-        class muzzle556 {
+        class muzzleRifle {
             class silent {
                 class COMPONENT {
                     muzzles[] = {
                         "hlc_muzzle_556nato_m42000",
                         "hlc_muzzle_556nato_rotexiiic_grey",
                         "hlc_muzzle_556nato_rotexiiic_tan",
-                        "hlc_muzzle_556nato_kac"
-                    };
-                };
-            };
-            class fire {
-                class COMPONENT {
-                    muzzles[] = {
-                        "hlc_muzzle_gunfighter_comp",
-                        "hlc_muzzle_kx3_comp",
-                        "hlc_muzzle_sf3p_556"
-                    };
-                };
-            };
-        };
-        class muzzle762 {
-            class fire {
-                class COMPONENT {
-                    muzzles[] = {
-                        "hlc_muzzle_mag58_brake",
-                        "hlc_muzzle_gunfighter_comp",
-                        "hlc_muzzle_kx3_comp",
-                        "hlc_muzzle_sf3p_762r"
-                    };
-                };
-            };
-        };
-        class muzzle762o {
-            class silent {
-                class COMPONENT {
-                    muzzles[] = {
+                        "hlc_muzzle_556nato_kac",
                         "hlc_muzzle_545sup_ak",
                         "hlc_muzzle_snds_arsenalcomp"
                     };
@@ -301,6 +368,10 @@ class CfgTSSLoadouts {
             class fire {
                 class COMPONENT {
                     muzzles[] = {
+                        "hlc_muzzle_mag58_brake",
+                        "hlc_muzzle_gunfighter_comp",
+                        "hlc_muzzle_kx3_comp",
+                        "hlc_muzzle_sf3p_556",
                         "hlc_muzzle_sf3p_762r"
                     };
                 };
