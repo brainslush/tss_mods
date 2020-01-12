@@ -155,7 +155,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -180,7 +180,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
         };
@@ -202,7 +202,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -230,7 +230,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsDmr";
             bipods = "bipod";
@@ -250,7 +250,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsSniper";
             bipods = "bipod";
@@ -274,7 +274,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzlePMC";
+            muzzles = "muzzleRifle";
         };
     };
     class CfgLaunchers {
@@ -293,56 +293,6 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-        };
-    };
-    class CfgMuzzles {
-        class muzzlePMC {
-            class silent {
-                class vanilla {
-                    muzzles[] = {
-                        "muzzle_snds_m",
-                        "muzzle_snds_m_khk_f",
-                        "muzzle_snds_m_snd_f",
-                        "muzzle_snds_b",
-                        "muzzle_snds_b_arid_f",
-                        "muzzle_snds_b_khk_f",
-                        "muzzle_snds_b_lush_f",
-                        "muzzle_snds_b_snd_f",
-                        "muzzle_snds_l",
-                        "muzzle_snds_93mmg",
-                        "muzzle_snds_93mmg_tan",
-                        "muzzle_snds_h_mg_blk_f",
-                        "muzzle_snds_h_mg",
-                        "muzzle_snds_h_mg_khk_f",
-                        "muzzle_snds_h_khk_f",
-                        "muzzle_snds_h_snd_f",
-                        "muzzle_snds_h",
-                        "muzzle_snds_338_black",
-                        "muzzle_snds_338_green",
-                        "muzzle_snds_338_sand",
-                        "muzzle_snds_65_ti_blk_f",
-                        "muzzle_snds_65_ti_ghex_f",
-                        "muzzle_snds_65_ti_hex_f",
-                        "muzzle_snds_570",
-                        "muzzle_snds_58_blk_f",
-                        "muzzle_snds_58_ghex_f",
-                        "muzzle_snds_58_hex_f",
-                        "muzzle_snds_acp"
-                    };
-                };
-            };
-            class fire {
-                class ace {
-                    muzzles[] = {
-                        "ace_muzzle_mzls_l",
-                        "ace_muzzle_mzls_b",
-                        "ace_muzzle_mzls_smg_02",
-                        "ace_muzzle_mzls_93mmg",
-                        "ace_muzzle_mzls_338",
-                        "ace_muzzle_mzls_smg_01"
-                    };
-                };
-            };
         };
     };
 };

@@ -128,7 +128,7 @@ class tss_infantry_2ic: B_soldier_TL_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"android"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -206,8 +206,8 @@ class tss_infantry_lmg: B_soldier_AR_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
-        {"primarymagazines",3}
+        {"markerevac",1},
+        {"primarymagazines",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -248,8 +248,8 @@ class tss_infantry_mmg: B_soldier_AR_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
-        {"primarymagazines",2}
+        {"markerevac",1},
+        {"primarymagazines",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -379,8 +379,8 @@ class tss_infantry_at: B_soldier_AT_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
-        {"launchermagazines",2}
+        {"markerevac",1},
+        {"launchermagazines",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -729,6 +729,7 @@ class tss_infantry_fac: B_recon_jtac_F {
     tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -856,7 +857,7 @@ class tss_infantry_dropn: B_soldier_UAV_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"small", "medium", "large"};
+    tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -867,11 +868,12 @@ class tss_infantry_dropn: B_soldier_UAV_F {
         {"secondarymagazines",1},
         {"primarymagazines",7},
         {"grenades",1},
-        {"markerred",1}
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2}
+        {"markerred",1},
+        {"markerevac",2},
+        {"tablet",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -889,6 +891,7 @@ class tss_infantry_drop: tss_infantry_dropn {
     tss_backpacksContent[] = {
         {"grenades",1},
         {"markerevac",2},
+        {"tablet",1},
         "darterBlufor"
     };
 };

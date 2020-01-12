@@ -101,6 +101,7 @@ class tss_recon_tl: B_recon_TL_F {
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -189,6 +190,7 @@ class tss_recon_com: B_recon_JTAC_F {
     tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -276,6 +278,7 @@ class tss_recon_drop: B_recon_F {
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {

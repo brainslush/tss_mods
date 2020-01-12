@@ -51,7 +51,7 @@ class CfgTSSLoadouts {
                     };
                 };
             };
-            muzzles = "muzzle762o";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -100,7 +100,7 @@ class CfgTSSLoadouts {
                     };
                 };
             };
-            muzzles = "muzzle762o";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
         };
@@ -148,7 +148,7 @@ class CfgTSSLoadouts {
                     };
                 };
             };
-            muzzles = "muzzle762o";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -168,21 +168,6 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-        };
-    };
-    class CfgMuzzles {
-        class muzzle762o {
-            class silent {
-                class vanilla {
-                    muzzles[] = {
-                        "muzzle_snds_b",
-                        "muzzle_snds_b_arid_f",
-                        "muzzle_snds_b_khk_f",
-                        "muzzle_snds_b_lush_f",
-                        "muzzle_snds_b_snd_f"
-                    };
-                };
-            };
         };
     };
 };

@@ -523,7 +523,7 @@ class CfgTSSLoadouts {
                     magazineRange[] = {{0,30},{0,0}};
                 };
             };
-            muzzles = "muzzle556";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -547,7 +547,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzle556";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
         };
@@ -564,7 +564,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzle556";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
         };
@@ -582,7 +582,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzle556";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsRifle";
             bipods = "bipod";
@@ -630,7 +630,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzle762";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsDmr";
             bipods = "bipod";
@@ -648,7 +648,7 @@ class CfgTSSLoadouts {
             class mdt: all {};
             class snw: all {};
             class wdl: all {};
-            muzzles = "muzzle338";
+            muzzles = "muzzleRifle";
             lasers = "laser";
             optics = "opticsSniper";
             bipods = "bipod";
@@ -735,44 +735,51 @@ class CfgTSSLoadouts {
         };
     };
     class CfgMuzzles {
-        class muzzle556 {
+        class muzzleRifle {
             class silent {
                 class vanilla {
                     muzzles[] = {
                         "muzzle_snds_m",
                         "muzzle_snds_m_khk_f",
-                        "muzzle_snds_m_snd_f"
-                    };
-                };
-            };
-            class fire {
-                class ace {
-                    muzzles[] = {"ace_muzzle_mzls_l"};
-                };
-            };
-        };
-        class muzzle762 {
-            class silent {
-                class vanilla {
-                    muzzles[] = {
+                        "muzzle_snds_m_snd_f",
                         "muzzle_snds_b",
                         "muzzle_snds_b_arid_f",
                         "muzzle_snds_b_khk_f",
                         "muzzle_snds_b_lush_f",
-                        "muzzle_snds_b_snd_f"
+                        "muzzle_snds_b_snd_f",
+                        "muzzle_snds_l",
+                        "muzzle_snds_93mmg",
+                        "muzzle_snds_93mmg_tan",
+                        "muzzle_snds_h_mg_blk_f",
+                        "muzzle_snds_h_mg",
+                        "muzzle_snds_h_mg_khk_f",
+                        "muzzle_snds_h_khk_f",
+                        "muzzle_snds_h_snd_f",
+                        "muzzle_snds_h",
+                        "muzzle_snds_338_black",
+                        "muzzle_snds_338_green",
+                        "muzzle_snds_338_sand",
+                        "muzzle_snds_65_ti_blk_f",
+                        "muzzle_snds_65_ti_ghex_f",
+                        "muzzle_snds_65_ti_hex_f",
+                        "muzzle_snds_570",
+                        "muzzle_snds_58_blk_f",
+                        "muzzle_snds_58_ghex_f",
+                        "muzzle_snds_58_hex_f",
+                        "muzzle_snds_acp"
                     };
                 };
             };
             class fire {
                 class ace {
-                    muzzles[] = {"ace_muzzle_mzls_b"};
-                };
-            };
-        };
-        class muzzle338 {
-            class silent {
-                class vanilla {
-                    muzzles[] = {"muzzle_snds_338_black"};
+                    muzzles[] = {
+                        "ace_muzzle_mzls_l",
+                        "ace_muzzle_mzls_b",
+                        "ace_muzzle_mzls_smg_02",
+                        "ace_muzzle_mzls_93mmg",
+                        "ace_muzzle_mzls_338",
+                        "ace_muzzle_mzls_smg_01"
+                    };
                 };
             };
         };
@@ -810,14 +817,16 @@ class CfgTSSLoadouts {
             class night {
                 class vanilla {
                     optics[] = {
-                        rifleoptics
+                        rifleoptics,
+                        "optic_nvs"
                     };
                 };
             };
             class both {
                 class vanilla {
                     optics[] = {
-                        rifleoptics
+                        rifleoptics,
+                        "optic_nvs"
                     };
                 };
             };
@@ -834,7 +843,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     optics[] = {
                         rifleoptics,
-                        "optic_nightstalker"
+                        "optic_nvs"
                     };
                 };
             };
@@ -842,7 +851,7 @@ class CfgTSSLoadouts {
                 class vanilla {
                     optics[] = {
                         rifleoptics,
-                        "optic_nightstalker"
+                        "optic_nvs"
                     };
                 };
             };
@@ -863,6 +872,12 @@ class CfgTSSLoadouts {
             class night {
                 class vanilla {
                     optics[] = {
+                        "optic_dms",
+                        "optic_dms_ghex_f",
+                        "optic_khs_blk",
+                        "optic_khs_hex",
+                        "optic_khs_tan",
+                        "ace_optic_sos_2d",
                         "optic_nightstalker"
                     };
                 };
@@ -893,6 +908,8 @@ class CfgTSSLoadouts {
             class night {
                 class vanilla {
                     optics[] = {
+                        "optic_lrps",
+                        "optic_lrps_tna_f",
                         "optic_nightstalker",
                         "optic_tws"
                     };
@@ -1172,6 +1189,16 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
+        class laserbatteries {
+            class all {
+                class vanilla {
+                    items[] = {{"Laserbatteries", 1}};
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
         class dagr {
             class all {
                 class ace {
@@ -1316,10 +1343,28 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class sheetbook {
+        class medkitsniperspotter {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_tourniquet", 2},
+                        {"ACE_packingBandage", 10},
+                        {"ACE_elasticBandage", 7},
+                        {"ACE_quikclot", 7},
+                        {"ACE_morphine", 2},
+                        {"ACE_epinephrine", 2},
+                        {"ACE_salineIV_500", 2}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class cheatsheets {
             class all {
                 class tss {
-                    items[] = {};
+                    items[] = {{QEGVAR(cheatsheets,item),1}};
                 };
             };
             class day : all {};
@@ -1533,9 +1578,19 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_SpottingScope",1},
-                        {"ACE_Tripod",1},
-                        {"",1}
+                        {"ACE_SpottingScope",1}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
+        class sniperkitbag {
+            class all {
+                class ace {
+                    items[] = {
+                        {"ACE_Tripod",1}
                     };
                 };
             };
