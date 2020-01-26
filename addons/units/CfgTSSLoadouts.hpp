@@ -1602,7 +1602,9 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_Kestrel4500",1}
+                        {"ACE_Kestrel4500",1},
+                        {"ACE_HuntIR_monitor", 1},
+                        {"ITC_ROVER_SIR", 1}
                     };
                 };
             };
@@ -1637,7 +1639,7 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class defkit {
+        class expkit {
             class all {
                 class ace {
                     items[] = {
@@ -1672,7 +1674,7 @@ class CfgTSSLoadouts {
                 class itc {
                     items[] = {
                         {"ITC_Land_B_AR2i_Packed",1},
-                        {"ACE_UAVBattery",2}
+                        {"ACE_UAVBattery",6}
                     };
                 };
             };
