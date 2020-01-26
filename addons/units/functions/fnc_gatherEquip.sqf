@@ -57,7 +57,7 @@ private _collectConfig = {
                         };
                     };
                 };
-                //TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
+                // TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
                 profileNamespace setVariable [_namespaceQ, _varContent];
                 _list append _varContent;
 
@@ -141,6 +141,7 @@ private _collectConfig = {
                                 } forEach _compatibleMagazines;
 
                                 _magazineList append _magazines;
+                                _magazineList append _defaultMagazines;
                                 profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
                             } forEach _muzzles;
                         };
@@ -206,12 +207,22 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     _itemList append (["Items"] call _collectConfig);
 
     SETPRVAR(GVAR(gearVersion),_modVersion);
+    _weaponList =_weaponList arrayIntersect _weaponList;
     SETPRVAR(GVAR(weaponList),_weaponList);
+    _gearList = _gearList arrayIntersect _gearList;
     SETPRVAR(GVAR(gearList),_gearList);
+    _itemList = _itemList apply {if (_x isEqualType []) then {_x select 0} else {_x}};
+    _itemList = _itemList arrayIntersect _itemList;
     SETPRVAR(GVAR(itemList),_itemList);
+    _attachmentList = _attachmentList arrayIntersect _attachmentList;
     SETPRVAR(GVAR(attachmentList),_attachmentList);
 
     _magazineList = _magazineList arrayIntersect _magazineList;
+    private _throwables = ['Throw', true] call CBA_fnc_compatibleMagazines;
+    private _putables = ['Put', true] call CBA_fnc_compatibleMagazines;
+    SETPRVAR(GVAR(explosiveList),_putables);
+    _magazineList append (_throwables arrayIntersect _itemList);
+    _magazineList append _putables;
     SETPRVAR(GVAR(magazineList),_magazineList);
 };
 
