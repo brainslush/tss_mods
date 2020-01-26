@@ -396,21 +396,25 @@ class CfgWeapons {
     class milgp_v_battle_belt_hgunner_mc : ItemCore {
         class ItemInfo : VestItem {
             mass = 15;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_battle_belt_hgunner_RGR : ItemCore {
         class ItemInfo : VestItem {
             mass = 15;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_battle_belt_hgunner_KHK : ItemCore {
         class ItemInfo : VestItem {
             mass = 15;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_battle_belt_hgunner_CB : ItemCore {
         class ItemInfo : VestItem {
             mass = 15;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_jpc_assaulter_rgr : ItemCore {
@@ -496,41 +500,49 @@ class CfgWeapons {
     class milgp_v_jpc_hgunner_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_jpc_hgunner_mc : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_jpc_hgunner_cb : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_jpc_hgunner_khk : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_jpc_hgunner_belt_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_jpc_hgunner_belt_mc : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_jpc_hgunner_belt_cb : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_jpc_hgunner_belt_khk : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_jpc_Medic_rgr : ItemCore {
@@ -721,11 +733,13 @@ class CfgWeapons {
     class milgp_v_mmac_hgunner_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_mmac_hgunner_belt_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_mmac_grenadier_rgr : ItemCore {
@@ -786,11 +800,13 @@ class CfgWeapons {
     class milgp_v_mmac_hgunner_KHK : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_mmac_hgunner_belt_KHK : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_mmac_grenadier_KHK : ItemCore {
@@ -851,11 +867,13 @@ class CfgWeapons {
     class milgp_v_mmac_hgunner_MC : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_mmac_hgunner_belt_MC : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_mmac_grenadier_MC : ItemCore {
@@ -921,11 +939,13 @@ class CfgWeapons {
     class milgp_v_mmac_hgunner_belt_CB : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_mmac_grenadier_CB : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_mmac_grenadier_belt_CB : ItemCore {
@@ -976,11 +996,13 @@ class CfgWeapons {
     class milgp_v_marciras_hgunner_mc : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_marciras_hgunner_belt_mc : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_marciras_medic_mc : ItemCore {
@@ -1041,11 +1063,13 @@ class CfgWeapons {
     class milgp_v_marciras_hgunner_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_marciras_hgunner_belt_rgr : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_marciras_medic_rgr : ItemCore {
@@ -1106,11 +1130,13 @@ class CfgWeapons {
     class milgp_v_marciras_hgunner_cb : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_marciras_hgunner_belt_cb : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_marciras_medic_cb : ItemCore {
@@ -1171,11 +1197,13 @@ class CfgWeapons {
     class milgp_v_marciras_hgunner_khk : ItemCore {
         class ItemInfo : VestItem {
             mass = 155;
+            containerClass = "Supply230";
         };
     };
     class milgp_v_marciras_hgunner_belt_khk : ItemCore {
         class ItemInfo : VestItem {
             mass = 170;
+            containerClass = "Supply250";
         };
     };
     class milgp_v_marciras_medic_khk : ItemCore {
