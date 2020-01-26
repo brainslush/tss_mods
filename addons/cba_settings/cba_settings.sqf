@@ -164,7 +164,7 @@ ace_mk6mortar_useAmmoHandling = true;
 
 // ACE Nightvision
 force force ace_nightvision_aimDownSightsBlur = 2;
-force force ace_nightvision_disableNVGsWithSights = true;
+force force ace_nightvision_disableNVGsWithSights = false;
 ace_nightvision_effectScaling = 0.1;
 ace_nightvision_fogScaling = 0;
 ace_nightvision_noiseScaling = 0.1;
