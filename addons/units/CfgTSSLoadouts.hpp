@@ -1238,7 +1238,9 @@ class CfgTSSLoadouts {
                         {"ACE_elasticBandage", 3},
                         {"ACE_quikclot", 3},
                         {"ACE_morphine", 1},
-                        {"ACE_epinephrine", 1}
+                        {"ACE_epinephrine", 1},
+                        {"ACE_adenosine", 1},
+                        {"ACE_splint", 1}
                     };
                 };
             };
@@ -1257,7 +1259,9 @@ class CfgTSSLoadouts {
                         {"ACE_morphine", 5},
                         {"ACE_epinephrine", 5},
                         {"ACE_salineIV_500", 6},
-                        {"ACE_bodyBag", 1}
+                        {"ACE_bodyBag", 1},
+                        {"ACE_adenosine", 5},
+                        {"ACE_splint", 5}
                     };
                 };
             };
@@ -1276,7 +1280,9 @@ class CfgTSSLoadouts {
                         {"ACE_morphine", 10},
                         {"ACE_epinephrine", 10},
                         {"ACE_salineIV", 7},
-                        {"ACE_bodyBag", 3}
+                        {"ACE_bodyBag", 1},
+                        {"ACE_adenosine", 10},
+                        {"ACE_splint", 10}
                     };
                 };
             };
@@ -1296,7 +1302,9 @@ class CfgTSSLoadouts {
                         {"ACE_epinephrine", 15},
                         {"ACE_salineIV_500", 10},
                         {"ACE_salineIV", 5},
-                        {"ACE_bodyBag", 3}
+                        {"ACE_bodyBag", 3},
+                        {"ACE_adenosine", 15},
+                        {"ACE_splint", 15}
                     };
                 };
             };
@@ -1314,10 +1322,12 @@ class CfgTSSLoadouts {
                         {"ACE_quikclot", 15},
                         {"ACE_morphine", 10},
                         {"ACE_epinephrine", 15},
-                        {"ACE_salineIV_500", 10},
+                        {"ACE_salineIV_500", 7},
                         {"ACE_salineIV", 5},
-                        {"ACE_surgicalKit",7},
-                        {"ACE_bodyBag", 3}
+                        {"ACE_surgicalKit",6},
+                        {"ACE_bodyBag", 3},
+                        {"ACE_adenosine", 10},
+                        {"ACE_splint", 10}
                     };
                 };
             };
