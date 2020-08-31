@@ -77,7 +77,9 @@ private _remainingContent = [];
 
         if (_overflow) then {
             private _containerStr = ["deine Uniform", "deine Veste", "deinen Rucksack"] select _containerId;
-            ["Es haben nicht alle Items in " + _containerStr + " gepasst!"] call CBA_fnc_notify;
+            if (!is3DEN) then {
+                ["Es haben nicht alle Items in " + _containerStr + " gepasst!"] call CBA_fnc_notify;
+            };
             _containerStr = ["uniform", "vest", "backpack"] select _containerId;
             ERROR(typeOf _unit +  " has an overflowing " + _containerStr + ".");
         };

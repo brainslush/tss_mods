@@ -9,23 +9,22 @@ class tss_recon_snp: B_sniper_F {
     tss_launchers[] = {};
 
     tss_uniforms[] = {"infantry"};
-    tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"gunbag"};
+    tss_vests[] = {"marksman"};
+    tss_backpacks[] = {"small", "medium"};
     tss_uniformsContent[] = {
-        "fak",
-        "markers",
-        "maptool",
-        {"secondarymagazines", 2}
+        UNIFORMCONTENT,
+        laserbatteries
     };
     tss_vestsContent[] = {
         "anprc148",
-        {"primaryaltmagazines",5},
-        {"secondarymagazines",1},
+        {"secondarymagazines",3},
         "sniperkit",
-        {"primarymagazines",2}
+        {"primarymagazines",5}
     };
     tss_backpacksContent[] = {
-        {"primarymagazines",4},
+        "sniperkitbag",
+        {"primarymagazines",2},
+        "medkitsniperspotter",
         {"markerevac",1}
     };
 
@@ -49,18 +48,16 @@ class tss_recon_spt: B_spotter_F {
         #include "attributes\ClassCls.hpp"
     };
 
-    tss_primaries[] = {"dmr"};
+    tss_primaries[] = {"rifle"};
     tss_secondaries[] = {"pistol"};
     tss_launchers[] = {};
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"medium", "large"};
+    tss_backpacks[] = {"small", "medium"};
     tss_uniformsContent[] = {
-        "fak",
-        "markers",
-        "maptool",
-        {"secondarymagazines", 2}
+        UNIFORMCONTENT,
+        laserbatteries
     };
     tss_vestsContent[] = {
         "anprc148",
@@ -70,8 +67,8 @@ class tss_recon_spt: B_spotter_F {
     };
     tss_backpacksContent[] = {
         "spotterkit",
-        {"markerevac",1},
-        {"dummymagazine",12}
+        "medkitsniperspotter",
+        {"markerevac",1}
     };
 
     tss_helmets[] = {"recon"};

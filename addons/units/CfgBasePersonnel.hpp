@@ -11,10 +11,7 @@ class tss_bp_atc: tss_infantry_ptl {
     tss_vests[] = {"belt"};
     tss_backpacks[] = {"large"};
     tss_uniformsContent[] = {
-        "sheetbook",
-        "fak",
-        "maptool",
-        "markers"
+        UNIFORMCONTENT
     };
     tss_vestsContent[] = {
         {"secondarymagazines",2}
@@ -53,10 +50,7 @@ class tss_bp_log: tss_infantry_engineer {
     tss_vests[] = {"belt"};
     tss_backpacks[] = {"large"};
     tss_uniformsContent[] = {
-        "sheetbook",
-        "fak",
-        "maptool",
-        "markers"
+        UNIFORMCONTENT
     };
     tss_vestsContent[] = {
         "anprc148",
@@ -86,10 +80,7 @@ class tss_bp_ptd: tss_infantry_ptd {
     tss_vests[] = {"belt"};
     tss_backpacks[] = {"small","medium"};
     tss_uniformsContent[] = {
-        "sheetbook",
-        "fak",
-        "maptool",
-        "markers"
+        UNIFORMCONTENT
     };
     tss_vestsContent[] = {
         "anprc148",

@@ -23,7 +23,7 @@ class tss_recon_operator: B_recon_F {
         {"secondarymagazines",1},
         {"primarymagazines",5},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
         {"grenades",1},
@@ -63,15 +63,16 @@ class tss_recon_gl: B_recon_F {
         "anprc148",
         {"secondarymagazines",1},
         {"primarymagazines",5},
-        {"primarygrenades",4},
+        {"primarygrenades",8},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
-        {"primarygrenades",4},
+        {"primarygrenades",8},
         {"markerevac",2},
         {"huntirmonitor",1},
-        {"huntirgrenade",3}
+        {"huntirgrenade",3},
+        {"grenades",2}
     };
 
     tss_helmets[] = {"recon"};
@@ -101,6 +102,7 @@ class tss_recon_tl: B_recon_TL_F {
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -108,16 +110,17 @@ class tss_recon_tl: B_recon_TL_F {
         "anprc152",
         {"secondarymagazines",1},
         {"primarymagazines",5},
-        {"primarygrenades",4},
+        {"primarygrenades",6},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"primarygrenades",2},
+        {"primarygrenades",6},
         {"markerevac",2},
         {"huntirmonitor",1},
-        {"huntirgrenade",3}
+        {"huntirgrenade",3},
+        "eplrs"
     };
 
     tss_helmets[] = {"recon"};
@@ -136,7 +139,7 @@ class tss_recon_ar: B_recon_F {
         #include "attributes\ClassBackpack.hpp"
         #include "attributes\ClassCls.hpp"
     };
-    displayName = "Recon Weapon Specialist (Silenced AR)";
+    displayName = "Recon Automatic Rifleman";
 
     tss_primaries[] = {"ar"};
     tss_secondaries[] = {"pistol"};
@@ -189,6 +192,7 @@ class tss_recon_com: B_recon_JTAC_F {
     tss_backpacks[] = {"medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -196,12 +200,12 @@ class tss_recon_com: B_recon_JTAC_F {
         "anprc152",
         {"secondarymagazines",1},
         {"primarymagazines",5},
-        {"primarygrenades",4},
+        {"primarygrenades",8},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
-        {"primarygrenades",2},
+        {"primarygrenades",6},
         "anprc117",
         {"markerevac",2},
         {"huntirmonitor",1},
@@ -242,10 +246,11 @@ class tss_recon_exp: B_recon_exp_F {
         {"secondarymagazines",1},
         {"primarymagazines",5},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
         "expkit",
+        {"grenades",2},
         {"markerevac",2}
     };
 
@@ -276,6 +281,7 @@ class tss_recon_drop: B_recon_F {
     tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
+        laserbatteries,
         {"cableties",2}
     };
     tss_vestsContent[] = {
@@ -289,7 +295,7 @@ class tss_recon_drop: B_recon_F {
     tss_backpacksContent[] = {
         {"grenades",1},
         "darterBlufor",
-        {"markerevac",2}
+        {"markerevac",3}
     };
 
     tss_helmets[] = {"recon"};
@@ -329,7 +335,7 @@ class tss_recon_cls: B_recon_medic_F {
     };
     tss_backpacksContent[] = {
         "medkitclsbravo",
-        {"smokewhite",3},
+        {"smokewhite",4},
         {"markerevac",2}
     };
 
@@ -368,7 +374,7 @@ class tss_recon_mm: B_Recon_Sharpshooter_F {
         {"secondarymagazines",1},
         {"primarymagazines",5},
         {"grenades",1},
-        {"markerred",2}
+        {"markerred",3}
     };
     tss_backpacksContent[] = {
         {"grenades",1},
