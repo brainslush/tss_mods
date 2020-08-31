@@ -214,7 +214,7 @@ class tss_infantry_lmg: B_soldier_AR_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"yardage"};
+    tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -256,7 +256,7 @@ class tss_infantry_mmg: B_soldier_AR_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"yardage"};
+    tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -387,7 +387,7 @@ class tss_infantry_at: B_soldier_AT_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"yardage"};
+    tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -430,7 +430,7 @@ class tss_infantry_lat: B_soldier_AT_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"yardage"};
+    tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -516,7 +516,7 @@ class tss_infantry_aar: B_soldier_AAR_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"binocs","yardage"};
+    tss_binoculars[] = {"binocs","rangefinder"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -561,7 +561,7 @@ class tss_infantry_dm: B_soldier_M_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"yardage"};
+    tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
@@ -705,7 +705,7 @@ class tss_infantry_alp: B_soldier_AAT_F {
 
     tss_helmets[] = {"infantry"};
     tss_glasses[] = {"glasses"};
-    tss_binoculars[] = {"binocs","yardage"};
+    tss_binoculars[] = {"binocs","rangefinder"};
     tss_maps[] = {"map"};
     tss_gps[] = {};
     tss_compass[] = {"compass"};
