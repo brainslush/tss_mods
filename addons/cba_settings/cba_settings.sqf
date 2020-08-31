@@ -40,7 +40,7 @@ force ace_captives_requireSurrenderAi = false;
 // ACE Common
 force ace_common_checkPBOsAction = 0;
 force ace_common_checkPBOsCheckAll = true;
-force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig""]";
+force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig"", ""Intercept_Core"", ""dedmen_sqf_assembly"", ""dedmen_arma_script_profiler""]";
 force ace_noradio_enabled = true;
 force force ace_parachute_hideAltimeter = true;
 
@@ -130,7 +130,7 @@ force force ace_map_gestures_maxRange = 8;
 // ACE Medical
 ace_medical_ai_enabledFor = 0;
 force force ace_medical_AIDamageThreshold = 1;
-force force ace_medical_bleedingCoefficient = 3;
+force force ace_medical_bleedingCoefficient = 0.5;
 force force ace_medical_blood_bloodLifetime = 900;
 force force ace_medical_blood_enabledFor = 2;
 force force ace_medical_blood_maxBloodObjects = 500;
@@ -140,9 +140,9 @@ force ace_medical_gui_maxDistance = 3;
 force force ace_medical_ivFlowRate = 1;
 ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 5;
-force force ace_medical_playerDamageThreshold = 10;
+force force ace_medical_playerDamageThreshold = 25;
 force force ace_medical_spontaneousWakeUpChance = 0.05;
-force force ace_medical_spontaneousWakeUpEpinephrineBoost = 1;
+force force ace_medical_spontaneousWakeUpEpinephrineBoost = 3;
 ace_medical_statemachine_AIUnconsciousness = true;
 ace_medical_statemachine_cardiacArrestTime = 360;
 force force ace_medical_statemachine_fatalInjuriesAI = 0;

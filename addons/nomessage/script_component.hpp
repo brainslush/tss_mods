@@ -1,5 +1,5 @@
-#define COMPONENT ace
-#define COMPONENT_BEAUTIFIED Ace
+#define COMPONENT nomessage
+#define COMPONENT_BEAUTIFIED NoMessage
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 //#define DEBUG_MODE_FULL

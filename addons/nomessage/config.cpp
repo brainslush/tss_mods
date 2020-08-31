@@ -7,12 +7,8 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
-        requiredAddons[] = {
-            "tss_mods_main",
-            "ace_medical"
-        };
+        requiredAddons[] = {"tss_mods_main"};
     };
 };
 
 #include "CfgEventhandlers.hpp"
-#include "ACE_Medical_Advanced2.hpp"
