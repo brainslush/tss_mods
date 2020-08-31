@@ -40,7 +40,7 @@ force ace_captives_requireSurrenderAi = false;
 // ACE Common
 force ace_common_checkPBOsAction = 0;
 force ace_common_checkPBOsCheckAll = true;
-force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig"", ""Intercept_Core"", ""dedmen_sqf_assembly"", ""dedmen_arma_script_profiler""]";
+force force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig"", ""Intercept_Core"", ""dedmen_sqf_assembly"", ""dedmen_arma_script_profiler""]";
 force ace_noradio_enabled = true;
 force force ace_parachute_hideAltimeter = true;
 
