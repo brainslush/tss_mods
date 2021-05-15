@@ -89,18 +89,16 @@ def check_privates(filepath):
                     private_output = private_output + '"' + bad_priv
                 else: 
                     private_output = private_output + '", "' + bad_priv
-                
+
             private_output = private_output + '"];';
             print (private_output)
-            
+
             for bad_priv in unused:
                 print ('\t' + bad_priv)
                 bad_count_file = bad_count_file + 1
-           
-           
-            
+
     return bad_count_file
-            
+
 def main():
 
     print("#########################")
@@ -113,15 +111,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
- 
+
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-        
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+
+    for root, dirnames, filenames in os.walk('../optionals' + '/' + args.module):
+        for filenames in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+
     for filename in sqf_list:
+        print ("Checking file " + filename)
+        print ("################")
         bad_count = bad_count + check_privates(filename)
-    
-    
+
     print ("Bad Count {0}".format(bad_count))
     
 if __name__ == "__main__":

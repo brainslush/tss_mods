@@ -51,7 +51,11 @@ def main():
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
         for filename in fnmatch.filter(filenames, '*.sqf'):
             sqf_list.append(os.path.join(root, filename))
-        
+
+    for root, dirnames, filenames in os.walk('../optionals' + '/' + args.module):
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+
     for filename in sqf_list:
         warnings, errors = analyze(filename)
         all_warnings += warnings

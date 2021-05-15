@@ -105,13 +105,14 @@ def main():
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
 
-    for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.cpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.hpp'):
-        sqf_list.append(os.path.join(root, filename))
+    for dirname in ['addons', 'optionals']:
+        for root, dirnames, filenames in os.walk('../' + dirname + '/' + args.module):
+            for filename in fnmatch.filter(filenames, '*.sqf'):
+                sqf_list.append(os.path.join(root, filename))
+            for filename in fnmatch.filter(filenames, '*.cpp'):
+                sqf_list.append(os.path.join(root, filename))
+            for filename in fnmatch.filter(filenames, '*.hpp'):
+                sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         allFunctions = allFunctions + getFunctions(filename)

@@ -120,15 +120,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
- 
-    for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-        
+
+    for dirname in ['addons', 'optionals']:
+        count = 0
+        print ('../' + dirname + '/' + args.module)
+        for root, dirnames, filenames in os.walk('../' + dirname + '/' + args.module):
+            for filename in fnmatch.filter(filenames, '*.sqf'):
+                count += 1
+                sqf_list.append(os.path.join(root, filename))
+            print ("Checking " + count + " sqf files")
+
     for filename in sqf_list:
         bad_count = bad_count + check_privates(filename)
-    
-    
+
     print ("Bad Count {0}".format(bad_count))
     
 if __name__ == "__main__":

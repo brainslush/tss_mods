@@ -1,16 +1,17 @@
-name = "TSS Units"
+name = "TSS Mods"
 prefix = "tss_mods"
-author = "TAC Units Team"
+author = "Tactical Stealth Squad"
 files = [
     "mod.cpp",
     "README.md",
     "LICENSE",
     "logo.paa"
 ]
-modname = "tss_mods"
 keyname = "{{prefix}}_{{version}}"
 signame = "{{prefix}}_{{version}}"
+folder_optionals = true
+sig_version = 3
 
 releasebuild = [
-    #"@zip tss_mods_{{semver.major}}.{{semver.minor}}.{{semver.patch}}"
+    #"@zip tss_mods_{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{git \'id 8\'}}"
 ]

@@ -13,13 +13,18 @@ VERSION_S = $(MAJOR).$(MINOR).$(PATCH)
 GIT_HASH = $(shell git log -1 --pretty=format:"%H" | head -c 8)
 
 ifeq ($(OS), Windows_NT)
-	ARMAKE = ./tools/armake.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
+	ARMAKE = ./tools/armake_w64.exe # Downloaded via make.ps (rename armake_wXY.exe otherwise)
 else
 	ARMAKE = armake
 endif
 
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
 	@mkdir -p $(BIN)/addons
+	@echo "  PBO  $@"
+	@${ARMAKE} build ${FLAGS} -f -e "version=$(GIT_HASH)" $< $@
+
+$(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
+	@mkdir -p $(BIN)/optionals
 	@echo "  PBO  $@"
 	@${ARMAKE} build ${FLAGS} -f -e "version=$(GIT_HASH)" $< $@
 
@@ -39,6 +44,10 @@ $(BIN)/keys/%.biprivatekey:
 	@${ARMAKE} keygen -f $(patsubst $(BIN)/keys/%.biprivatekey, $(BIN)/keys/%, $@)
 
 $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
+	@echo "  SIG  $@"
+	@${ARMAKE} sign -f -s $@ $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
+
+$(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION)-$(GIT_HASH).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey
 	@echo "  SIG  $@"
 	@${ARMAKE} sign -f -s $@ $(BIN)/keys/$(PREFIX)_$(VERSION).biprivatekey $<
 
@@ -63,7 +72,7 @@ push: commit
 release: clean version commit
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  $(ZIP)_$(VERSION_S).zip"
-	@cp *.dll mod.cpp README.md docs/README_DE.md docs/README_PL.md AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp $(BIN)
+	@cp mod.cpp README.md LICENSE logo.paa$(BIN)
 	@zip -qr $(ZIP)_$(VERSION_S).zip $(BIN)
 
 clean:

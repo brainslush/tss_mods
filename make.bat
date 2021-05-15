@@ -10,7 +10,7 @@ for /d %%f in (addons\*) do (
     set folder=%%f
     set name=!folder:addons\=!
     echo   PBO  @tss_mods\addons\tss_mods_!name!.pbo
-    !armake! build -i include -w redefinition-wo-undef -w unquoted-string -w excessive-concatenation -f !folder! @TSS_UNITS\addons\tss_units_!name!.pbo
+    !armake! build -i include -w redefinition-wo-undef -w unquoted-string -w excessive-concatenation -f !folder! @tss_mods\addons\tss_mods_!name!.pbo
 )
 
 pause
