@@ -28,7 +28,7 @@ class tss_recon_snp: B_sniper_F {
         {"markerevac",1}
     };
 
-    tss_helmets[] = {"recon"};
+    tss_helmets[] = {"recon", "infantry"};
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"laserdesignator"};
     tss_maps[] = {"map"};
@@ -67,11 +67,12 @@ class tss_recon_spt: B_spotter_F {
     };
     tss_backpacksContent[] = {
         "spotterkit",
+        {"dummymagazine", 5},
         "medkitsniperspotter",
         {"markerevac",1}
     };
 
-    tss_helmets[] = {"recon"};
+    tss_helmets[] = {"recon", "infantry"};
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"laserdesignator"};
     tss_maps[] = {"map"};

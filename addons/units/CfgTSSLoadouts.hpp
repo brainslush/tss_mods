@@ -1588,7 +1588,8 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_SpottingScope",1}
+                        {"ACE_SpottingScope",1},
+                        {"APERSTripMine_Wire_Mag",4}
                     };
                 };
             };
