@@ -40,7 +40,7 @@ force ace_captives_requireSurrenderAi = false;
 // ACE Common
 force ace_common_checkPBOsAction = 0;
 force ace_common_checkPBOsCheckAll = true;
-force force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig"", ""cba_cache_disable"", ""Intercept_Core"", ""dedmen_sqf_assembly"", ""dedmen_arma_script_profiler"", ""jsrs_soundmod_complete_edition_soundfiles"", ""Tracer_C_F"", ""jsrs_soundmod_complete_edition"", ""jsrs_soundmod_boats"", ""jsrs_soundmod_sonic_cracks"", ""jsrs_soundmod_weapons"", ""jsrs_soundmod_environment"", ""jsrs_soundmod_explosions"", ""jsrs_soundmod_framework"", ""jsrs_soundmod_landvehicles"", ""jsrs_soundmod_movement"", ""jsrs_soundmod_bullethits"", ""jsrs_soundmod_helicopters"", ""jsrs_soundmod_cup_weapons"", ""jsrs_soundmod_cfg_cup_weapons"", ""jsrs_soundmod_cup_vehicles""]";
+force force ace_common_checkPBOsWhitelist = "[""cba_settings_userconfig"", ""cba_cache_disable"", ""Intercept_Core"", ""dedmen_sqf_assembly"", ""dedmen_arma_script_profiler"", ""jsrs_soundmod_complete_edition_soundfiles"", ""Tracer_C_F"", ""jsrs_soundmod_complete_edition"", ""jsrs_soundmod_boats"", ""jsrs_soundmod_sonic_cracks"", ""jsrs_soundmod_weapons"", ""jsrs_soundmod_environment"", ""jsrs_soundmod_explosions"", ""jsrs_soundmod_framework"", ""jsrs_soundmod_landvehicles"", ""jsrs_soundmod_movement"", ""jsrs_soundmod_bullethits"", ""jsrs_soundmod_helicopters"", ""jsrs_soundmod_cup_weapons"", ""jsrs_soundmod_cfg_cup_weapons"", ""jsrs_soundmod_cup_vehicles"", ""jsrs_soundmod_ce_reloadingsounds"", ""jsrs_soundmod_reloadingsounds""]";
 force ace_noradio_enabled = true;
 force force ace_parachute_hideAltimeter = true;
 
@@ -316,6 +316,10 @@ acre_sys_zeus_zeusCanSpectate = true;
 acre_sys_zeus_zeusCommunicateViaCamera = false;
 acre_sys_zeus_zeusDefaultVoiceSource = true;
 
+// CF_Woodland
+force force cf_woodland_branches_prone_slow_chance = 0;
+force force cf_woodland_branches_walking_chance = 0;
+
 // Community Base Addons - Network
 force cba_network_loadoutValidation = 2;
 
@@ -323,11 +327,13 @@ force cba_network_loadoutValidation = 2;
 mts_markers_saveLastSelection = true;
 mts_markers_showPresetsUI = false;
 
-// Unit Ambient SFX Options
-force UAS_option_disableOnPlayers = true;
+// Unit Ambient SFX
+force force uvo_uas_enablePlayers = false;
+force force uvo_uas_enableRadioPlayers = false;
 
-// Unit Voice-Over Options
-force UVO_option_clientEnabled = false;
+// Unit Voice-overs
+force force uvo_main_enablePlayers = false;
+force force UVO_option_clientEnabled = false;
 
 // Zeus Enhanced
 zen_common_autoAddObjects = true;

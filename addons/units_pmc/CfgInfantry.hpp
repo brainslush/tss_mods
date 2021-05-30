@@ -157,3 +157,20 @@ class tss_pmc_aar: tss_infantry_aar {
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
 };
+class tss_infantry_drop;
+class tss_pmc_drop: tss_infantry_drop {
+    TSSAUTHOR
+    PMCSETBASE
+    side = 2;
+
+    tss_primaries[] = {"riflePMC"};
+    tss_secondaries[] = {"pistolPMC"};
+    tss_uniforms[] = {"pmc"};
+    tss_helmets[] = {"pmc"};
+    tss_gps[] = {"uavterminalI"};
+    tss_backpacksContent[] = {
+        {"grenades",1},
+        {"markerevac",2},
+        "darterGreenfor",
+    };
+};

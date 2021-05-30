@@ -1706,5 +1706,18 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
+        class darterGreenfor {
+            class all {
+                class itc {
+                    items[] = {
+                        {"ITC_Land_I_AR2i_Packed",1},
+                        {"ACE_UAVBattery",2}
+                    };
+                };
+            };
+            class day : all {};
+            class night : all {};
+            class both : all {};
+        };
     };
 };
