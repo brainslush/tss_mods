@@ -21,6 +21,11 @@ class tss_pmc_sc: tss_infantry_sc {
     tss_uniforms[] = {"pmc"};
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
+    tss_backpacksContent[] = {
+        {"grenades",1},
+        {"markerevac",2},
+        {"primarygrenades",4}
+    };
 };
 class tss_infantry_2ic;
 class tss_pmc_2ic: tss_infantry_2ic {
@@ -33,6 +38,11 @@ class tss_pmc_2ic: tss_infantry_2ic {
     tss_uniforms[] = {"pmc"};
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
+    tss_backpacksContent[] = {
+        {"grenades",1},
+        {"markerevac",2},
+        {"primarygrenades",4}
+    };
 };
 class tss_infantry_lmg;
 class tss_pmc_mg: tss_infantry_lmg {
@@ -40,7 +50,6 @@ class tss_pmc_mg: tss_infantry_lmg {
     PMCSETBASE
     side = 2;
     displayName = "Machinegunner";
-
 
     tss_primaries[] = {"mgPMC"};
     tss_secondaries[] = {"pistolPMC"};

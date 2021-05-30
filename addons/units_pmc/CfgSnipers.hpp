@@ -5,9 +5,7 @@ class tss_pmc_snp: tss_recon_snp {
 
     tss_primaries[] = {"sniperPMC"};
     tss_secondaries[] = {"pistolPMC"};
-
     tss_uniforms[] = {"pmc"};
-
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
 };
@@ -18,9 +16,7 @@ class tss_pmc_spt: tss_recon_spt {
 
     tss_primaries[] = {"dmrPMC"};
     tss_secondaries[] = {"pistolPMC"};
-
     tss_uniforms[] = {"pmc"};
-
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
 };

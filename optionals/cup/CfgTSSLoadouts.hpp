@@ -104,6 +104,51 @@
 "cup_optic_acog_reflex_wood_pip"
 
 class CfgTSSLoadouts {
+    class CfgUniforms {
+        class pmc {
+            class all {
+                class COMPONENT {
+                    uniforms[] = {
+                        "CUP_I_B_PMC_Unit_22",
+                        "CUP_I_B_PMC_Unit_19",
+                        "CUP_I_B_PMC_Unit_16",
+                        "CUP_I_B_PMC_Unit_7",
+                        "CUP_I_B_PMC_Unit_6",
+                        "CUP_I_B_PMC_Unit_5",
+                        "CUP_I_B_PMC_Unit_8",
+                        "CUP_I_B_PMC_Unit_11",
+                        "CUP_I_B_PMC_Unit_10",
+                        "CUP_I_B_PMC_Unit_9",
+                        "CUP_I_B_PMC_Unit_12",
+                        "CUP_I_B_PMC_Unit_42",
+                        "CUP_I_B_PMC_Unit_41",
+                        "CUP_I_B_PMC_Unit_43",
+                        "CUP_I_B_PMC_Unit_40",
+                        "CUP_I_B_PMC_Unit_39",
+                        "CUP_I_B_PMC_Unit_36",
+                        "CUP_I_B_PMC_Unit_38",
+                        "CUP_I_B_PMC_Unit_37",
+                        "CUP_I_B_PMC_Unit_35"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class wdl: all {};
+            class snw {
+                class COMPONENT {
+                    uniforms[] = {
+                        "CUP_I_B_PMC_Unit_28",
+                        "CUP_I_B_PMC_Unit_29",
+                        "CUP_I_B_PMC_Unit_30",
+                        "CUP_I_B_PMC_Unit_34",
+                        "CUP_I_B_PMC_Unit_33"
+                    };
+                };
+            };
+        };
+    };
     class CfgOptics {
         class opticsRifle {
             class day {
