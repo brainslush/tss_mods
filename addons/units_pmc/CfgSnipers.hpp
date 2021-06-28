@@ -3,9 +3,9 @@ class tss_pmc_snp: tss_recon_snp {
     PMCSETBASE
     side = 2;
 
-    tss_primaries[] = {"sniperPMC"};
+    tss_primaries[] = {"sniper", "sniperPMC"};
     tss_secondaries[] = {"pistolPMC"};
-    tss_uniforms[] = {"pmc"};
+    tss_uniforms[] = {"pmc", "infantry"};
     tss_helmets[] = {"pmc"};
     tss_gps[] = {};
 };
@@ -17,6 +17,6 @@ class tss_pmc_spt: tss_recon_spt {
     tss_primaries[] = {"dmrPMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };

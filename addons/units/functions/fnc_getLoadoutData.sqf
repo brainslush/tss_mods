@@ -20,40 +20,37 @@
 */
 
 params ["_unit", "_configPath", "_property", "_type", ["_saveVar", "", [""]], ["_arsenalList", "", [""]]];
-
+TRACE_1("1",_type);
 ([_configPath, _property, _type] call FUNC(getConfigData)) params [["_availableList", [], [[]]],["_groupList", [], [[]]]];
 
 // append arsenal whitelist
 if (_arsenalList != "") then {
     private _varName = ["tss_arsenalList", _arsenalList] joinString "_";
-    private _whitelist = _unit getVariable [_varName,[]];
+    private _whitelist = _unit getVariable [_varName, []];
     _whitelist append _availableList;
-    _unit setVariable [_varName,_whiteList];
+    _unit setVariable [_varName, _whiteList];
 };
-//_availableList = _availableList apply {toLower _x};
-
+TRACE_1("2",_type);
 // check if item is in list, if not revert to default
 if (_availableList isEqualTo []) then {
     ["", ""];
 } else {
+    TRACE_1("3",_type);
     private _default = selectRandom _availableList;
     private _item = if (_saveVar != "") then {
         private _savedGear = if (tolower _saveVar == "itemgroup") then {
-            private _groupTest = _groupList arrayIntersect _groupList;
-            private _return = if (count _groupTest == 1) then {
-                private _return = LOADGEARITEM(_property,_groupList select 0,_type,_default);
-                _return;
-            } else {
-                _default;
-                ERROR_WITH_TITLE("Loadoutkonfiguration","Itemgroup kann nicht mit mehreren Gruppen verwendet werden");
-            };
+            // TRACE_1("",_groupList);
+            private _groupString = [_unit, _property] call FUNC(getPropertyGroupString);
+            TRACE_3("",_property,_groupString,_type);
+            private _return = LOADGEARITEM(_property,_groupString,_type,_default);
             _return;
         } else {
+            TRACE_1("",_saveVar);
             private _return = LOADGEARITEM(_property,_saveVar,_type,_default);
             _return;
         };
         private _findId = _availableList find _savedGear;
-        //TRACE_4("",_findId,_savedGear,_availableList,_groupList);
+        TRACE_4("",_findId,_savedGear,_availableList,_default);
         if (_findId != -1) then {
             [_savedGear, _groupList select _findId];
         } else {

@@ -11,6 +11,7 @@ PREP(determineWeapon);
 PREP(gatherEquip);
 PREP(getConfigData);
 PREP(getLoadoutData);
+PREP(getPropertyGroupString);
 PREP(getUnitParameters);
 PREP(getWeaponGroup);
 PREP(handleDiverGear);

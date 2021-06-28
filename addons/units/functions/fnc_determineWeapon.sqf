@@ -42,9 +42,9 @@ private _getAttachment = {
     private _availableList = profileNamespace getVariable [_varName, []];
     // save for arsenal
     if (_addToArsenal) then {
-        private _whitelist = _unit getVariable ["tss_arsenalList_unit",[]];
+        private _whitelist = _unit getVariable ["tss_arsenalList_unit", []];
         _whitelist append _availableList;
-        _unit setVariable ["tss_arsenalList_unit",_whiteList];
+        _unit setVariable ["tss_arsenalList_unit", _whiteList];
     };
     private _return = if (_availableList isEqualTo []) then {
         "";
@@ -69,10 +69,16 @@ private _getAttachment = {
 };
 
 params ["_unit", "_configPath", "_property", "_camo", "_daynight", "_muzzle", "_bipod", "_unitc", ["_addToArsenal", true]];
-//TRACE_6("getWeapon",_configPath,_property,_camo,_daynight,_muzzle,_unitc);
+TRACE_6("getWeapon",_configPath,_property,_camo,_daynight,_muzzle,_unitc);
+
+private _typeOfUnit = _unit getVariable [QGVAR(typeOf), typeOf _unit];
+private _weaponGroupsOfUnit = getArray(_configPath >>  "tss_" + _property);
+// TRACE_2("",_typeOfUnit,_weaponGroupsOfUnit);
 
 private _arsenalvar = if(_addToArsenal) then {"unit"} else {""};
-([_unit, _configPath, _property, _camo, "itemgroup", _arsenalvar] call FUNC(getLoadoutData)) params [["_weapon","",[""]], ["_weaponGroup","",[""]]];
+(
+    [_unit, _configPath, _property, _camo, "itemgroup", _arsenalvar] call FUNC(getLoadoutData)
+) params [["_weapon", "", [""]], ["_weaponGroup", "", [""]]];
 //private _savedWeapon = LOADGEARITEM(_property,_weaponGroup,_camo,_weapon);
 private _weaponArray = [_weapon];
 // get muzzles, optics, lasers modules
@@ -82,20 +88,13 @@ _weaponArray pushBack ([_unit, _property, "Optics", _daynight, _weaponGroup] cal
 // get magazines
 
 {
-    private _varName = ["TSS_Magazines", MODSET, _weaponGroup, _weapon, _forEachIndex] joinString "_";
+    private _varName = ["TSS_Magazines", MODSET, _property, _weaponGroup, _weapon, _forEachIndex] joinString "_";
     private _array = profileNamespace getVariable [_varName, []];
-    //TRACE_4("",_x,_varName,_addToArsenal,_array);
+    private _loadType = _x;
+    TRACE_4("",_x,_varName,_addToArsenal,_array);
     if (_array isEqualTo []) then {
         _weaponArray pushBack [];
     } else {
-        // add magazines to arsenal list
-
-        //TRACE_3("",_x,_addToArsenal,_x == "Magazines" && {_addToArsenal});
-        if (_x == "Magazines" && {_addToArsenal}) then {
-            private _whitelist = _unit getVariable ["tss_arsenalList_unit",[]];
-            _whitelist append _array;
-            _unit setVariable ["tss_arsenalList_unit",_whiteList];
-        };
         // determine magazine
         private _default = _array select 0;
         //TRACE_3("",_property,_x,_weapon);
@@ -105,11 +104,20 @@ _weaponArray pushBack ([_unit, _property, "Optics", _daynight, _weaponGroup] cal
         private _count = getNumber(configFile >> "CfgMagazines" >> _magazine >> "count");
         _weaponArray pushBack [_magazine, _count];
         private _varName = [QUOTE(ADDON), _property, _x] joinString "_";
-        //TRACE_2("",_varName,_magazine);
-        missionNamespace setVariable [
-            _varName, _magazine
-        ];
+        TRACE_2("",_varName,_magazine);
+        missionNamespace setVariable [_varName, _magazine];
     };
-} forEach ["Magazines","Grenades"];
+    {
+        private _weaponGroupMagazinesVarName = ["TSS_Magazines", MODSET, _property, _x] joinString "_";
+        private _array = profileNamespace getVariable [_weaponGroupMagazinesVarName, []];
+        TRACE_2("",_weaponGroupMagazinesVarName,_array);
+        // add magazines to arsenal list
+        if (_loadType == "Magazines" && {_addToArsenal}) then {
+            private _whitelist = _unit getVariable ["tss_arsenalList_unit", []];
+            _whitelist append _array;
+            _unit setVariable ["tss_arsenalList_unit", _whiteList];
+        };
+    } forEach _weaponGroupsOfUnit;
+} forEach ["Magazines", "Grenades"];
 _weaponArray pushBack ([_unit, _property, "Bipods", _bipod, _weaponGroup] call _getAttachment);
 _weaponArray;

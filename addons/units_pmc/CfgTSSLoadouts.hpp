@@ -25,6 +25,7 @@ class CfgTSSLoadouts {
                         "U_C_IDAP_Man_Tee_F",
                         "U_C_IDAP_Man_cargo_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -48,8 +49,6 @@ class CfgTSSLoadouts {
                         "H_Bandanna_sgg",
                         "H_Bandanna_sand",
                         "H_Bandanna_camo",
-                        "H_PASGT_basic_black_F",
-                        "H_PASGT_basic_olive_F",
                         "H_Watchcap_blk",
                         "H_Watchcap_cbr",
                         "H_Watchcap_camo",
@@ -70,30 +69,6 @@ class CfgTSSLoadouts {
                         "H_Cap_red",
                         "H_Cap_tan",
                         "H_HelmetB",
-                        "H_HelmetB_black",
-                        "H_HelmetB_desert",
-                        "H_HelmetB_grass",
-                        "H_HelmetB_sand",
-                        "H_HelmetB_snakeskin",
-                        "H_HelmetB_tna_F",
-                        "H_HelmetB_plain_wdl",
-                        "H_HelmetSpecB",
-                        "H_HelmetSpecB_blk",
-                        "H_HelmetSpecB_paint2",
-                        "H_HelmetSpecB_paint1",
-                        "H_HelmetSpecB_sand",
-                        "H_HelmetSpecB_snakeskin",
-                        "H_HelmetB_Enh_tna_F",
-                        "H_HelmetSpecB_wdl",
-                        "H_HeadSet_black_F",
-                        "H_HelmetB_light",
-                        "H_HelmetB_light_black",
-                        "H_HelmetB_light_desert",
-                        "H_HelmetB_light_grass",
-                        "H_HelmetB_light_sand",
-                        "H_HelmetB_light_snakeskin",
-                        "H_HelmetB_Light_tna_F",
-                        "H_HelmetB_light_wdl",
                         "H_MilCap_blue",
                         "H_MilCap_grn",
                         "H_MilCap_gry",
@@ -148,6 +123,7 @@ class CfgTSSLoadouts {
                         "arifle_TRG21_F",
                         "SMG_01_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -173,6 +149,7 @@ class CfgTSSLoadouts {
                         "arifle_MSBS65_GL_black_F",
                         "arifle_CTAR_GL_blk_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -184,17 +161,54 @@ class CfgTSSLoadouts {
             lasers = "laser";
             optics = "opticsRifle";
         };
-        class mgPMC {
+        class arPMC {
+            class all {
+                class vanilla {
+                    primaries[] = {
+                        "arifle_MX_SW_Black_F",
+                        "arifle_CTARS_blk_F",
+                        "arifle_RPK12_F"
+                    };
+                    excludeOnAlternative = 1;
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+            muzzles = "muzzleRifle";
+            lasers = "laser";
+            optics = "opticsRifle";
+            bipods = "bipod";
+        };
+        class lmgPMC {
             class all {
                 class vanilla {
                     primaries[] = {
                         "LMG_03_F",
-                        "LMG_Mk200_black_F",
-                        "arifle_MX_SW_Black_F",
-                        "LMG_Zafir_F",
-                        "arifle_CTARS_blk_F",
-                        "arifle_RPK12_F"
+                        "LMG_Mk200_black_F"
                     };
+                    excludeOnAlternative = 1;
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+            muzzles = "muzzleRifle";
+            lasers = "laser";
+            optics = "opticsRifle";
+            bipods = "bipod";
+        };
+        class mmgPMC {
+            class all {
+                class vanilla {
+                    primaries[] = {
+                        "LMG_Zafir_F"
+                    };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -223,6 +237,7 @@ class CfgTSSLoadouts {
                         "srifle_DMR_03_F",
                         "srifle_DMR_01_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -243,6 +258,7 @@ class CfgTSSLoadouts {
                         "srifle_GM6_F",
                         "srifle_LRR_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -267,6 +283,7 @@ class CfgTSSLoadouts {
                         "hgun_Pistol_heavy_01_F",
                         "hgun_Pistol_01_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};
@@ -286,6 +303,7 @@ class CfgTSSLoadouts {
                         "launch_RPG32_green_F",
                         "launch_RPG7_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {};

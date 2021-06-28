@@ -8,11 +8,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredAddons[] = {
+            "hlcweapons_core",
             QGVARMAIN(main),
             QGVARMAIN(units)
         };
     };
 };
 
+#include "CfgMagazines.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"

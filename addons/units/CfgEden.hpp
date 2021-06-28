@@ -178,4 +178,10 @@ class Cfg3DEN {
             };
         };
     };
+    class EventHandlers {
+        class ADDON {
+            onMissionLoad = call FUNC(reequip3Den);
+            onMissionPreviewEnd = call FUNC(reequip3Den);
+        };
+    };
 };

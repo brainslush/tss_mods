@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: brainslush
- * restore virtual items for the  on the object
+ * restore virtual items for the ace arsenal on the object
  *
  * Arguments:
  * None

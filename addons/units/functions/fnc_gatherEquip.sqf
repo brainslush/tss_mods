@@ -27,21 +27,20 @@ private _collectConfig = {
     //TRACE_3("",_class,_property,_hasExcludent);
     // run through config and save into profilespace variables
     {
-        private _collectionName = configName _x;
+        private _collectionName = configName _x; // e.g. rifle, at, riflePMC
         private _configPathA = _x;
+        private _weaponGroupMagazineVarName = ["TSS_Magazines", MODSET, _property, _collectionName] joinString "_";
+        private _weaponGroupMagazines = createHashMapFromArray([["excludable", []], ["fixed", []]]);
         {
-            private _type = configName _x;
+            private _type = configName _x; // e.g. all, jgl, mdt, snw
             private _namespaceQ = ["TSS", MODSET ,_property, _collectionName, _type] joinString "_";
             profileNamespace setVariable [_namespaceQ,[]];
-            private _test = configProperties [_x, "true", true];
             {
-                private _configPath = _x;
+                private _configPath = _x; // e.g. vanilla, cup
                 private _exclude = isNumber(_x >> "excludeOnAlternative") && {getNumber(_x >> "excludeOnAlternative") == 1};
                 private _varContent = profileNamespace getVariable [_namespaceQ,[]];
                 if (_varContent isEqualTo []) then {
-                    if (_exclude) then {
-                        _hasExcludent = true;
-                    };
+                    if (_exclude) then {_hasExcludent = true;};
                     _varContent = getArray(_x >> _property);
                 } else {
                     if (_hasExcludent) then {
@@ -52,9 +51,7 @@ private _collectConfig = {
                             _varContent append getArray(_x >> _property);
                         };
                     } else {
-                        if (!_exclude) then {
-                            _varContent append getArray(_x >> _property);
-                        };
+                        if (!_exclude) then {_varContent append getArray(_x >> _property);};
                     };
                 };
                 // TRACE_4("",_namespaceQ,_exclude,_configPath,_varContent);
@@ -81,7 +78,7 @@ private _collectConfig = {
                         getArray(_configPath >> "allowedMagazineMods");
                     } else {[]};
 
-                    // get allowed greandeMods
+                    // get allowed grenadeMods
                     private _allowedGrenades = if (isArray(_configPath >> "allowedGrenadeMods")) then {
                         getArray(_configPath >> "allowedGrenadeMods");
                     } else {[]};
@@ -92,59 +89,68 @@ private _collectConfig = {
                     {
                         // create magazine list per weapon
                         private _weapon = _x;
-                        private _varNameWeapon = ["TSS_Magazines", MODSET, _collectionName, _x] joinString "_";
-                        private _weaponMagazines = profileNamespace getVariable (_varNameWeapon + "_0");
-                        private _weaponGrenades = profileNameSpace getVariable (_varNameWeapon + "_1");
+                        private _varNameWeapon = ["TSS_Magazines", MODSET, _property, _collectionName, _x] joinString "_";
 
-                        if (/*VERSIONCHECK ||*/ isNil "_weaponMagazines" || {isNil "_weaponGrenades"}) then {
-                            private _muzzles = [_x] call CBA_fnc_getMuzzles;
+                        private _muzzles = [_x] call CBA_fnc_getMuzzles;
+                        // TRACE_1("",_x);
+
+                        {
+                            private _muzzleIndex = _forEachIndex;
+
+                            private _muzzleCfg = configFile >> "CfgWeapons" >> _weapon >> _x;
+                            if (isClass (configFile >> "CfgWeapons" >> _x)) then {
+                                _muzzleCfg = configFile >> "CfgWeapons" >> _x;
+                            };
+
+                            private _weaponMagazines = if (!(_defaultMagazines isEqualTo [])) then {
+                                [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
+                            } else {[]};
+                            private _compatibleMagazines = [_muzzleCfg] call CBA_fnc_compatibleMagazines;
+                            // TRACE_1("",_compatibleMagazines);
+
+                            private _minRange = if (_forEachIndex < _magazineRangesCount)
+                                                then {(_magazineRanges select _forEachIndex) select 0} else {0};
+                            private _maxRange = if (_forEachIndex < _magazineRangesCount)
+                                                then {(_magazineRanges select _forEachIndex) select 1} else {9999};
+                            private _index = _forEachIndex;
+                            // TRACE_2("",_minRange,_maxRange);
 
                             {
-                                private _muzzleIndex = _forEachIndex;
-
-                                private _muzzleCfg = configFile >> "CfgWeapons" >> _weapon >> _x;
-                                if (isClass (configFile >> "CfgWeapons" >> _x)) then {
-                                    _muzzleCfg = configFile >> "CfgWeapons" >> _x;
-                                };
-
-                                private _magazines = if (!(_defaultMagazines isEqualTo [])) then {
-                                    [_defaultMagazines select (_forEachIndex max 0 min _defaultMagazinesCount)];
-                                } else {[]};
-                                private _compatibleMagazines = [_muzzleCfg] call CBA_fnc_compatibleMagazines;
-                                //TRACE_1("",_compatibleMagazines);
-
-                                private _minRange = if (_forEachIndex < _magazineRangesCount) then {(_magazineRanges select _forEachIndex) select 0} else {0};
-                                private _maxRange = if (_forEachIndex < _magazineRangesCount) then {(_magazineRanges select _forEachIndex) select 1} else {9999};
-                                private _index = _forEachIndex;
-                                //TRACE_2("",_minRange,_maxRange);
-
-                                {
-                                    private _dlc = if (isText(configFile >> "CfgMagazines" >> _x >> "dlc")) then {
-                                        getText(configFile >> "CfgMagazines" >> _x >> "dlc");
+                                private _dlc = if (isText(configFile >> "CfgMagazines" >> _x >> "dlc")) then {
+                                    getText(configFile >> "CfgMagazines" >> _x >> "dlc");
+                                } else {
+                                    if (isText(configFile >> "CfgMagazines" >> _x >> "author")) then {
+                                        getText(configFile >> "CfgMagazines" >> _x >> "author");
                                     } else {
-                                        if (isText(configFile >> "CfgMagazines" >> _x >> "author")) then {
-                                            getText(configFile >> "CfgMagazines" >> _x >> "author");
-                                        } else {
-                                            "";
-                                        };
+                                        "";
                                     };
-                                    if (
-                                        (_allowedArray select _muzzleIndex) isEqualTo [] || 
-                                        {_dlc in (_allowedArray select _muzzleIndex) || 
-                                        {toLower (([_x, "_"] call CBA_fnc_split) select 0) in (_allowedArray select _muzzleIndex)}}
-                                    ) then {
-                                        private _ammoCount = getNumber(configFile >> "CfgMagazines" >> _x >> "count");
-                                        if (_minRange <= _ammoCount && {_ammoCount <= _maxRange}) then {
-                                            _magazines pushBackUnique _x;
-                                        };
+                                };
+                                if (
+                                    (_allowedArray select _muzzleIndex) isEqualTo [] || 
+                                    {_dlc in (_allowedArray select _muzzleIndex) || 
+                                    {toLower (([_x, "_"] call CBA_fnc_split) select 0) in (_allowedArray select _muzzleIndex)}}
+                                ) then {
+                                    private _ammoCount = getNumber(configFile >> "CfgMagazines" >> _x >> "count");
+                                    if (_minRange <= _ammoCount && {_ammoCount <= _maxRange}) then {
+                                        _weaponMagazines pushBackUnique _x;
                                     };
-                                } forEach _compatibleMagazines;
+                                };
+                            } forEach _compatibleMagazines;
 
-                                _magazineList append _magazines;
-                                _magazineList append _defaultMagazines;
-                                profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _magazines];
-                            } forEach _muzzles;
-                        };
+                            if (_exclude) then {
+                                private _magazines = _weaponGroupMagazines get "excludable";
+                                _magazines append _weaponMagazines;
+                                _magazines append _defaultMagazines;
+                                _weaponGroupMagazines set ["excludable", _magazines];
+                            } else {
+                                private _magazines = _weaponGroupMagazines get "fixed";
+                                _magazines append _weaponMagazines;
+                                _magazines append _defaultMagazines;
+                                _weaponGroupMagazines set ["fixed", _magazines];
+                            };
+
+                            profileNamespace setVariable [[_varNameWeapon, _forEachIndex] joinString "_", _weaponMagazines];
+                        } forEach _muzzles;
                     } forEach _varContent;
                 };
                 // save item group
@@ -157,6 +163,17 @@ private _collectConfig = {
                 } forEach _varContent;
             } forEach configProperties [_x, "isClass(_x)", true];
         } forEach configProperties [_x, "isClass(_x)", true];
+
+        if (count (_weaponGroupMagazines get "fixed") == 0) then {
+            private _magazines = _weaponGroupMagazines get "excludable";
+            _magazineList append _magazines;
+            profileNamespace setVariable [_weaponGroupMagazineVarName, _magazines];
+        } else {
+            private _magazines = _weaponGroupMagazines get "fixed";
+            _magazineList append _magazines;
+            profileNamespace setVariable [_weaponGroupMagazineVarName, _magazines];
+        };
+
         // handle allowed subproperties
         if (_property in ["primaries", "secondaries", "launchers"]) then {
             {
@@ -175,12 +192,11 @@ private _collectConfig = {
 };
 
 // check if we got a new version
+params [["_force", false]];
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") + MODSET;
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
-private _ignoreVersionCheck = IGNOREVERSIONCHECK;
-//TRACE_3("",_modVersion,_savedVersion,_ignoreVersionCheck);
-private _gather = _modVersion != _savedVersion || {IGNOREVERSIONCHECK};
-if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
+private _gather = _modVersion != _savedVersion || {_force || {IGNOREVERSIONCHECK}};
+if (_gather) then {
     // collect existing gear
     private _weaponList = [];
     private _gearList = [];

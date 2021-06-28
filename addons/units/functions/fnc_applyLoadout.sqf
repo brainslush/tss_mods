@@ -15,17 +15,6 @@
  * Public: No
 */
 
-params[["_unit", objNull]];
-
-if (!(local _unit)) exitWith {};
-([_unit] call FUNC(getUnitParameters)) params [
-    "_unitg", "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod", "_type"
-];
-private _configPath = configFile >> "CfgVehicles" >> _type;
-private _modset = MODSET;
-
-//TRACE_8("data",_unitg,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_3denBipod,_modset);
-
 // handle content of container
 private _getContainerContent = {
     params ["_configPath", "_property", "_daynight", "_unitc"];
@@ -41,12 +30,12 @@ private _getContainerContent = {
         ];
 
         if (!(_itemList isEqualType [])) then {
-            _itemList = [[_itemList,1]];
+            _itemList = [[_itemList, 1]];
         };
 
         {
             private _item = _x;
-
+            // TRACE_1("", _item);
             // handle special types
             if (_item isEqualType "") then {
                 //TRACE_1("",_item);
@@ -84,6 +73,7 @@ private _getContainerContent = {
                 _multiplier = _count;
             };
             private _dataR = if (_data isEqualType []) then {
+                // TRACE_1("", _data);
                 _data params ["_type", "_value"];
                 _type = toLower _type;
                 if (_type == "count") exitWith {
@@ -91,9 +81,10 @@ private _getContainerContent = {
                 };
                 if (_type == "weight") exitWith {
                     if (_multiplier != -1) then {
-                        if (isNumber(getNumber(configFile >> "CfgMagazines" >> _item >> "mass"))) then {
+                        if (isNumber(configFile >> "CfgMagazines" >> _item >> "mass")) then {
                             private _mass = getNumber(configFile >> "CfgMagazines" >> _item >> "mass");
                             private _count = floor(_value / _mass);
+                            // TRACE_3("weight count",_mass,_count,_value);
                             _count;
                         } else {1};
                     } else {
@@ -169,6 +160,16 @@ private _getContainer = {
     //TRACE_1("",_return);
     _return;
 };
+
+params[["_unit", objNull]];
+
+if (!(local _unit)) exitWith {};
+([_unit] call FUNC(getUnitParameters)) params [
+    "_unitg", "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod", "_type"
+];
+private _configPath = configFile >> "CfgVehicles" >> _type;
+private _modset = MODSET;
+//TRACE_8("data",_unitg,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_3denBipod,_modset);
 
 private _loadout = [];
 // rifle slot

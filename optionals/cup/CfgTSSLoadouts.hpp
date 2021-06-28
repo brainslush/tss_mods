@@ -318,4 +318,217 @@ class CfgTSSLoadouts {
             };
         };
     };
+
+    class CfgPrimaries {
+        /*
+        class riflePMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12",
+                        "CUP_arifle_Mk17_CQC_AFG_black",
+                        "CUP_arifle_Mk17_CQC_FG_black"
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_Desert",
+                        "CUP_arifle_Mk17_CQC_AFG",
+                        "CUP_arifle_Mk17_CQC_FG"
+                    };
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_Wood",
+                        "CUP_arifle_Mk17_CQC_AFG_woodland",
+                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    };
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_Desert",
+                        "CUP_arifle_Mk17_CQC_AFG",
+                        "CUP_arifle_Mk17_CQC_FG"
+                    };
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_Wood",
+                        "CUP_arifle_Mk17_CQC_AFG_woodland",
+                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    };
+                };
+            };
+            class wdl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_Wood",
+                        "CUP_arifle_Mk17_CQC_AFG_woodland",
+                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    };
+                };
+            };
+        };
+        class rifleGlPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36",
+                        "CUP_arifle_Mk17_CQC_EGLM_black"
+                    };
+                };
+            };
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36_Desert",
+                        "CUP_arifle_Mk17_CQC_EGLM"
+                    };
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36_Wood",
+                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
+                    };
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36_Desert",
+                        "CUP_arifle_Mk17_CQC_EGLM"
+                    };
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36_Wood",
+                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
+                    };
+                };
+            };
+            class wdl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_12_AG36_Wood",
+                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
+                    };
+                };
+            };
+        };
+        class dmrPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20",
+                        "CUP_srifle_M110_black",
+                        "CUP_srifle_SVD_top_rail"
+                    };
+                };
+            };
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20_Desert",
+                        "CUP_srifle_M110"
+                    };
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20_Wood",
+                        "CUP_srifle_M110_woodland"
+                    };
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20_Desert",
+                        "CUP_srifle_M110"
+                    };
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20_Wood",
+                        "CUP_srifle_M110_woodland"
+                    };
+                };
+            };
+            class wdl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_arifle_HK417_20_Wood",
+                        "CUP_srifle_M110_woodland"
+                    };
+                };
+            };
+        };
+        class sniperPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_blk",
+                        "CUP_srifle_AWM_blk"
+                    };
+                };
+            };
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_des",
+                        "CUP_srifle_AWM_des"
+                    };
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_wdl",
+                        "CUP_srifle_AWM_wdl"
+                    };
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_des",
+                        "CUP_srifle_AWM_des"
+                    };
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_wdl",
+                        "CUP_srifle_AWM_wdl"
+                    };
+                };
+            };
+            class wdl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] = {
+                        "CUP_srifle_G22_wdl",
+                        "CUP_srifle_AWM_wdl"
+                    };
+                };
+            };
+        };
+        */
+    };
 };

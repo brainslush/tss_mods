@@ -37,5 +37,5 @@ if (count _cfgArray != 1) exitWith {""};
 private _itemGroup = GETITEMGROUP(_weapon);
 if (_itemGroup isEqualType "") then {_itemGroup = []};
 private _groups = GETITEMGROUP(_weapon) arrayIntersect _cfgArray;
-if (count _groups != 1) exitWith {""};
-_groups select 0
+// if (count _groups != 1) exitWith {""};
+_groups joinString "__";

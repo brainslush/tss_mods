@@ -7,7 +7,7 @@ class tss_pmc_soldier: tss_infantry_soldier {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_sc;
@@ -19,7 +19,7 @@ class tss_pmc_sc: tss_infantry_sc {
     tss_primaries[] = {"rifleGlPMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
     tss_backpacksContent[] = {
         {"grenades",1},
@@ -36,7 +36,7 @@ class tss_pmc_2ic: tss_infantry_2ic {
     tss_primaries[] = {"rifleGlPMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
     tss_backpacksContent[] = {
         {"grenades",1},
@@ -51,10 +51,10 @@ class tss_pmc_mg: tss_infantry_lmg {
     side = 2;
     displayName = "Machinegunner";
 
-    tss_primaries[] = {"mgPMC"};
+    tss_primaries[] = {"arPMC","lmgPMC","mmgPMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_cls;
@@ -66,7 +66,7 @@ class tss_pmc_cls: tss_infantry_cls {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_engineer;
@@ -78,7 +78,7 @@ class tss_pmc_engineer: tss_infantry_engineer {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_exp;
@@ -90,7 +90,7 @@ class tss_pmc_exp: tss_infantry_exp {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_gl;
@@ -102,7 +102,7 @@ class tss_pmc_gl: tss_infantry_gl {
     tss_primaries[] = {"rifleGlPMC"};
     tss_secondaries[] = {"pistol"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_dm;
@@ -114,7 +114,7 @@ class tss_pmc_dm: tss_infantry_dm {
     tss_primaries[] = {"dmrPMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_at;
@@ -127,7 +127,7 @@ class tss_pmc_at: tss_infantry_at {
     tss_secondaries[] = {"pistolPMC"};
     tss_launchers[] = {"atPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_lat;
@@ -139,7 +139,7 @@ class tss_pmc_lat: tss_infantry_lat {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_alp;
@@ -151,7 +151,7 @@ class tss_pmc_alp: tss_infantry_alp {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_aar;
@@ -163,7 +163,7 @@ class tss_pmc_aar: tss_infantry_aar {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {};
 };
 class tss_infantry_drop;
@@ -175,7 +175,7 @@ class tss_pmc_drop: tss_infantry_drop {
     tss_primaries[] = {"riflePMC"};
     tss_secondaries[] = {"pistolPMC"};
     tss_uniforms[] = {"pmc"};
-    tss_helmets[] = {"pmc"};
+    tss_helmets[] = {"pmc", "infantry"};
     tss_gps[] = {"uavterminalI"};
     tss_backpacksContent[] = {
         {"grenades",1},

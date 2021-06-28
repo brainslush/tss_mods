@@ -3,10 +3,6 @@ class CfgTSSLoadouts {
         #define RifleB \
             "hlc_rifle_RU556",\
             "hlc_rifle_RU5562",\
-            "hlc_rifle_bcmjack",\
-            "hlc_rifle_bcmblackjack",\
-            "hlc_rifle_M4",\
-            "hlc_rifle_CQBR",\
             "hlc_rifle_416D10",\
             "hlc_rifle_416D10_st6",\
             "hlc_rifle_416D10_ptato",\
@@ -19,21 +15,14 @@ class CfgTSSLoadouts {
             "hlc_rifle_416D165",\
             "hlc_rifle_416C",\
             "hlc_rifle_416N",\
-            "hlc_rifle_mk18mod0",\
-            "hlc_rifle_SAMR",\
-            "hlc_rifle_samr2",\
             "hlc_rifleACR_SBR_cliffhanger",\
             "hlc_rifle_ACR_carb_black",\
-            "hlc_rifle_ACR_carb_green",\
             "hlc_rifle_ACR_carb_tan",\
             "hlc_rifle_ACR_SBR_black",\
-            "hlc_rifle_ACR_SBR_green",\
             "hlc_rifle_ACR_SBR_tan",\
             "hlc_rifle_ACR_Full_black",\
-            "hlc_rifle_ACR_Full_green",\
             "hlc_rifle_ACR_Full_tan",\
             "hlc_rifle_ACR_MID_black",\
-            "hlc_rifle_ACR_MID_green",\
             "hlc_rifle_ACR_MID_tan"
         #define RifleBDes\
             "hlc_rifle_416D10_tan",\
@@ -172,7 +161,7 @@ class CfgTSSLoadouts {
                         MmgB
                     };
                     defaultMagazine[] = {"hlc_200Rnd_762x51_Barrier_M60E4"};
-                    magazineRange[] = {{100,200},{0,0}};
+                    magazineRange[] = {{100,100},{0,0}};
                     allowedMagazineMods[] = {"hlc"};
                 };
             };
@@ -289,15 +278,46 @@ class CfgTSSLoadouts {
             class snw: all {};
             class wdl: all {};
         };
-        class mgPMC {
+        class arPMC {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        LmgB,
-                        MmgB,
                         ArB,
                         ArO
                     };
+                    magazineRange[] = {{40,80},{0,0}};
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class lmgPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        LmgB
+                    };
+                    magazineRange[] = {{150,200},{0,0}};
+                    allowedMagazineMods[] = {"hlc"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class mmgPMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        MmgB
+                    };
+                    magazineRange[] = {{150,200},{0,0}};
                     allowedMagazineMods[] = {"hlc"};
                 };
             };
@@ -474,7 +494,6 @@ class CfgTSSLoadouts {
             };
         };
         class opticsPistol {
-
             #define opticsPistol \
             "hlc_optic_docter_cadex",\
             "hlc_optic_hp",\

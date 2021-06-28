@@ -35,8 +35,4 @@ GVAR(ArsenalTypeOpen) = "";
 [QGVAR(initArsenal), FUNC(initArsenal)] call CBA_fnc_addEventHandler;
 [QGVAR(initPersonalBox), FUNC(initPersonalBox)] call CBA_fnc_addEventHandler;
 
-// add event handlers for reequiping units after returning from test mission
-// add3DENEventHandler ["OnMissionPreviewEnd",{call FUNC(reequip3Den)}];
-add3DENEventHandler ["OnMissionLoad",{call FUNC(reequip3Den)}];
-
 ADDON = true;

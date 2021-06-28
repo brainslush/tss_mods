@@ -39,10 +39,10 @@ _loadout params [
 
 // primary
 _primaryArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
-private _weaponGroup = [ACE_player, "Primaries", _weapon] call FUNC(getWeaponGroup);
+private _weaponGroup = [ACE_player, "Primaries"] call FUNC(getPropertyGroupString);
 
 //TRACE_7("",_unitg, _unitc,_3denCamo, _3denDaynight, _3denBackpack, _3denMuzzle, _3denBipod);
-//TRACE_7("",_weapongroup,_3denCamo,_weapon,_muzzle,_pointer,_optic,_magazine);
+TRACE_7("",_weapongroup,_3denCamo,_weapon,_muzzle,_pointer,_optic,_magazine);
 
 SAVEGEARITEM("Primaries",_weaponGroup,_3denCamo,_weapon);
 SAVEGEARITEM("PrimariesMuzzles",_weaponGroup,_3denMuzzle,_muzzle);
@@ -52,7 +52,7 @@ SAVEGEARITEM("PrimariesMagazines",_weapon,"",_magazine select 0);
 
 // launcher
 _launcherArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
-_weaponGroup = [ACE_player, "Launchers", _weapon] call FUNC(getWeaponGroup);;
+_weaponGroup = [ACE_player, "Launchers"] call FUNC(getPropertyGroupString);
 SAVEGEARITEM("Launchers",_weaponGroup,_3denCamo,_weapon);
 SAVEGEARITEM("LaunchersMuzzles",_weaponGroup,_3denMuzzle,_muzzle);
 SAVEGEARITEM("LaunchersLasers",_weaponGroup,_3denDaynight,_pointer);
@@ -61,7 +61,7 @@ SAVEGEARITEM("LaunchersMagazines",_weapon,"",_magazine select 0);
 
 // secondary
 _handgunArray params [["_weapon", ""], ["_muzzle", ""], ["_pointer", ""], ["_optic", ""], ["_magazine", [""]], "", ["_bipod", ""]];
-_weaponGroup = [ACE_player, "Secondaries", _weapon] call FUNC(getWeaponGroup);;
+_weaponGroup = [ACE_player, "Secondaries"] call FUNC(getPropertyGroupString);
 SAVEGEARITEM("Secondaries",_weaponGroup,_3denCamo,_weapon);
 SAVEGEARITEM("SecondariesMuzzles",_weaponGroup,_3denMuzzle,_muzzle);
 SAVEGEARITEM("SecondariesLasers",_weaponGroup,_3denDaynight,_pointer);
