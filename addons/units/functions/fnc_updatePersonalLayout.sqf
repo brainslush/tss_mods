@@ -18,7 +18,7 @@
 if (isNil QGVAR(ArsenalTypeOpen) || {GVAR(ArsenalTypeOpen) != "personal"}) exitWith {GVAR(ArsenalTypeOpen) = "";};
 
 ([ACE_player] call FUNC(getUnitParameters)) params [
-    "_unitg", "_unitc","_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod"
+    "_unitg", "_unitc", "_3denCamo", "_3denDaynight", "_3denBackpack", "_3denMuzzle", "_3denBipod"
 ];
 
 private _loadout = getUnitLoadout ACE_player;

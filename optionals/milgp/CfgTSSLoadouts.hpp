@@ -100,13 +100,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_assaulter_rgr",
                         "milgp_v_marciras_assaulter_belt_rgr",
-                        "milgp_v_marciras_assaulter_cb",
                         "milgp_v_marciras_assaulter_belt_cb",
-                        "milgp_v_marciras_assaulter_khk",
                         "milgp_v_marciras_assaulter_belt_khk",
-                        "milgp_v_marciras_assaulter_mc",
                         "milgp_v_marciras_assaulter_belt_mc"
                     };
                 };
@@ -121,13 +117,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_teamleader_RGR",
                         "milgp_v_marciras_teamleader_belt_RGR",
-                        "milgp_v_marciras_teamleader_CB",
                         "milgp_v_marciras_teamleader_belt_CB",
-                        "milgp_v_marciras_teamleader_KHK",
                         "milgp_v_marciras_teamleader_belt_KHK",
-                        "milgp_v_marciras_teamleader_mc",
                         "milgp_v_marciras_teamleader_belt_mc"
                     };
                 };
@@ -142,13 +134,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_grenadier_rgr",
                         "milgp_v_marciras_grenadier_belt_rgr",
-                        "milgp_v_marciras_grenadier_cb",
                         "milgp_v_marciras_grenadier_belt_cb",
-                        "milgp_v_marciras_grenadier_khk",
                         "milgp_v_marciras_grenadier_belt_khk",
-                        "milgp_v_marciras_grenadier_mc",
                         "milgp_v_marciras_grenadier_belt_mc"
                     };
                 };
@@ -163,13 +151,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_hgunner_rgr",
                         "milgp_v_marciras_hgunner_belt_rgr",
-                        "milgp_v_marciras_hgunner_cb",
                         "milgp_v_marciras_hgunner_belt_cb",
-                        "milgp_v_marciras_hgunner_khk",
                         "milgp_v_marciras_hgunner_belt_khk",
-                        "milgp_v_marciras_hgunner_mc",
                         "milgp_v_marciras_hgunner_belt_mc"
                     };
                 };
@@ -184,13 +168,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_marksman_rgr",
                         "milgp_v_marciras_marksman_belt_rgr",
-                        "milgp_v_marciras_marksman_cb",
                         "milgp_v_marciras_marksman_belt_cb",
-                        "milgp_v_marciras_marksman_khk",
                         "milgp_v_marciras_marksman_belt_khk",
-                        "milgp_v_marciras_marksman_mc",
                         "milgp_v_marciras_marksman_belt_mc"
                     };
                 };
@@ -205,13 +185,9 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_medic_rgr",
                         "milgp_v_marciras_medic_belt_rgr",
-                        "milgp_v_marciras_medic_cb",
                         "milgp_v_marciras_medic_belt_cb",
-                        "milgp_v_marciras_medic_khk",
                         "milgp_v_marciras_medic_belt_khk",
-                        "milgp_v_marciras_medic_mc",
                         "milgp_v_marciras_medic_belt_mc"
                     };
                 };

@@ -58,7 +58,7 @@ class tss_fd_helicrew : B_helicrew_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {};
+    tss_gps[] = {"microdagr"};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};

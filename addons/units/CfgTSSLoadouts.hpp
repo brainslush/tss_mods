@@ -1233,14 +1233,15 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_tourniquet", 2},
-                        {"ACE_packingBandage", 6},
-                        {"ACE_elasticBandage", 4},
-                        {"ACE_quikclot", 4},
-                        {"ACE_morphine", 1},
+                        {"ACE_tourniquet", 4},
+                        {"ACE_packingBandage", 8},
+                        {"ACE_elasticBandage", 6},
+                        {"ACE_quikclot", 6},
+                        {"ACE_morphine", 2},
                         {"ACE_epinephrine", 1},
                         {"ACE_adenosine", 1},
-                        {"ACE_splint", 1}
+                        {"ACE_splint", 2},
+                        {"ACE_salineIV_500", 1}
                     };
                 };
             };

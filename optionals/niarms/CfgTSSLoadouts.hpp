@@ -15,7 +15,6 @@ class CfgTSSLoadouts {
             "hlc_rifle_416D165",\
             "hlc_rifle_416C",\
             "hlc_rifle_416N",\
-            "hlc_rifleACR_SBR_cliffhanger",\
             "hlc_rifle_ACR_carb_black",\
             "hlc_rifle_ACR_carb_tan",\
             "hlc_rifle_ACR_SBR_black",\
@@ -28,7 +27,6 @@ class CfgTSSLoadouts {
             "hlc_rifle_416D10_tan",\
             "hlc_rifle_416D145_tan",\
             "hlc_rifle_416D165_tan",\
-            "hlc_rifle_ACR_GL_SBR_cliffhanger",\
             "hlc_rifle_ACR_GL_Carb_black",\
             "hlc_rifle_ACR_GL_Carb_green",\
             "hlc_rifle_ACR_GL_Carb_tan",\
