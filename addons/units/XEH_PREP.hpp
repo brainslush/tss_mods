@@ -10,6 +10,8 @@ PREP(convertDummyMagazine);
 PREP(determineWeapon);
 PREP(gatherEquip);
 PREP(getConfigData);
+PREP(getContainer);
+PREP(getContainerContent);
 PREP(getLoadoutData);
 PREP(getPropertyGroupString);
 PREP(getUnitParameters);
