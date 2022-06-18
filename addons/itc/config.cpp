@@ -14,10 +14,13 @@ class CfgPatches {
         requiredAddons[] = {
             "tss_mods_main",
             "itc_land_common",
-            "itc_land_veh_darter"
+            "itc_land_veh_darter",
+            "itc_land_ciws"
         };
     };
 };
 
+#include "CfgAmmo.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
