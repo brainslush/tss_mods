@@ -320,215 +320,615 @@ class CfgTSSLoadouts {
     };
 
     class CfgPrimaries {
-        /*
-        class riflePMC {
+        #define RifleB \
+            "CUP_arifle_HK416_Black",\
+            "CUP_arifle_HK416_CQB_Black"
+        #define RifleBDes\
+            "CUP_arifle_HK416_Desert",\
+            "CUP_arifle_HK416_CQB_Desert"
+        #define RifleBWdl\
+            "CUP_arifle_HK416_Wood",\
+            "CUP_arifle_HK416_CQB_Wood"
+        #define RifleGlB\
+            "CUP_arifle_HK416_CQB_AG36",\
+            "CUP_arifle_HK416_AGL_Black"
+        #define RifleGlDes\
+            "CUP_arifle_HK416_CQB_AG36_Desert",\
+            "CUP_arifle_HK416_AGL_Desert"
+        #define RifleGlWdl\
+            "CUP_arifle_HK416_AGL_Wood",\
+            "CUP_arifle_HK416_CQB_AG36_Wood"
+        #define LmgB\
+            "CUP_lmg_m249_SQuantoon",\
+            "CUP_lmg_m249_pip4"
+        #define ArB\
+            "CUP_arifle_HK_M27",\
+            "CUP_arifle_HK_M27_VFG"
+        #define MmgB\
+            "CUP_lmg_Mk48"
+        #define DmrB\
+            "CUP_arifle_HK417_20"
+
+        class rifle {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_12",
-                        "CUP_arifle_Mk17_CQC_AFG_black",
-                        "CUP_arifle_Mk17_CQC_FG_black"
+                        RifleB
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    magazineRange[] = {{0,30},{0,0}};
                     allowedMagazineMods[] = {"cup"};
                 };
             };
             class des: all {
                 class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_Desert",
-                        "CUP_arifle_Mk17_CQC_AFG",
-                        "CUP_arifle_Mk17_CQC_FG"
+                    primaries[] += {
+                        RifleBDes
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
             class jgl: all {
                 class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_Wood",
-                        "CUP_arifle_Mk17_CQC_AFG_woodland",
-                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    primaries[] += {
+                        RifleBWdl
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
             class mdt: all {
                 class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_Desert",
-                        "CUP_arifle_Mk17_CQC_AFG",
-                        "CUP_arifle_Mk17_CQC_FG"
+                    primaries[] += {
+                        RifleBDes,
+                        RifleBWdl
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
             class snw: all {
                 class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_Wood",
-                        "CUP_arifle_Mk17_CQC_AFG_woodland",
-                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    primaries[] += {
+                        RifleBWdl
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
             class wdl: all {
                 class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_Wood",
-                        "CUP_arifle_Mk17_CQC_AFG_woodland",
-                        "CUP_arifle_Mk17_CQC_FG_woodland"
+                    primaries[] += {
+                        RifleBWdl
                     };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK"};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
+        };
+        class riflegl {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlB
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    magazineRange[] = {{0,30},{0,1}};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlDes
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class jgl: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class mdt: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlDes,
+                        RifleGlWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class snw: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class wdl: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleGlWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_556x45_PMAG_BLACK", "1Rnd_HE_Grenade_shell"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+        };
+        class lmg {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        LmgB
+                    };
+                    defaultMagazine[] = {"CUP_200Rnd_TE1_Red_Tracer_556x45_M249_Pouch"};
+                    magazineRange[] = {{200,200},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class ar {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        ArB
+                    };
+                    defaultMagazine[] = {"CUP_100Rnd_556x45_BetaCMag_ar15"};
+                    magazineRange[] = {{30,100},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class mmg {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        MmgB
+                    };
+                    defaultMagazine[] = {"CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"};
+                    magazineRange[] = {{100,100},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class dmr {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        DmrB
+                    };
+                    defaultMagazine[] = {"CUP_20Rnd_762x51_HK417"};
+                    magazineRange[] = {{0,20},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+
+        #define RifleO\
+            "CUP_arifle_AK12_AFG_black",\
+            "CUP_arifle_AK12_black",\
+            "CUP_arifle_AK12_VG_black"
+        #define RifleODes\
+            "CUP_arifle_AK12_AFG_arid",\
+            "CUP_arifle_AK12_AFG_tan",\
+            "CUP_arifle_AK12_AFG_bicolor",\
+            "CUP_arifle_AK12_arid",\
+            "CUP_arifle_AK12_tan",\
+            "CUP_arifle_AK12_bicolor",\
+            "CUP_arifle_AK12_VG_arid",\
+            "CUP_arifle_AK12_VG_tan",\
+            "CUP_arifle_AK12_VG_bicolor"
+        #define RifleOWdl\
+            "CUP_arifle_AK12_AFG_lush",\
+            "CUP_arifle_AK12_AFG_wood",\
+            "CUP_arifle_AK12_lush",\
+            "CUP_arifle_AK12_wood",\
+            "CUP_arifle_AK12_VG_lush",\
+            "CUP_arifle_AK12_VG_wood"
+        #define RfileGlO\
+            "CUP_arifle_AK12_GP34_black"
+        #define RfileGlODes\
+            "CUP_arifle_AK12_GP34_arid", \
+            "CUP_arifle_AK12_GP34_tan", \
+            "CUP_arifle_AK12_GP34_bicolor"
+        #define RfileGlOWdl\
+            "CUP_arifle_AK12_GP34_lush", \
+            "CUP_arifle_AK12_GP34_wood"
+        #define ArO\
+            "CUP_arifle_RPK74M_top_rail"
+
+        // redfor weapons
+        class rifleOpfor {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleOB
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleODes
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleOWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleODes,
+                        RifleOWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleOWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class wdl: all {
+                class COMPONENT: COMPONENT {
+                    primaries[] += {
+                        RifleOWdl
+                    };
+                    defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+        };
+        class rifleGlOpfor {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RfileGlO
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RfileGlO
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {
+                class COMPONENT {
+                    primaries[] = {
+                        RfileGlO
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+        };
+        class arOpfor {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        ArO
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class riflePMC {
+            class all {
+                class COMPONENT {
+                    primaries[] = {
+                        RifleB,
+                        RifleOB
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class rifleGlPMC {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_12_AG36",
-                        "CUP_arifle_Mk17_CQC_EGLM_black"
+                        RifleGlB,
+                        RfileGlO
                     };
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
-            class des: all {
-                class COMPONENT: COMPONENT {
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class arPMC {
+            class all {
+                class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_12_AG36_Desert",
-                        "CUP_arifle_Mk17_CQC_EGLM"
+                        ArB,
+                        ArO
                     };
+                    magazineRange[] = {{40,80},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
-            class jgl: all {
-                class COMPONENT: COMPONENT {
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class lmgPMC {
+            class all {
+                class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_12_AG36_Wood",
-                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
+                        LmgB
                     };
+                    magazineRange[] = {{150,200},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
-            class mdt: all {
-                class COMPONENT: COMPONENT {
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+        class mmgPMC {
+            class all {
+                class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_12_AG36_Desert",
-                        "CUP_arifle_Mk17_CQC_EGLM"
+                        MmgB
                     };
+                    magazineRange[] = {{150,200},{0,0}};
+                    allowedMagazineMods[] = {"cup"};
                 };
             };
-            class snw: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_AG36_Wood",
-                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
-                    };
-                };
-            };
-            class wdl: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_12_AG36_Wood",
-                        "CUP_arifle_Mk17_CQC_EGLM_woodland"
-                    };
-                };
-            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
         class dmrPMC {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        "CUP_arifle_HK417_20",
-                        "CUP_srifle_M110_black",
-                        "CUP_srifle_SVD_top_rail"
+                        DmrB
                     };
                 };
             };
-            class des: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_20_Desert",
-                        "CUP_srifle_M110"
-                    };
-                };
-            };
-            class jgl: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_20_Wood",
-                        "CUP_srifle_M110_woodland"
-                    };
-                };
-            };
-            class mdt: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_20_Desert",
-                        "CUP_srifle_M110"
-                    };
-                };
-            };
-            class snw: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_20_Wood",
-                        "CUP_srifle_M110_woodland"
-                    };
-                };
-            };
-            class wdl: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_arifle_HK417_20_Wood",
-                        "CUP_srifle_M110_woodland"
-                    };
-                };
-            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
         };
-        class sniperPMC {
+    };
+    class CfgSecondaries {
+        class pistol {
             class all {
                 class COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_blk",
-                        "CUP_srifle_AWM_blk"
+                    secondaries[] = {
+                        "CUP_hgun_M17_Black"
+                    };
+                    allowedMagazineMods[] = {"cup"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+            muzzles = "muzzlePistol";
+            lasers = "laserPistol";
+            optics = "opticsPistol";
+        };
+    };
+    class CfgMuzzles {
+        class muzzleRifle {
+            class silent {
+                class COMPONENT {
+                    muzzles[] = {
+                        "cup_muzzle_snds_m16",
+                        "cup_muzzle_snds_m16_coyote",
+                        "cup_muzzle_snds_m16_desert",
+                        "cup_muzzle_snds_m16_camo",
+                        "cup_muzzle_snds_g36_black",
+                        "cup_muzzle_snds_g36_desert",
+                        "cup_muzzle_snds_g36_hex",
+                        "cup_muzzle_snds_g36_wood",
+                        "cup_muzzle_snds_kzrzp_ak545",
+                        "cup_muzzle_snds_kzrzp_ak545_desert",
+                        "cup_muzzle_snds_kzrzp_ak545_woodland"
                     };
                 };
             };
-            class des: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_des",
-                        "CUP_srifle_AWM_des"
-                    };
+            class fire {
+                class COMPONENT {
+                    muzzles[] = {};
                 };
             };
-            class jgl: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_wdl",
-                        "CUP_srifle_AWM_wdl"
-                    };
-                };
-            };
-            class mdt: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_des",
-                        "CUP_srifle_AWM_des"
-                    };
-                };
-            };
-            class snw: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_wdl",
-                        "CUP_srifle_AWM_wdl"
-                    };
-                };
-            };
-            class wdl: all {
-                class COMPONENT: COMPONENT {
-                    primaries[] = {
-                        "CUP_srifle_G22_wdl",
-                        "CUP_srifle_AWM_wdl"
+        };
+        class muzzlePistol {
+            class silent {
+                class COMPONENT {
+                    muzzles[] = {
+                        "cup_muzzle_snds_m9"
                     };
                 };
             };
         };
-        */
+    };
+    class CfgOptics {
+        class opticsRifle {
+            class day {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+            class night {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+            class both {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+        };
+        class opticsMmg {
+            class day {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+            class night {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+            class both {
+                class COMPONENT {
+                    optics[] = {
+                        rifleoptics
+                    };
+                };
+            };
+        };
+        class opticsDmr {
+            class day {
+                class COMPONENT {
+                    optics[] = {
+                        "hlc_optic_atacr",
+                        "hlc_optic_atacr_offset"
+                    };
+                };
+            };
+            class night {
+                class COMPONENT {
+                    optics[] = {
+                        "hlc_optic_atacr",
+                        "hlc_optic_atacr_offset"
+                    };
+                };
+            };
+            class both {
+                class COMPONENT {
+                    optics[] = {
+                        "hlc_optic_atacr",
+                        "hlc_optic_atacr_offset"
+                    };
+                };
+            };
+        };
+        class opticsPistol {
+            class day {
+                class COMPONENT {
+                    optics[] = {};
+                };
+            };
+            class night {
+                class COMPONENT {
+                    optics[] = {};
+                };
+            };
+            class both {
+                class COMPONENT {
+                    optics[] = {};
+                };
+            };
+        };
+    };
+    class CfgLasers {
+        class laserPistol {
+            class night {
+                class COMPONENT {
+                    lasers[] = {
+                        "cup_acc_mlpls_laser",
+                        ""
+                    };
+                };
+            };
+            class both {
+                class COMPONENT {
+                    lasers[] = {
+                        "cup_acc_mlpls_laser",
+                        ""
+                    };
+                };
+            };
+        };
     };
 };
