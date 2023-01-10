@@ -772,21 +772,14 @@ class CfgTSSLoadouts {
             };
             class fire {
                 class ace {
-                    muzzles[] = {
-                        "ace_muzzle_mzls_l",
-                        "ace_muzzle_mzls_b",
-                        "ace_muzzle_mzls_smg_02",
-                        "ace_muzzle_mzls_93mmg",
-                        "ace_muzzle_mzls_338",
-                        "ace_muzzle_mzls_smg_01"
-                    };
+                    muzzles[] = {};
                 };
             };
         };
         class muzzlePistol {
             class silent {
                 class vanilla {
-                    muzzles[] = {"muzzle_snds_l"};
+                    muzzles[] = {};
                 };
             };
         };
