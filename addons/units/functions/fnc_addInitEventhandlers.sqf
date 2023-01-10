@@ -19,6 +19,7 @@
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") + MODSET;
 private _savedVersion = GETPRVAR(GVAR(cachedClassesVersion),"");
 private _classes = GETPRVAR(GVAR(cachedClasses),[]);
+
 if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     _classes = [];
     {
@@ -40,10 +41,11 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
     [_x, "init", {
         params["_unit"];
         _unit setVariable [QGVAR(IsTss), true];
+        // apply loadout in Eden
         if (is3DEN) then {
             _this call FUNC(applyLoadout);
         };
-    }] call CBA_fnc_addClassEventHandler;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
 
     // add init post eventhandlers
     [_x, "initPost", {
@@ -52,7 +54,7 @@ if (_modVersion != _savedVersion || {IGNOREVERSIONCHECK}) then {
         if (local _unit) then {
             _this call FUNC(applyLoadout);
         };
-    }] call CBA_fnc_addClassEventHandler;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
 
     // add respawn eventhandler
     [_x, "respawn", {
