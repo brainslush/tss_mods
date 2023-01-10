@@ -15,21 +15,13 @@
  * Public: No
 */
 
-private _actionPrimaryMagazine = [
+private _actionPrimaryMagazine = [] call ACE_interact_menu_fnc_createAction;
 
-] call ACE_interact_menu_fnc_createAction;
+private _actionPrimaryGrenade = [] call ACE_interact_menu_fnc_createAction;
 
-private _actionPrimaryGrenade = [
+private _actionSecondaryMagazine = [] call ACE_interact_menu_fnc_createAction;
 
-] call ACE_interact_menu_fnc_createAction;
-
-private _actionSecondaryMagazine = [
-
-] call ACE_interact_menu_fnc_createAction;
-
-private _actionLauncherMagazine = [
-
-] call ACE_interact_menu_fnc_createAction;
+private _actionLauncherMagazine = [] call ACE_interact_menu_fnc_createAction;
 
 private _action = [
     QGVAR(obtainMagazine), "Magazine beziehen", "", {true}, {

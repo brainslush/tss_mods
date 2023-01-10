@@ -193,6 +193,7 @@ private _collectConfig = {
 
 // check if we got a new version
 params [["_force", false]];
+
 private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version") + MODSET;
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 private _gather = _modVersion != _savedVersion || {_force || {IGNOREVERSIONCHECK}};
@@ -223,20 +224,26 @@ if (_gather) then {
     _itemList append (["Items"] call _collectConfig);
 
     SETPRVAR(GVAR(gearVersion),_modVersion);
+
     _weaponList =_weaponList arrayIntersect _weaponList;
     SETPRVAR(GVAR(weaponList),_weaponList);
+
     _gearList = _gearList arrayIntersect _gearList;
     SETPRVAR(GVAR(gearList),_gearList);
+
     _itemList = _itemList apply {if (_x isEqualType []) then {_x select 0} else {_x}};
     _itemList = _itemList arrayIntersect _itemList;
     SETPRVAR(GVAR(itemList),_itemList);
+
     _attachmentList = _attachmentList arrayIntersect _attachmentList;
     SETPRVAR(GVAR(attachmentList),_attachmentList);
 
     _magazineList = _magazineList arrayIntersect _magazineList;
-    private _throwables = ['Throw', true] call CBA_fnc_compatibleMagazines;
+
     private _putables = ['Put', true] call CBA_fnc_compatibleMagazines;
     SETPRVAR(GVAR(explosiveList),_putables);
+
+    private _throwables = ['Throw', true] call CBA_fnc_compatibleMagazines;
     _magazineList append (_throwables arrayIntersect _itemList);
     _magazineList append _putables;
     SETPRVAR(GVAR(magazineList),_magazineList);

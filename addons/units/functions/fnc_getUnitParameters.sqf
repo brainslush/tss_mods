@@ -14,7 +14,7 @@
  * 4: Backpack Group <STRING>
  * 5: Muzzle Group <STRING>
  * 6: Bipod Group <STRING>
- * 7: Unit Typr <STRING>
+ * 7: Unit Type <STRING>
  *
  * Example:
  * ["tss_recon_tl"] call tss_mods_units_fnc_getUnitParameters
@@ -23,6 +23,9 @@
 */
 
 params ["_unit"];
+
+private _cache = _unit getVariable [QGVAR(unitparameters), []];
+if (!(_cache isEqualTo [])) exitWith {_cache};
 
 private _type = _unit getVariable [QGVAR(typeOf), typeOf _unit];
 ([_type, "_"] call CBA_fnc_split) params ["", "_unitg", "_unitc"];
@@ -44,4 +47,9 @@ private _3denBipod = [_unit getVariable [QGVAR(EdenBipod), "none"], "bipod"] sel
     {_unitc == "ar" ||
     {_unitc == "dm"}}}}
 );
-[_unitg, _unitc, _3denCamo, _3denDaynight, _3denBackpack, _3denMuzzle, _3denBipod, _type];
+
+private _unitParameters = [_unitg, _unitc, _3denCamo, _3denDaynight, _3denBackpack, _3denMuzzle, _3denBipod, _type];
+
+_unit setVariable [QGVAR(unitparameters), _unitParameters];
+
+_unitParameters;

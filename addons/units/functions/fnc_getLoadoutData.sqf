@@ -31,6 +31,7 @@ if (_arsenalList != "") then {
     _unit setVariable [_varName, _whiteList];
 };
 TRACE_1("2",_type);
+
 // check if item is in list, if not revert to default
 if (_availableList isEqualTo []) then {
     ["", ""];

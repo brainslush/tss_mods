@@ -53,5 +53,6 @@ _loadout pushBack [
 [_unit, _unitc] call FUNC(addRifleToSniper);
 [_unit, _unitg, _unitc, _3denCamo] call FUNC(handleDiverGear);
 [_unit, "clsbravo", false, true] call FUNC(addMedKit);
+
 private _items = _unit getVariable ["tss_arsenalList_unit", []];
 [_unit, _items, false] call ace_arsenal_fnc_addVirtualItems;
