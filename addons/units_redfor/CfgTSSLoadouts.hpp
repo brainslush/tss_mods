@@ -7,6 +7,7 @@ class CfgTSSLoadouts {
                         "arifle_AK12_F",
                         "arifle_AK12U_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {
@@ -62,6 +63,7 @@ class CfgTSSLoadouts {
                     primaries[] = {
                         "arifle_AK12_GL_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {
@@ -110,6 +112,7 @@ class CfgTSSLoadouts {
                     primaries[] = {
                         "arifle_RPK12_F"
                     };
+                    excludeOnAlternative = 1;
                 };
             };
             class des: all {
