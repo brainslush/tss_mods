@@ -7,8 +7,8 @@ files = [
     "LICENSE",
     "logo.paa"
 ]
-keyname = "{{prefix}}_{{version}}"
-signame = "{{prefix}}_{{version}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}"
 folder_optionals = true
 sig_version = 3
 

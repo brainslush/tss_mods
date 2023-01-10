@@ -14,3 +14,7 @@ release/
 releases/
 
 \.vscode/
+
+keys/*
+
+.hemtt/local
