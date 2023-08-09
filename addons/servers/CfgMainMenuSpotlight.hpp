@@ -2,7 +2,7 @@ class CfgMainMenuSpotlight {
     class GVAR(joinCombat) {
         text = "TSS Combat Server";
         picture = QPATHTOF(ui\server_join_logo.paa);
-        action = '["144.76.33.250", 2302, "zeCElQX"] call (uiNamespace getVariable QFUNC(joinServer))';
+        action = '["195.201.169.5", 2330, "zeCElQX"] call (uiNamespace getVariable QFUNC(joinServer))';
         actionText = "Join TSS Combat Server";
         condition = "true";
     };
