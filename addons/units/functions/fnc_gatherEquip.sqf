@@ -198,6 +198,7 @@ private _modVersion = getText(configFile >> "CfgPatches" >> QUOTE(ADDON) >> "ver
 private _savedVersion = GETPRVAR(GVAR(gearVersion),"");
 private _gather = _modVersion != _savedVersion || {_force || {IGNOREVERSIONCHECK}};
 if (_gather) then {
+    INFO_4("Gathering equipment", _modVersion, _savedVersion, _force, IGNOREVERSIONCHECK);
     // collect existing gear
     private _weaponList = [];
     private _gearList = [];

@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 // add ace menu entry for personal loadout customizer
-if (hasInterface) then {
+if (hasInterface && {player getVariable [QGVAR(isTss),false]}) then {
     player setVariable [QGVAR(canAccessLoadout), true];
     if (
         {(_x # 0 # 0) isEqualTo QGVAR(Loadout)} count (player getVariable ["ace_interact_menu_selfActions", []]) == 0

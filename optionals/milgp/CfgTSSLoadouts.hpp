@@ -3,28 +3,72 @@ class CfgTSSLoadouts {
         class infantry {
             class all {
                 class COMPONENT {
-                    uniforms[] += {
-                        "milgp_u_fleece_grey_g3_field_pants_rgr",
-                        "milgp_u_fleece_rgr_g3_field_pants_rgr",
-                        "milgp_u_fleece_khk_g3_field_pants_rgr",
-                        "milgp_u_g3_field_set_rgr",
-                        "milgp_u_g3_field_set_rolled_rgr"
-                    };
+                    uniforms[] += {};
                 };
             };
             class des: all {
                 class COMPONENT: COMPONENT {
                     uniforms[] += {
+                        "milgp_u_fleece_grey_g3_field_pants_rgr",
+                        "milgp_u_fleece_grey_g3_field_pants_mc",
                         "milgp_u_fleece_grey_g3_field_pants_mcarid",
                         "milgp_u_fleece_khk_g3_field_pants_mcarid",
-                        "milgp_u_g3_field_set_mc",
+                        "milgp_u_fleece_khk_g3_field_pants_mc",
+                        "milgp_u_fleece_khk_g3_field_pants_rgr",
+                        "milgp_u_fleece_mc_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_mcarid",
+                        "milgp_u_fleece_mc_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_mcarid",
+                        "milgp_u_fleece_rgr_g3_field_pants_mc",
+                        "milgp_u_g3_field_set_blk_mc",
+                        "milgp_u_g3_field_set_blk_mcarid",
+                        "milgp_u_g3_field_set_blk_rgr",
                         "milgp_u_g3_field_set_mcarid",
-                        "milgp_u_g3_field_set_rolled_mc",
+                        "milgp_u_g3_field_set_mc",
+                        "milgp_u_g3_field_set_mc_mcarid",
+                        "milgp_u_g3_field_set_mc_rgr",
+                        "milgp_u_g3_field_set_mcarid_mc",
+                        "milgp_u_g3_field_set_mcarid_rgr",
+                        "milgp_u_g3_field_set_rgr",
+                        "milgp_u_g3_field_set_rgr_mc",
+                        "milgp_u_g3_field_set_rgr_mcarid",
+                        "milgp_u_g3_field_set_rolled_blk_mc",
+                        "milgp_u_g3_field_set_rolled_blk_mcarid",
+                        "milgp_u_g3_field_set_rolled_blk_rgr",
                         "milgp_u_g3_field_set_rolled_mcarid",
+                        "milgp_u_g3_field_set_rolled_mc",
+                        "milgp_u_g3_field_set_rolled_mc_mcarid",
+                        "milgp_u_g3_field_set_rolled_mc_rgr",
+                        "milgp_u_g3_field_set_rolled_mcarid_mc",
+                        "milgp_u_g3_field_set_rolled_mcarid_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr_mc",
+                        "milgp_u_g3_field_set_rolled_rgr_mcarid",
                         "milgp_u_pcu_g3_field_pants_mcarid",
-                        "milgp_u_tshirt_g3_field_pants_mcarid",
+                        "milgp_u_pcu_g3_field_pants_mc",
                         "milgp_u_pcu_g3_field_pants_rgr",
-                        "milgp_u_tshirt_g3_field_pants_rgr"
+                        "milgp_u_pcu_mc_g3_field_pants_mcarid",
+                        "milgp_u_pcu_mc_g3_field_pants_mc",
+                        "milgp_u_pcu_mc_g3_field_pants_rgr",
+                        "milgp_u_pcu_rgr_g3_field_pants_mcarid",
+                        "milgp_u_pcu_rgr_g3_field_pants_mc",
+                        "milgp_u_pcu_rgr_g3_field_pants_rgr",
+                        "milgp_u_pcu_tan_g3_field_pants_mcarid",
+                        "milgp_u_pcu_tan_g3_field_pants_mc",
+                        "milgp_u_pcu_tan_g3_field_pants_rgr",
+                        "milgp_u_tshirt_blk_g3_field_pants_mc",
+                        "milgp_u_tshirt_blk_g3_field_pants_mcarid",
+                        "milgp_u_tshirt_blk_g3_field_pants_rgr",
+                        "milgp_u_tshirt_cb_g3_field_pants_mc",
+                        "milgp_u_tshirt_cb_g3_field_pants_mcarid",
+                        "milgp_u_tshirt_cb_g3_field_pants_rgr",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mc",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mcarid",
+                        "milgp_u_tshirt_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_tan_g3_field_pants_mc",
+                        "milgp_u_tshirt_tan_g3_field_pants_mcarid",
+                        "milgp_u_tshirt_tan_g3_field_pants_rgr"
                     };
                 };
             };
@@ -32,12 +76,53 @@ class CfgTSSLoadouts {
                 class COMPONENT: COMPONENT {
                     uniforms[] += {
                         "milgp_u_fleece_grey_g3_field_pants_mctropic",
+                        "milgp_u_fleece_grey_g3_field_pants_mc",
+                        "milgp_u_fleece_grey_g3_field_pants_rgr",
+                        "milgp_u_fleece_mc_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_mctropic",
+                        "milgp_u_fleece_mc_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_rgr",
                         "milgp_u_fleece_rgr_g3_field_pants_mctropic",
+                        "milgp_u_fleece_rgr_g3_field_pants_mc",
+                        "milgp_u_g3_field_set_blk_mc",
+                        "milgp_u_g3_field_set_blk_mctropic",
+                        "milgp_u_g3_field_set_blk_rgr",
                         "milgp_u_g3_field_set_mctropic",
+                        "milgp_u_g3_field_set_mc",
+                        "milgp_u_g3_field_set_mc_mctropic",
+                        "milgp_u_g3_field_set_mc_rgr",
+                        "milgp_u_g3_field_set_mctropic_mc",
+                        "milgp_u_g3_field_set_mctropic_rgr",
+                        "milgp_u_g3_field_set_rgr",
+                        "milgp_u_g3_field_set_rgr_mc",
+                        "milgp_u_g3_field_set_rgr_mctropic",
+                        "milgp_u_g3_field_set_rolled_blk_mc",
+                        "milgp_u_g3_field_set_rolled_blk_mctropic",
+                        "milgp_u_g3_field_set_rolled_blk_rgr",
                         "milgp_u_g3_field_set_rolled_mctropic",
+                        "milgp_u_g3_field_set_rolled_mc",
+                        "milgp_u_g3_field_set_rolled_mc_mctropic",
+                        "milgp_u_g3_field_set_rolled_mc_rgr",
+                        "milgp_u_g3_field_set_rolled_mctropic_mc",
+                        "milgp_u_g3_field_set_rolled_mctropic_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr_mc",
+                        "milgp_u_g3_field_set_rolled_rgr_mctropic",
                         "milgp_u_pcu_g3_field_pants_mctropic",
-                        "milgp_u_tshirt_g3_field_pants_mctropic",
-                        "milgp_u_tshirt_g3_field_pants_rgr"
+                        "milgp_u_pcu_g3_field_pants_mc",
+                        "milgp_u_pcu_g3_field_pants_rgr",
+                        "milgp_u_pcu_mc_g3_field_pants_mctropic",
+                        "milgp_u_pcu_mc_g3_field_pants_mc",
+                        "milgp_u_pcu_mc_g3_field_pants_rgr",
+                        "milgp_u_pcu_rgr_g3_field_pants_mctropic",
+                        "milgp_u_pcu_rgr_g3_field_pants_mc",
+                        "milgp_u_pcu_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_blk_g3_field_pants_mc",
+                        "milgp_u_tshirt_blk_g3_field_pants_mctropic",
+                        "milgp_u_tshirt_blk_g3_field_pants_rgr",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mc",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mctropic",
+                        "milgp_u_tshirt_rgr_g3_field_pants_rgr"
                     };
                 };
             };
@@ -45,13 +130,35 @@ class CfgTSSLoadouts {
                 class COMPONENT: COMPONENT {
                     uniforms[] += {
                         "milgp_u_fleece_grey_g3_field_pants_mc",
+                        "milgp_u_fleece_grey_g3_field_pants_rgr",
                         "milgp_u_fleece_khk_g3_field_pants_mc",
+                        "milgp_u_fleece_khk_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_rgr",
                         "milgp_u_fleece_rgr_g3_field_pants_mc",
                         "milgp_u_g3_field_set_mc",
+                        "milgp_u_g3_field_set_mc_rgr",
+                        "milgp_u_g3_field_set_rgr",
+                        "milgp_u_g3_field_set_rgr_mc",
                         "milgp_u_g3_field_set_rolled_mc",
+                        "milgp_u_g3_field_set_rolled_mc_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr_mc",
                         "milgp_u_pcu_g3_field_pants_mc",
-                        "milgp_u_tshirt_g3_field_pants_mc",
-                        "milgp_u_tshirt_g3_field_pants_rgr"
+                        "milgp_u_pcu_g3_field_pants_rgr",
+                        "milgp_u_pcu_mc_g3_field_pants_mc",
+                        "milgp_u_pcu_mc_g3_field_pants_rgr",
+                        "milgp_u_pcu_rgr_g3_field_pants_mc",
+                        "milgp_u_pcu_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_blk_g3_field_pants_mc",
+                        "milgp_u_tshirt_blk_g3_field_pants_rgr",
+                        "milgp_u_tshirt_cb_g3_field_pants_mc",
+                        "milgp_u_tshirt_cb_g3_field_pants_rgr",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mc",
+                        "milgp_u_tshirt_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_tan_g3_field_pants_mc",
+                        "milgp_u_tshirt_tan_g3_field_pants_rgr"
                     };
                 };
             };
@@ -59,22 +166,53 @@ class CfgTSSLoadouts {
                 class COMPONENT: COMPONENT {
                     uniforms[] += {
                         "milgp_u_fleece_grey_g3_field_pants_mcalpine",
+                        "milgp_u_fleece_mc_g3_field_pants_mcalpine",
+                        "milgp_u_fleece_rgr_g3_field_pants_mcalpine",
                         "milgp_u_g3_field_set_mcalpine",
+                        "milgp_u_g3_field_set_mc_mcalpine",
+                        "milgp_u_g3_field_set_mcalpine_mc",
+                        "milgp_u_g3_field_set_mcalpine_rgr",
+                        "milgp_u_g3_field_set_rgr_mcalpine",
                         "milgp_u_pcu_g3_field_pants_mcalpine",
-                        "milgp_u_pcu_g3_field_pants_rgr"
+                        "milgp_u_pcu_mc_g3_field_pants_mcalpine",
+                        "milgp_u_pcu_mcal_g3_field_pants_mcalpine",
+                        "milgp_u_pcu_rgr_g3_field_pants_mcalpine"
                     };
                 };
             };
             class wdl: all {
                 class COMPONENT: COMPONENT {
                     uniforms[] += {
-                        "milgp_u_fleece_grey_g3_field_pants_mctropic",
-                        "milgp_u_fleece_rgr_g3_field_pants_mctropic",
-                        "milgp_u_g3_field_set_mctropic",
-                        "milgp_u_g3_field_set_rolled_mctropic",
-                        "milgp_u_pcu_g3_field_pants_mctropic",
-                        "milgp_u_tshirt_g3_field_pants_mctropic",
-                        "milgp_u_tshirt_g3_field_pants_rgr"
+                        "milgp_u_fleece_grey_g3_field_pants_mc",
+                        "milgp_u_fleece_grey_g3_field_pants_rgr",
+                        "milgp_u_fleece_khk_g3_field_pants_mc",
+                        "milgp_u_fleece_khk_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_mc",
+                        "milgp_u_fleece_mc_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_rgr",
+                        "milgp_u_fleece_rgr_g3_field_pants_mc",
+                        "milgp_u_g3_field_set_mc",
+                        "milgp_u_g3_field_set_mc_rgr",
+                        "milgp_u_g3_field_set_rgr",
+                        "milgp_u_g3_field_set_rgr_mc",
+                        "milgp_u_g3_field_set_rolled_mc",
+                        "milgp_u_g3_field_set_rolled_mc_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr",
+                        "milgp_u_g3_field_set_rolled_rgr_mc",
+                        "milgp_u_pcu_g3_field_pants_mc",
+                        "milgp_u_pcu_g3_field_pants_rgr",
+                        "milgp_u_pcu_mc_g3_field_pants_mc",
+                        "milgp_u_pcu_mc_g3_field_pants_rgr",
+                        "milgp_u_pcu_rgr_g3_field_pants_mc",
+                        "milgp_u_pcu_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_blk_g3_field_pants_mc",
+                        "milgp_u_tshirt_blk_g3_field_pants_rgr",
+                        "milgp_u_tshirt_cb_g3_field_pants_mc",
+                        "milgp_u_tshirt_cb_g3_field_pants_rgr",
+                        "milgp_u_tshirt_rgr_g3_field_pants_mc",
+                        "milgp_u_tshirt_rgr_g3_field_pants_rgr",
+                        "milgp_u_tshirt_tan_g3_field_pants_mc",
+                        "milgp_u_tshirt_tan_g3_field_pants_rgr"
                     };
                 };
             };
@@ -100,10 +238,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_assaulter_belt_rgr",
-                        "milgp_v_marciras_assaulter_belt_cb",
-                        "milgp_v_marciras_assaulter_belt_khk",
-                        "milgp_v_marciras_assaulter_belt_mc"
+                        "milgp_v_marciras_assaulter_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_assaulter_belt_cb_cb_cb",
+                        "milgp_v_marciras_assaulter_belt_khk_khk_khk",
+                        "milgp_v_marciras_assaulter_belt_mc_mc_mc"
                     };
                 };
             };
@@ -117,10 +255,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_teamleader_belt_RGR",
-                        "milgp_v_marciras_teamleader_belt_CB",
-                        "milgp_v_marciras_teamleader_belt_KHK",
-                        "milgp_v_marciras_teamleader_belt_mc"
+                        "milgp_v_marciras_teamleader_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_teamleader_belt_cb_cb_cb",
+                        "milgp_v_marciras_teamleader_belt_khk_khk_khk",
+                        "milgp_v_marciras_teamleader_belt_mc_mc_mc"
                     };
                 };
             };
@@ -134,10 +272,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_grenadier_belt_rgr",
-                        "milgp_v_marciras_grenadier_belt_cb",
-                        "milgp_v_marciras_grenadier_belt_khk",
-                        "milgp_v_marciras_grenadier_belt_mc"
+                        "milgp_v_marciras_grenadier_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_grenadier_belt_cb_cb_cb",
+                        "milgp_v_marciras_grenadier_belt_khk_khk_khk",
+                        "milgp_v_marciras_grenadier_belt_mc_mc_mc"
                     };
                 };
             };
@@ -151,10 +289,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_hgunner_belt_rgr",
-                        "milgp_v_marciras_hgunner_belt_cb",
-                        "milgp_v_marciras_hgunner_belt_khk",
-                        "milgp_v_marciras_hgunner_belt_mc"
+                        "milgp_v_marciras_hgunner_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_hgunner_belt_cb_cb_cb",
+                        "milgp_v_marciras_hgunner_belt_khk_khk_khk",
+                        "milgp_v_marciras_hgunner_belt_mc_mc_mc"
                     };
                 };
             };
@@ -168,10 +306,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_marksman_belt_rgr",
-                        "milgp_v_marciras_marksman_belt_cb",
-                        "milgp_v_marciras_marksman_belt_khk",
-                        "milgp_v_marciras_marksman_belt_mc"
+                        "milgp_v_marciras_marksman_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_marksman_belt_cb_cb_cb",
+                        "milgp_v_marciras_marksman_belt_khk_khk_khk",
+                        "milgp_v_marciras_marksman_belt_mc_mc_mc"
                     };
                 };
             };
@@ -185,10 +323,10 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     vests[] = {
-                        "milgp_v_marciras_medic_belt_rgr",
-                        "milgp_v_marciras_medic_belt_cb",
-                        "milgp_v_marciras_medic_belt_khk",
-                        "milgp_v_marciras_medic_belt_mc"
+                        "milgp_v_marciras_medic_belt_rgr_rgr_rgr",
+                        "milgp_v_marciras_medic_belt_cb_cb_cb",
+                        "milgp_v_marciras_medic_belt_khk_khk_khk",
+                        "milgp_v_marciras_medic_belt_mc_mc_mc"
                     };
                 };
             };
@@ -251,139 +389,312 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     helmets[] = {
-                        "milgp_h_airframe_01_khk",
-                        "milgp_h_airframe_02_khk",
-                        "milgp_h_airframe_03_khk",
-                        "milgp_h_airframe_04_khk",
-                        "milgp_h_airframe_05_khk",
-                        "milgp_h_airframe_06_khk",
-                        "milgp_h_airframe_01_khk_hexagon",
-                        "milgp_h_airframe_02_khk_hexagon",
-                        "milgp_h_airframe_03_khk_hexagon",
-                        "milgp_h_airframe_04_khk_hexagon",
-                        "milgp_h_airframe_05_khk_hexagon",
-                        "milgp_h_airframe_06_khk_hexagon",
-                        "milgp_h_airframe_01_CB",
-                        "milgp_h_airframe_02_CB",
-                        "milgp_h_airframe_03_CB",
-                        "milgp_h_airframe_04_CB",
-                        "milgp_h_airframe_05_CB",
-                        "milgp_h_airframe_06_CB",
-                        "milgp_h_airframe_01_CB_hexagon",
-                        "milgp_h_airframe_02_CB_hexagon",
-                        "milgp_h_airframe_03_CB_hexagon",
-                        "milgp_h_airframe_04_CB_hexagon",
-                        "milgp_h_airframe_05_CB_hexagon",
-                        "milgp_h_airframe_06_CB_hexagon",
-                        "milgp_h_airframe_01_RGR",
-                        "milgp_h_airframe_02_RGR",
-                        "milgp_h_airframe_03_RGR",
-                        "milgp_h_airframe_04_RGR",
-                        "milgp_h_airframe_05_RGR",
-                        "milgp_h_airframe_06_RGR",
-                        "milgp_h_airframe_01_RGR_hexagon",
-                        "milgp_h_airframe_02_RGR_hexagon",
-                        "milgp_h_airframe_03_RGR_hexagon",
-                        "milgp_h_airframe_04_RGR_hexagon",
-                        "milgp_h_airframe_05_RGR_hexagon",
-                        "milgp_h_airframe_06_RGR_hexagon",
-                        "milgp_h_airframe_01_MC",
-                        "milgp_h_airframe_02_MC",
-                        "milgp_h_airframe_03_MC",
-                        "milgp_h_airframe_04_MC",
-                        "milgp_h_airframe_05_MC",
-                        "milgp_h_airframe_06_MC",
-                        "milgp_h_opscore_01_khk",
-                        "milgp_h_opscore_02_khk",
-                        "milgp_h_opscore_03_khk",
-                        "milgp_h_opscore_04_khk",
-                        "milgp_h_opscore_05_khk",
-                        "milgp_h_opscore_06_khk",
-                        "milgp_h_opscore_01_khk_hexagon",
-                        "milgp_h_opscore_02_khk_hexagon",
-                        "milgp_h_opscore_03_khk_hexagon",
-                        "milgp_h_opscore_04_khk_hexagon",
-                        "milgp_h_opscore_05_khk_hexagon",
-                        "milgp_h_opscore_06_khk_hexagon",
-                        "milgp_h_opscore_01_CB",
-                        "milgp_h_opscore_02_CB",
-                        "milgp_h_opscore_03_CB",
-                        "milgp_h_opscore_04_CB",
-                        "milgp_h_opscore_05_CB",
-                        "milgp_h_opscore_06_CB",
-                        "milgp_h_opscore_01_CB_hexagon",
-                        "milgp_h_opscore_02_CB_hexagon",
-                        "milgp_h_opscore_03_CB_hexagon",
-                        "milgp_h_opscore_04_CB_hexagon",
-                        "milgp_h_opscore_05_CB_hexagon",
-                        "milgp_h_opscore_06_CB_hexagon",
-                        "milgp_h_opscore_01_RGR",
-                        "milgp_h_opscore_02_RGR",
-                        "milgp_h_opscore_03_RGR",
-                        "milgp_h_opscore_04_RGR",
-                        "milgp_h_opscore_05_RGR",
-                        "milgp_h_opscore_06_RGR",
-                        "milgp_h_opscore_01_RGR_hexagon",
-                        "milgp_h_opscore_02_RGR_hexagon",
-                        "milgp_h_opscore_03_RGR_hexagon",
-                        "milgp_h_opscore_04_RGR_hexagon",
-                        "milgp_h_opscore_05_RGR_hexagon",
-                        "milgp_h_opscore_06_RGR_hexagon",
-                        "milgp_h_opscore_01_MC",
-                        "milgp_h_opscore_02_MC",
-                        "milgp_h_opscore_03_MC",
-                        "milgp_h_opscore_04_MC",
-                        "milgp_h_opscore_05_MC",
-                        "milgp_h_opscore_06_MC"
+                        "milgp_h_opscore_01_cb_hexagon_blk",
+                        "milgp_h_opscore_01_cb_hexagon_khk",
+                        "milgp_h_opscore_01_cb_hexagon_rgr",
+                        "milgp_h_opscore_01_mc_blk",
+                        "milgp_h_opscore_01_mc_khk",
+                        "milgp_h_opscore_01_mc_rgr",
+                        "milgp_h_opscore_01_rgr_hexagon_blk",
+                        "milgp_h_opscore_01_rgr_hexagon_khk",
+                        "milgp_h_opscore_01_rgr_hexagon_rgr",
+                        "milgp_h_opscore_01_rgr_blk",
+                        "milgp_h_opscore_01_rgr_blk_mcc",
+                        "milgp_h_opscore_01_rgr_blk_rgrc",
+                        "milgp_h_opscore_01_rgr_khk",
+                        "milgp_h_opscore_01_rgr_khk_mcc",
+                        "milgp_h_opscore_01_rgr_khk_rgrc",
+                        "milgp_h_opscore_01_rgr_rgr",
+                        "milgp_h_opscore_01_rgr_rgr_mcc",
+                        "milgp_h_opscore_01_rgr_rgr_rgrc",
+
+                        "milgp_h_opscore_02_cb_hexagon_blk",
+                        "milgp_h_opscore_02_cb_hexagon_khk",
+                        "milgp_h_opscore_02_cb_hexagon_rgr",
+                        "milgp_h_opscore_02_mc_blk",
+                        "milgp_h_opscore_02_mc_khk",
+                        "milgp_h_opscore_02_mc_rgr",
+                        "milgp_h_opscore_02_rgr_hexagon_blk",
+                        "milgp_h_opscore_02_rgr_hexagon_khk",
+                        "milgp_h_opscore_02_rgr_hexagon_rgr",
+                        "milgp_h_opscore_02_rgr_blk",
+                        "milgp_h_opscore_02_rgr_blk_mcc",
+                        "milgp_h_opscore_02_rgr_blk_rgrc",
+                        "milgp_h_opscore_02_rgr_khk",
+                        "milgp_h_opscore_02_rgr_khk_mcc",
+                        "milgp_h_opscore_02_rgr_khk_rgrc",
+                        "milgp_h_opscore_02_rgr_rgr",
+                        "milgp_h_opscore_02_rgr_rgr_mcc",
+                        "milgp_h_opscore_02_rgr_rgr_rgrc",
+
+                        "milgp_h_opscore_03_cb_hexagon_blk",
+                        "milgp_h_opscore_03_cb_hexagon_khk",
+                        "milgp_h_opscore_03_cb_hexagon_rgr",
+                        "milgp_h_opscore_03_mc_blk",
+                        "milgp_h_opscore_03_mc_khk",
+                        "milgp_h_opscore_03_mc_rgr",
+                        "milgp_h_opscore_03_rgr_hexagon_blk",
+                        "milgp_h_opscore_03_rgr_hexagon_khk",
+                        "milgp_h_opscore_03_rgr_hexagon_rgr",
+                        "milgp_h_opscore_03_rgr_blk",
+                        "milgp_h_opscore_03_rgr_blk_mcc",
+                        "milgp_h_opscore_03_rgr_blk_rgrc",
+                        "milgp_h_opscore_03_rgr_khk",
+                        "milgp_h_opscore_03_rgr_khk_mcc",
+                        "milgp_h_opscore_03_rgr_khk_rgrc",
+                        "milgp_h_opscore_03_rgr_rgr",
+                        "milgp_h_opscore_03_rgr_rgr_mcc",
+                        "milgp_h_opscore_03_rgr_rgr_rgrc",
+
+                        "milgp_h_opscore_04_cb_hexagon_blk",
+                        "milgp_h_opscore_04_cb_hexagon_khk",
+                        "milgp_h_opscore_04_cb_hexagon_rgr",
+                        "milgp_h_opscore_04_mc_blk",
+                        "milgp_h_opscore_04_mc_khk",
+                        "milgp_h_opscore_04_mc_rgr",
+                        "milgp_h_opscore_04_rgr_hexagon_blk",
+                        "milgp_h_opscore_04_rgr_hexagon_khk",
+                        "milgp_h_opscore_04_rgr_hexagon_rgr",
+                        "milgp_h_opscore_04_rgr_blk",
+                        "milgp_h_opscore_04_rgr_blk_mcc",
+                        "milgp_h_opscore_04_rgr_blk_rgrc",
+                        "milgp_h_opscore_04_rgr_khk",
+                        "milgp_h_opscore_04_rgr_khk_mcc",
+                        "milgp_h_opscore_04_rgr_khk_rgrc",
+                        "milgp_h_opscore_04_rgr_rgr",
+                        "milgp_h_opscore_04_rgr_rgr_mcc",
+                        "milgp_h_opscore_04_rgr_rgr_rgrc",
+
+                        "milgp_h_opscore_05_cb_hexagon_blk",
+                        "milgp_h_opscore_05_cb_hexagon_khk",
+                        "milgp_h_opscore_05_cb_hexagon_rgr",
+                        "milgp_h_opscore_05_mc_blk",
+                        "milgp_h_opscore_05_mc_khk",
+                        "milgp_h_opscore_05_mc_rgr",
+                        "milgp_h_opscore_05_rgr_hexagon_blk",
+                        "milgp_h_opscore_05_rgr_hexagon_khk",
+                        "milgp_h_opscore_05_rgr_hexagon_rgr",
+                        "milgp_h_opscore_05_rgr_blk",
+                        "milgp_h_opscore_05_rgr_blk_mcc",
+                        "milgp_h_opscore_05_rgr_blk_rgrc",
+                        "milgp_h_opscore_05_rgr_khk",
+                        "milgp_h_opscore_05_rgr_khk_mcc",
+                        "milgp_h_opscore_05_rgr_khk_rgrc",
+                        "milgp_h_opscore_05_rgr_rgr",
+                        "milgp_h_opscore_05_rgr_rgr_mcc",
+                        "milgp_h_opscore_05_rgr_rgr_rgrc",
+
+                        "milgp_h_opscore_06_cb_hexagon_blk",
+                        "milgp_h_opscore_06_cb_hexagon_khk",
+                        "milgp_h_opscore_06_cb_hexagon_rgr",
+                        "milgp_h_opscore_06_mc_blk",
+                        "milgp_h_opscore_06_mc_khk",
+                        "milgp_h_opscore_06_mc_rgr",
+                        "milgp_h_opscore_06_rgr_hexagon_blk",
+                        "milgp_h_opscore_06_rgr_hexagon_khk",
+                        "milgp_h_opscore_06_rgr_hexagon_rgr",
+                        "milgp_h_opscore_06_rgr_blk",
+                        "milgp_h_opscore_06_rgr_blk_mcc",
+                        "milgp_h_opscore_06_rgr_blk_rgrc",
+                        "milgp_h_opscore_06_rgr_khk",
+                        "milgp_h_opscore_06_rgr_khk_mcc",
+                        "milgp_h_opscore_06_rgr_khk_rgrc",
+                        "milgp_h_opscore_06_rgr_rgr",
+                        "milgp_h_opscore_06_rgr_rgr_mcc",
+                        "milgp_h_opscore_06_rgr_rgr_rgrc"
                     };
                 };
             };
-            class des: all {};
-            class jgl: all {};
-            class mdt: all {};
-            class snw: all {};
+            class des: all {
+                class COMPONENT: COMPONENT {
+                    helmets[] += {
+                        "milgp_h_opscore_01_rgr_blk_cbc",
+                        "milgp_h_opscore_01_rgr_blk_mcarc",
+                        "milgp_h_opscore_01_rgr_khk_cbc",
+                        "milgp_h_opscore_01_rgr_khk_mcarc",
+                        "milgp_h_opscore_01_rgr_rgr_cbc",
+                        "milgp_h_opscore_01_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_02_rgr_blk_cbc",
+                        "milgp_h_opscore_02_rgr_blk_mcarc",
+                        "milgp_h_opscore_02_rgr_khk_cbc",
+                        "milgp_h_opscore_02_rgr_khk_mcarc",
+                        "milgp_h_opscore_02_rgr_rgr_cbc",
+                        "milgp_h_opscore_02_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_03_rgr_blk_cbc",
+                        "milgp_h_opscore_03_rgr_blk_mcarc",
+                        "milgp_h_opscore_03_rgr_khk_cbc",
+                        "milgp_h_opscore_03_rgr_khk_mcarc",
+                        "milgp_h_opscore_03_rgr_rgr_cbc",
+                        "milgp_h_opscore_03_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_04_rgr_blk_cbc",
+                        "milgp_h_opscore_04_rgr_blk_mcarc",
+                        "milgp_h_opscore_04_rgr_khk_cbc",
+                        "milgp_h_opscore_04_rgr_khk_mcarc",
+                        "milgp_h_opscore_04_rgr_rgr_cbc",
+                        "milgp_h_opscore_04_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_05_rgr_blk_cbc",
+                        "milgp_h_opscore_05_rgr_blk_mcarc",
+                        "milgp_h_opscore_05_rgr_khk_cbc",
+                        "milgp_h_opscore_05_rgr_khk_mcarc",
+                        "milgp_h_opscore_05_rgr_rgr_cbc",
+                        "milgp_h_opscore_05_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_06_rgr_blk_cbc",
+                        "milgp_h_opscore_06_rgr_blk_mcarc",
+                        "milgp_h_opscore_06_rgr_khk_cbc",
+                        "milgp_h_opscore_06_rgr_khk_mcarc",
+                        "milgp_h_opscore_06_rgr_rgr_cbc",
+                        "milgp_h_opscore_06_rgr_rgr_mcarc"
+                    };
+                };
+            };
+            class jgl: all {
+                class COMPONENT: COMPONENT {
+                    helmets[] += {
+                        "milgp_h_opscore_01_rgr_blk_mctc",
+                        "milgp_h_opscore_01_rgr_khk_mctc",                        
+                        "milgp_h_opscore_01_rgr_rgr_mctc",
+
+                        "milgp_h_opscore_02_rgr_blk_mctc",
+                        "milgp_h_opscore_02_rgr_khk_mctc",                        
+                        "milgp_h_opscore_02_rgr_rgr_mctc",
+
+                        "milgp_h_opscore_03_rgr_blk_mctc",
+                        "milgp_h_opscore_03_rgr_khk_mctc",                        
+                        "milgp_h_opscore_03_rgr_rgr_mctc",
+
+                        "milgp_h_opscore_04_rgr_blk_mctc",
+                        "milgp_h_opscore_04_rgr_khk_mctc",                        
+                        "milgp_h_opscore_04_rgr_rgr_mctc",
+
+                        "milgp_h_opscore_05_rgr_blk_mctc",
+                        "milgp_h_opscore_05_rgr_khk_mctc",                        
+                        "milgp_h_opscore_05_rgr_rgr_mctc",
+
+                        "milgp_h_opscore_06_rgr_blk_mctc",
+                        "milgp_h_opscore_06_rgr_khk_mctc",                        
+                        "milgp_h_opscore_06_rgr_rgr_mctc"
+                    };
+                };
+            };
+            class mdt: all {
+                class COMPONENT: COMPONENT {
+                    helmets[] += {
+                        "milgp_h_opscore_01_rgr_blk_cbc",
+                        "milgp_h_opscore_01_rgr_blk_mcarc",
+                        "milgp_h_opscore_01_rgr_khk_cbc",
+                        "milgp_h_opscore_01_rgr_khk_mcarc",
+                        "milgp_h_opscore_01_rgr_rgr_cbc",
+                        "milgp_h_opscore_01_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_02_rgr_blk_cbc",
+                        "milgp_h_opscore_02_rgr_blk_mcarc",
+                        "milgp_h_opscore_02_rgr_khk_cbc",
+                        "milgp_h_opscore_02_rgr_khk_mcarc",
+                        "milgp_h_opscore_02_rgr_rgr_cbc",
+                        "milgp_h_opscore_02_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_03_rgr_blk_cbc",
+                        "milgp_h_opscore_03_rgr_blk_mcarc",
+                        "milgp_h_opscore_03_rgr_khk_cbc",
+                        "milgp_h_opscore_03_rgr_khk_mcarc",
+                        "milgp_h_opscore_03_rgr_rgr_cbc",
+                        "milgp_h_opscore_03_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_04_rgr_blk_cbc",
+                        "milgp_h_opscore_04_rgr_blk_mcarc",
+                        "milgp_h_opscore_04_rgr_khk_cbc",
+                        "milgp_h_opscore_04_rgr_khk_mcarc",
+                        "milgp_h_opscore_04_rgr_rgr_cbc",
+                        "milgp_h_opscore_04_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_05_rgr_blk_cbc",
+                        "milgp_h_opscore_05_rgr_blk_mcarc",
+                        "milgp_h_opscore_05_rgr_khk_cbc",
+                        "milgp_h_opscore_05_rgr_khk_mcarc",
+                        "milgp_h_opscore_05_rgr_rgr_cbc",
+                        "milgp_h_opscore_05_rgr_rgr_mcarc",
+
+                        "milgp_h_opscore_06_rgr_blk_cbc",
+                        "milgp_h_opscore_06_rgr_blk_mcarc",
+                        "milgp_h_opscore_06_rgr_khk_cbc",
+                        "milgp_h_opscore_06_rgr_khk_mcarc",
+                        "milgp_h_opscore_06_rgr_rgr_cbc",
+                        "milgp_h_opscore_06_rgr_rgr_mcarc"
+                    };
+                };
+            };
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    helmets[] += {
+                        "milgp_h_opscore_01_wht_blk",
+                        "milgp_h_opscore_01_wht_rgr",
+                        "milgp_h_opscore_01_wht_wht",
+                        "milgp_h_opscore_01_rgr_blk_mcalc",
+                        "milgp_h_opscore_01_rgr_rgr_mcalc",
+                        "milgp_h_opscore_01_rgr_wht_mcalc",
+                        "milgp_h_opscore_02_wht_blk",
+                        "milgp_h_opscore_02_wht_rgr",
+                        "milgp_h_opscore_02_wht_wht",
+                        "milgp_h_opscore_02_rgr_blk_mcalc",
+                        "milgp_h_opscore_02_rgr_rgr_mcalc",
+                        "milgp_h_opscore_02_rgr_wht_mcalc",
+                        "milgp_h_opscore_03_wht_blk",
+                        "milgp_h_opscore_03_wht_rgr",
+                        "milgp_h_opscore_03_wht_wht",
+                        "milgp_h_opscore_03_rgr_blk_mcalc",
+                        "milgp_h_opscore_03_rgr_rgr_mcalc",
+                        "milgp_h_opscore_03_rgr_wht_mcalc",
+                        "milgp_h_opscore_04_wht_blk",
+                        "milgp_h_opscore_04_wht_rgr",
+                        "milgp_h_opscore_04_wht_wht",
+                        "milgp_h_opscore_04_rgr_blk_mcalc",
+                        "milgp_h_opscore_04_rgr_rgr_mcalc",
+                        "milgp_h_opscore_04_rgr_wht_mcalc",
+                        "milgp_h_opscore_05_wht_blk",
+                        "milgp_h_opscore_05_wht_rgr",
+                        "milgp_h_opscore_05_wht_wht",
+                        "milgp_h_opscore_05_rgr_blk_mcalc",
+                        "milgp_h_opscore_05_rgr_rgr_mcalc",
+                        "milgp_h_opscore_05_rgr_wht_mcalc",
+                        "milgp_h_opscore_06_wht_blk",
+                        "milgp_h_opscore_06_wht_rgr",
+                        "milgp_h_opscore_06_wht_wht",
+                        "milgp_h_opscore_06_rgr_blk_mcalc",
+                        "milgp_h_opscore_06_rgr_rgr_mcalc",
+                        "milgp_h_opscore_06_rgr_wht_mcalc"
+                    };
+                };
+            };
             class wdl: all {};
         };
         class recon {
             class all {
                 class COMPONENT {
                     helmets[] = {
-                        "milgp_h_cap_01_khk",
-                        "milgp_h_cap_02_khk",
-                        "milgp_h_cap_03_khk",
-                        "milgp_h_cap_01_RGR",
-                        "milgp_h_cap_02_RGR",
-                        "milgp_h_cap_03_RGR",
-                        "milgp_h_cap_01_CB",
-                        "milgp_h_cap_02_CB",
-                        "milgp_h_cap_03_CB",
-                        "milgp_h_cap_01_MC",
-                        "milgp_h_cap_02_MC",
-                        "milgp_h_cap_03_MC",
-                        "milgp_h_cap_backwards_01_khk",
-                        "milgp_h_cap_backwards_01_goggles_khk",
-                        "milgp_h_cap_backwards_02_khk",
-                        "milgp_h_cap_backwards_02_goggles_khk",
-                        "milgp_h_cap_backwards_03_khk",
-                        "milgp_h_cap_backwards_03_goggles_khk",
-                        "milgp_h_cap_backwards_01_RGR",
-                        "milgp_h_cap_backwards_01_goggles_RGR",
-                        "milgp_h_cap_backwards_02_RGR",
-                        "milgp_h_cap_backwards_02_goggles_RGR",
-                        "milgp_h_cap_backwards_03_RGR",
-                        "milgp_h_cap_backwards_03_goggles_RGR",
-                        "milgp_h_cap_backwards_01_CB",
-                        "milgp_h_cap_backwards_01_goggles_CB",
-                        "milgp_h_cap_backwards_02_CB",
-                        "milgp_h_cap_backwards_02_goggles_CB",
-                        "milgp_h_cap_backwards_03_CB",
-                        "milgp_h_cap_backwards_03_goggles_CB",
-                        "milgp_h_cap_backwards_01_MC",
-                        "milgp_h_cap_backwards_01_goggles_MC",
-                        "milgp_h_cap_backwards_02_MC",
-                        "milgp_h_cap_backwards_02_goggles_MC",
-                        "milgp_h_cap_backwards_03_MC",
-                        "milgp_h_cap_backwards_03_goggles_MC"
+                        "milgp_h_cap_02_khk_blk",
+                        "milgp_h_cap_02_khk_khk",
+                        "milgp_h_cap_02_khk_rgr",
+                        "milgp_h_cap_02_mc_blk",
+                        "milgp_h_cap_02_mc_khk",
+                        "milgp_h_cap_02_mc_rgr",
+                        "milgp_h_cap_02_rgr_blk",
+                        "milgp_h_cap_02_rgr_khk",
+                        "milgp_h_cap_02_rgr_rgr",
+
+                        "milgp_h_cap_backwards_02_khk_blk",
+                        "milgp_h_cap_backwards_02_khk_khk",
+                        "milgp_h_cap_backwards_2_khk_rgr",
+                        "milgp_h_cap_backwards_02_mc_blk",
+                        "milgp_h_cap_backwards_02_mc_khk",
+                        "milgp_h_cap_backwards_02_mc_rgr",
+                        "milgp_h_cap_backwards_02_rgr_blk",
+                        "milgp_h_cap_backwards_02_rgr_khk",
+                        "milgp_h_cap_backwards_02_rgr_rgr"
                     };
                 };
             };
@@ -397,42 +708,25 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     helmets[] = {
-                        "milgp_h_cap_01_khk",
-                        "milgp_h_cap_02_khk",
-                        "milgp_h_cap_03_khk",
-                        "milgp_h_cap_01_RGR",
-                        "milgp_h_cap_02_RGR",
-                        "milgp_h_cap_03_RGR",
-                        "milgp_h_cap_01_CB",
-                        "milgp_h_cap_02_CB",
-                        "milgp_h_cap_03_CB",
-                        "milgp_h_cap_01_MC",
-                        "milgp_h_cap_02_MC",
-                        "milgp_h_cap_03_MC",
-                        "milgp_h_cap_backwards_01_khk",
-                        "milgp_h_cap_backwards_01_goggles_khk",
-                        "milgp_h_cap_backwards_02_khk",
-                        "milgp_h_cap_backwards_02_goggles_khk",
-                        "milgp_h_cap_backwards_03_khk",
-                        "milgp_h_cap_backwards_03_goggles_khk",
-                        "milgp_h_cap_backwards_01_RGR",
-                        "milgp_h_cap_backwards_01_goggles_RGR",
-                        "milgp_h_cap_backwards_02_RGR",
-                        "milgp_h_cap_backwards_02_goggles_RGR",
-                        "milgp_h_cap_backwards_03_RGR",
-                        "milgp_h_cap_backwards_03_goggles_RGR",
-                        "milgp_h_cap_backwards_01_CB",
-                        "milgp_h_cap_backwards_01_goggles_CB",
-                        "milgp_h_cap_backwards_02_CB",
-                        "milgp_h_cap_backwards_02_goggles_CB",
-                        "milgp_h_cap_backwards_03_CB",
-                        "milgp_h_cap_backwards_03_goggles_CB",
-                        "milgp_h_cap_backwards_01_MC",
-                        "milgp_h_cap_backwards_01_goggles_MC",
-                        "milgp_h_cap_backwards_02_MC",
-                        "milgp_h_cap_backwards_02_goggles_MC",
-                        "milgp_h_cap_backwards_03_MC",
-                        "milgp_h_cap_backwards_03_goggles_MC"
+                        "milgp_h_cap_02_khk_blk",
+                        "milgp_h_cap_02_khk_khk",
+                        "milgp_h_cap_02_khk_rgr",
+                        "milgp_h_cap_02_mc_blk",
+                        "milgp_h_cap_02_mc_khk",
+                        "milgp_h_cap_02_mc_rgr",
+                        "milgp_h_cap_02_rgr_blk",
+                        "milgp_h_cap_02_rgr_khk",
+                        "milgp_h_cap_02_rgr_rgr",
+
+                        "milgp_h_cap_backwards_02_khk_blk",
+                        "milgp_h_cap_backwards_02_khk_khk",
+                        "milgp_h_cap_backwards_2_khk_rgr",
+                        "milgp_h_cap_backwards_02_mc_blk",
+                        "milgp_h_cap_backwards_02_mc_khk",
+                        "milgp_h_cap_backwards_02_mc_rgr",
+                        "milgp_h_cap_backwards_02_rgr_blk",
+                        "milgp_h_cap_backwards_02_rgr_khk",
+                        "milgp_h_cap_backwards_02_rgr_rgr"
                     };
                 };
             };
@@ -448,34 +742,50 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     glasses[] = {
+                        "milgp_f_goggles_khk",
+
                         "milgp_f_face_shield_khk",
+                        "milgp_f_face_shield_goggles_khk",
                         "milgp_f_face_shield_tactical_khk",
                         "milgp_f_face_shield_shades_khk",
                         "milgp_f_face_shield_shemagh_khk",
+                        "milgp_f_face_shield_goggles_shemagh_khk",
                         "milgp_f_face_shield_tactical_shemagh_khk",
                         "milgp_f_face_shield_shades_shemagh_khk",
+
                         "milgp_f_face_shield_RGR",
+                        "milgp_f_face_shield_goggles_RGR",
                         "milgp_f_face_shield_tactical_RGR",
                         "milgp_f_face_shield_shades_RGR",
                         "milgp_f_face_shield_shemagh_RGR",
+                        "milgp_f_face_shield_goggles_shemagh_RGR",
                         "milgp_f_face_shield_tactical_shemagh_RGR",
                         "milgp_f_face_shield_shades_shemagh_RGR",
+
                         "milgp_f_face_shield_CB",
+                        "milgp_f_face_shield_goggles_CB",
                         "milgp_f_face_shield_tactical_CB",
                         "milgp_f_face_shield_shades_CB",
                         "milgp_f_face_shield_shemagh_CB",
+                        "milgp_f_face_shield_goggles_shemagh_CB",
                         "milgp_f_face_shield_tactical_shemagh_CB",
                         "milgp_f_face_shield_shades_shemagh_CB",
+
                         "milgp_f_face_shield_MC",
+                        "milgp_f_face_shield_goggles_MC",
                         "milgp_f_face_shield_tactical_MC",
                         "milgp_f_face_shield_shades_MC",
                         "milgp_f_face_shield_shemagh_MC",
+                        "milgp_f_face_shield_goggles_shemagh_MC",
                         "milgp_f_face_shield_tactical_shemagh_MC",
                         "milgp_f_face_shield_shades_shemagh_MC",
+
                         "milgp_f_face_shield_BLK",
+                        "milgp_f_face_shield_goggles_BLK",
                         "milgp_f_face_shield_tactical_BLK",
                         "milgp_f_face_shield_shades_BLK",
                         "milgp_f_face_shield_shemagh_BLK",
+                        "milgp_f_face_shield_goggles_shemagh_BLK",
                         "milgp_f_face_shield_tactical_shemagh_BLK",
                         "milgp_f_face_shield_shades_shemagh_BLK"
                     };
@@ -484,7 +794,16 @@ class CfgTSSLoadouts {
             class des: all {};
             class jgl: all {};
             class mdt: all {};
-            class snw: all {};
+            class snw: all {
+                class COMPONENT: COMPONENT {
+                    glasses[] += {
+                        "milgp_f_face_shield_WHT",
+                        "milgp_f_face_shield_goggles_WHT",
+                        "milgp_f_face_shield_shades_WHT",
+                        "milgp_f_face_shield_tactical_WHT"
+                    };
+                };
+            };
             class wdl: all {};
         };
     };

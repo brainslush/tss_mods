@@ -931,4 +931,48 @@ class CfgTSSLoadouts {
             };
         };
     };
+    class CfgGlasses {
+        class glasses {
+            class all {
+                class COMPONENT {
+                    glasses[] = {
+                        "CUP_Beard_Black",
+                        "CUP_Beard_Blonde",
+                        "CUP_Beard_Brown",
+                        "CUP_G_Grn_Scarf_Shades_GPS_Beard_Blonde",
+                        "CUP_G_Grn_Scarf_Shades_GPS_Beard",
+                        "CUP_G_Tan_Scarf_Shades_GPS_Beard_Blonde",
+                        "CUP_G_Tan_Scarf_Shades_GPS_Beard",
+                        "CUP_G_White_Scarf_Shades_GPS_Beard",
+                        "CUP_G_White_Scarf_Shades_GPS_Beard_Blonde",
+                        "CUP_G_Grn_Scarf_Shades_Beard",
+                        "CUP_G_Grn_Scarf_Shades_Beard_Blonde",
+                        "CUP_G_Tan_Scarf_Shades_Beard_Blonde",
+                        "CUP_G_Tan_Scarf_Shades_Beard",
+                        "CUP_G_White_Scarf_Shades_Beard_Blonde",
+                        "CUP_G_White_Scarf_Shades_Beard",
+                        "CUP_G_Beard_Shades_Black",
+                        "CUP_G_Beard_Shades_Blonde",
+                        "CUP_G_Grn_Scarf_GPS_Beard_Blonde",
+                        "CUP_G_Grn_Scarf_GPS_Beard",
+                        "CUP_G_Tan_Scarf_GPS_Beard_Blonde",
+                        "CUP_G_Tan_Scarf_GPS_Beard",
+                        "CUP_G_White_Scarf_GPS_Beard_Blonde",
+                        "CUP_G_White_Scarf_GPS_Beard",
+                        "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard_Blonde",
+                        "CUP_G_Grn_Scarf_Shades_GPSCombo_Beard",
+                        "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard_Blonde",
+                        "CUP_G_Tan_Scarf_Shades_GPSCombo_Beard",
+                        "CUP_G_White_Scarf_Shades_GPSCombo_Beard",
+                        "CUP_G_White_Scarf_Shades_GPSCombo_Beard_Blonde"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+    };
 };
