@@ -88,5 +88,4 @@ private _remainingContent = [];
 } forEach [[_uniform, _uniformContent, _uniformSize], [_vest, _vestContent, _vestSize], [_backpack, _backpackContent, _backpackSize]];
 
 
-
 _unit setUnitLoadout _loadout;

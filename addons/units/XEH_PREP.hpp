@@ -2,6 +2,7 @@ PREP(addInitEventhandlers);
 PREP(addMedKit);
 PREP(addMedKitInteraction);
 PREP(addRifleToSniper);
+PREP(addSettings);
 PREP(applyLoadout);
 PREP(cacheVirtualItems);
 PREP(convertDummyChildren);

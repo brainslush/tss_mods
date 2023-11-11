@@ -31,20 +31,16 @@ if (hasInterface && {player getVariable [QGVAR(isTss),false]}) then {
         //TRACE_2("We are in the right state",getClientStateNumber,isMultiplayer);
         player setVariable [QGVARMAIN(spawnPos), getPos player];
         [
-            "Loadoutkonfigurator für " +
-            str (missionNamespace getVariable [QGVARMAIN(3denLoadoutTimeout), 600]) +
-            "s in " +
-            str (missionNamespace getVariable [QGVARMAIN(3denLoadoutRange), 30]) +
-            "m Radius verfügbar."
+            "Loadoutkonfigurator für " + str GVAR(LoadoutTimeout) + "s in " +
+            str GVAR(LoadoutRange) + "m Radius verfügbar."
         ] call CBA_fnc_notify;
         [
             {
-                private _maxDist = missionnamespace getVariable [QGVARMAIN(3denLoadoutRange), 30];
-                ((player getVariable QGVARMAIN(spawnPos)) distance2D (getPos player)) > _maxDist
+                ((player getVariable QGVARMAIN(spawnPos)) distance2D (getPos player)) > GVAR(LoadoutRange) 
             }, {
                 player setVariable [QGVAR(canAccessLoadout), false];
                 ["Loadoutkonfigurator nicht mehr verfügbar."] call CBA_fnc_notify;
-            }, "", missionnamespace getVariable [QGVARMAIN(3denLoadoutTimeout), 600], {
+            }, "", GVAR(LoadoutTimeout), {
                 player setVariable [QGVAR(canAccessLoadout), false];
                 ["Loadoutkonfigurator nicht mehr verfügbar."] call CBA_fnc_notify;
             }

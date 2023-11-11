@@ -23,7 +23,7 @@ if (!(local _unit)) exitWith {};
 ];
 private _configPath = configFile >> "CfgVehicles" >> _type;
 private _modset = MODSET;
-//TRACE_8("data",_unitg,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_3denBipod,_modset);
+TRACE_8("data",_unitg,_unitc,_3denCamo,_3denDaynight,_3denBackpack,_3denMuzzle,_3denBipod,_modset);
 
 private _loadout = [];
 // rifle slot
@@ -56,3 +56,5 @@ _loadout pushBack [
 
 private _items = _unit getVariable ["tss_arsenalList_unit", []];
 [_unit, _items, false] call ace_arsenal_fnc_addVirtualItems;
+
+["tss_post_equip", _unit] call CBA_fnc_localEvent;

@@ -20,7 +20,7 @@
 */
 
 params ["_unit", "_configPath", "_property", "_type", ["_saveVar", "", [""]], ["_arsenalList", "", [""]]];
-TRACE_1("1",_type);
+// TRACE_1("1",_type);
 ([_configPath, _property, _type] call FUNC(getConfigData)) params [["_availableList", [], [[]]],["_groupList", [], [[]]]];
 
 // append arsenal whitelist
@@ -30,13 +30,13 @@ if (_arsenalList != "") then {
     _whitelist append _availableList;
     _unit setVariable [_varName, _whiteList];
 };
-TRACE_1("2",_type);
+// TRACE_1("2",_type);
 
 // check if item is in list, if not revert to default
 if (_availableList isEqualTo []) then {
     ["", ""];
 } else {
-    TRACE_1("3",_type);
+    // TRACE_1("3",_type);
     private _default = selectRandom _availableList;
     private _item = if (_saveVar != "") then {
         private _savedGear = if (tolower _saveVar == "itemgroup") then {
@@ -46,7 +46,7 @@ if (_availableList isEqualTo []) then {
             private _return = LOADGEARITEM(_property,_groupString,_type,_default);
             _return;
         } else {
-            TRACE_1("",_saveVar);
+            // TRACE_1("",_saveVar);
             private _return = LOADGEARITEM(_property,_saveVar,_type,_default);
             _return;
         };

@@ -32,8 +32,6 @@ private _type = _unit getVariable [QGVAR(typeOf), typeOf _unit];
 _unitc = toLower _unitc;
 
 // get misison & unit parameters
-private _3denCamo = missionNamespace getVariable [QGVARMAIN(3denCamo), "mdt"];
-private _3denDaynight = missionNamespace getVariable [QGVARMAIN(3denDayNight), "both"];
 private _3denBackpack = _unit getVariable [QGVAR(EdenBackpack), "all"];
 private _3denMuzzle = [_unit getVariable [QGVAR(EdenMuzzle), "fire"], "silent"] select (
     _unitg == "recon" ||
@@ -48,7 +46,7 @@ private _3denBipod = [_unit getVariable [QGVAR(EdenBipod), "none"], "bipod"] sel
     {_unitc == "dm"}}}}
 );
 
-private _unitParameters = [_unitg, _unitc, _3denCamo, _3denDaynight, _3denBackpack, _3denMuzzle, _3denBipod, _type];
+private _unitParameters = [_unitg, _unitc, GVAR(LoadoutCamo), GVAR(LoadoutDayNight), _3denBackpack, _3denMuzzle, _3denBipod, _type];
 
 _unit setVariable [QGVAR(unitparameters), _unitParameters];
 

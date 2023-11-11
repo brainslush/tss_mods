@@ -15,9 +15,7 @@
  * Public: No
 */
 
-TEST = 1;
-TRACE_1("",TEST);
-TRACE_1("",allUnits);
+if !is3DEN exitWith {};
 
 {
     if (_x isKindOf "CAManBase") then {

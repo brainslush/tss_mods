@@ -69,7 +69,7 @@ private _getAttachment = {
 };
 
 params ["_unit", "_configPath", "_property", "_camo", "_daynight", "_muzzle", "_bipod", "_unitc", ["_addToArsenal", true]];
-TRACE_6("getWeapon",_configPath,_property,_camo,_daynight,_muzzle,_unitc);
+// TRACE_6("getWeapon",_configPath,_property,_camo,_daynight,_muzzle,_unitc);
 
 private _typeOfUnit = _unit getVariable [QGVAR(typeOf), typeOf _unit];
 private _weaponGroupsOfUnit = getArray(_configPath >>  "tss_" + _property);
