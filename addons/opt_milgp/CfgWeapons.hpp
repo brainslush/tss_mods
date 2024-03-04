@@ -527,6 +527,41 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_pcu_aor1_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_aor2_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_mc_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_mcal_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_rgr_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_pcu_tan_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_fleece_grey_g3_field_pants_3CD : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -807,6 +842,26 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_fleece_grey_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_fleece_khk_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_fleece_rgr_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_fleece_mc_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_atacsau : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -848,6 +903,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_atacsau_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_atacsau_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -923,6 +983,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_atacsfg_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_atacsfg_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1032,6 +1097,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_m81_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_flecktarn : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1073,6 +1143,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_flecktarn_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_flecktarn_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1152,6 +1227,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_3cd_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_3cd_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1227,6 +1307,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_aor2_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_aor2_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1298,6 +1383,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_aor1_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_aor1_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1382,6 +1472,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_tropentarn_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_tropentarn_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1453,6 +1548,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_mc_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_mc_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1532,6 +1632,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_mcalpine_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_mcalpine_tropentarn : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1603,6 +1708,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_mctropic_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_mctropic_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1682,6 +1792,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_mcarid_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_mcarid_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1753,6 +1868,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rgr_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rgr_rbs : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1832,6 +1952,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_khk_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_khk_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1907,6 +2032,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_blk_rbs : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_blk_mcalpine : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -1928,6 +2058,86 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_blk_rgr : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_3cd : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_aor1 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_aor2 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_atacsau : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_atacsfg : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_blk : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_flecktarn : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_khk : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_m81 : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_mcalpine : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_mcarid : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_mctropic : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_mc : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_rgr : milgp_u_g3_field_set_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rbs_tropentarn : milgp_u_g3_field_set_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -1973,6 +2183,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_atacsau_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_atacsau_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2048,6 +2263,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_atacsfg_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_atacsfg_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2157,6 +2377,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_m81_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_flecktarn : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2198,6 +2423,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_flecktarn_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_flecktarn_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2277,6 +2507,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_3cd_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_3cd_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2352,6 +2587,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_aor2_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_aor2_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2423,6 +2663,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_aor1_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_aor1_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2507,6 +2752,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_tropentarn_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_tropentarn_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2578,6 +2828,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_mc_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_mc_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2657,6 +2912,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_mcalpine_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_mcalpine_tropentarn : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2728,6 +2988,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_mctropic_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_mctropic_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2807,6 +3072,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_mcarid_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_mcarid_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -2878,6 +3148,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_rgr_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rgr_rbs : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -2957,6 +3232,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_khk_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_khk_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -3032,6 +3312,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_g3_field_set_rolled_blk_rbs : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_g3_field_set_rolled_blk_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -3053,6 +3338,86 @@ class CfgWeapons {
         };
     };
     class milgp_u_g3_field_set_rolled_blk_rgr : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_3cd : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_aor1 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_aor2 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_atacsau : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_atacsfg : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_blk : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_flecktarn : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_khk : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_m81 : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_mcalpine : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_mcarid : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_mctropic : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_mc : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_rgr : milgp_u_g3_field_set_rolled_atacsau {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_g3_field_set_rolled_rbs_tropentarn : milgp_u_g3_field_set_rolled_atacsau {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -3098,6 +3463,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_tshirt_blk_g3_field_pants_m81 : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_tshirt_blk_g3_field_pants_rbs : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -3177,6 +3547,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_tshirt_cb_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_tshirt_cb_g3_field_pants_mc : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -3248,6 +3623,11 @@ class CfgWeapons {
         };
     };
     class milgp_u_tshirt_rgr_g3_field_pants_m81 : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
+    class milgp_u_tshirt_rgr_g3_field_pants_rbs : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
         };
@@ -3327,6 +3707,11 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
+    class milgp_u_tshirt_tan_g3_field_pants_rbs : Uniform_Base {
+        class ItemInfo : UniformItem {
+            containerClass = "Supply80";
+        };
+    };
     class milgp_u_tshirt_tan_g3_field_pants_mc : Uniform_Base {
         class ItemInfo : UniformItem {
             containerClass = "Supply80";
@@ -3357,61 +3742,7 @@ class CfgWeapons {
             containerClass = "Supply80";
         };
     };
-    class milgp_u_tshirt_g3_field_pants_3CD : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_M81 : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_atacsau : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_atacsfg : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_aor1 : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_aor2 : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_mctropic : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_mcarid : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_mc : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_khk : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
-    class milgp_u_tshirt_g3_field_pants_rgr : Uniform_Base {
-        class ItemInfo : UniformItem {
-            containerClass = "Supply80";
-        };
-    };
+
 
     class ItemCore;
     class VestItem;

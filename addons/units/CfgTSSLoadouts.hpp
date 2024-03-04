@@ -1378,7 +1378,10 @@ class CfgTSSLoadouts {
         class maptool {
             class all {
                 class ace {
-                    items[] = {{"ACE_MapTools",1}};
+                    items[] = {
+                        {"ACE_MapTools",1},
+                        {"acex_intelitems_notepad", 1}
+                    };
                 };
             };
             class day : all {};

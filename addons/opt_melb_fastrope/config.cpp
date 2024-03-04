@@ -7,15 +7,15 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
+        skipWhenMissingDependencies = 1;
         requiredAddons[] = {
             QGVARMAIN(main),
-            "MELB"
+            "MELB",
+            "ace_fastroping"
         };
     };
 };
 
 class Mode_FullAuto;
 
-#include "CfgAmmo.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgWeapons.hpp"
+#include "CfgVehicles.hpp"

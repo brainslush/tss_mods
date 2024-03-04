@@ -7,14 +7,15 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
+        skipWhenMissingDependencies = 1;
         requiredAddons[] = {
             QGVARMAIN(main),
             QGVARMAIN(units),
-            "JAS_GPNVG18"
+            "SPS_weapons_ai_axmc"
         };
     };
 };
 
+#include "CfgWeapons.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"
-#include "CfgWeapons.hpp"

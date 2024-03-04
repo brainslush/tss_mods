@@ -29,7 +29,7 @@ private _result = [_configPath, _property, _daynight, _unitc] call FUNC(getConta
 private _container = if (_property == "Backpacks") then {
     ([_unit, _configPath, _property, _size, _unitc, "unit"] call FUNC(getLoadoutData)) select 0;
 } else {
-    ([_unit, _configPath, _property, _camo, _unitc, "unit"]  call FUNC(getLoadoutData)) select 0;
+    ([_unit, _configPath, _property, _camo, _unitc, "unit"] call FUNC(getLoadoutData)) select 0;
 };
 
 private _return = [];

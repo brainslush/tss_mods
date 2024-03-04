@@ -6,15 +6,18 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         VERSION_CONFIG;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"milgp_u_fleece_khk_g3_field_pants_rgr"};
+        skipWhenMissingDependencies = 1;
         requiredAddons[] = {
             QGVARMAIN(main),
-            "MELB",
-            "ace_fastroping"
+            QGVARMAIN(units),
+            "milgp_uniforms_cfg",
+            "milgp_vests_cfg"
         };
     };
 };
 
-class Mode_FullAuto;
-
+#include "CfgEventhandlers.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgTSSLoadouts.hpp"

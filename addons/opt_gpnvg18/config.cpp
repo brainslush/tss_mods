@@ -7,8 +7,15 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
-        requiredAddons[] = {"tss_mods_main"};
+        skipWhenMissingDependencies = 1;
+        requiredAddons[] = {
+            QGVARMAIN(main),
+            QGVARMAIN(units),
+            "JAS_GPNVG18"
+        };
     };
 };
 
 #include "CfgEventhandlers.hpp"
+#include "CfgTSSLoadouts.hpp"
+#include "CfgWeapons.hpp"

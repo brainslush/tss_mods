@@ -1,5 +1,5 @@
-#define COMPONENT event
-#define COMPONENT_BEAUTIFIED Event
+#define COMPONENT kat
+#define COMPONENT_BEAUTIFIED Kat
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

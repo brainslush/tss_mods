@@ -7,9 +7,12 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
+        skipWhenMissingDependencies = 1;
         requiredAddons[] = {
             QGVARMAIN(main),
-            QGVARMAIN(units)
+            QGVARMAIN(units),
+            QGVARMAIN(milgp),
+            "CUP_Weapons_Ammunition"
         };
     };
 };

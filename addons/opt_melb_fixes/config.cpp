@@ -7,14 +7,16 @@ class CfgPatches {
         VERSION_CONFIG;
         units[] = {};
         weapons[] = {};
+        skipWhenMissingDependencies = 1;
         requiredAddons[] = {
             QGVARMAIN(main),
-            QGVARMAIN(units),
-            "SPS_weapons_ai_axmc"
+            "MELB"
         };
     };
 };
 
+class Mode_FullAuto;
+
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgEventhandlers.hpp"
-#include "CfgTSSLoadouts.hpp"
