@@ -1,4 +1,4 @@
-#define COMPONENT cup
+#define COMPONENT opt_cup
 #define COMPONENT_BEAUTIFIED Cup
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 

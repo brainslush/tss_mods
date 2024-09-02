@@ -1,5 +1,5 @@
-#define COMPONENT uvo
-#define COMPONENT_BEAUTIFIED uvo
+#define COMPONENT opt_uvo
+#define COMPONENT_BEAUTIFIED opt_uvo
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 //#define DEBUG_MODE_FULL

@@ -20,3 +20,4 @@ class CfgPatches {
 #include "CfgTSSLoadouts.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"

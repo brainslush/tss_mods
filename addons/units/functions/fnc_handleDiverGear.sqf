@@ -21,9 +21,9 @@ params ["_unit", "_unitg", "_unitc", "_3denCamo"];
 if (_unitg == "diver") then {
     private _configPath = configFile >> "CfgVehicles" >> ("tss_recon_" + _unitc);
     private _vest = ([_unit, _configPath, "Vests", _3denCamo] call FUNC(getLoadoutData)) select 0;
-    private _helmet = ([_unit, _configPath, "Helmets", _3denCamo] call FUNC(getLoadoutData)) select 0;
+    //private _helmet = ([_unit, _configPath, "Helmets", _3denCamo] call FUNC(getLoadoutData)) select 0;
     private _glasses = ([_unit, _configPath, "Glasses", _3denCamo] call FUNC(getLoadoutData)) select 0;
     _unit addItemToBackpack _vest;
-    _unit addItemToBackpack _helmet;
+    //_unit addItemToBackpack _helmet;
     _unit addItemToBackpack _glasses;
 };

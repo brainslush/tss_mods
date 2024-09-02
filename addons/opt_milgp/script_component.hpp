@@ -1,5 +1,5 @@
-#define COMPONENT milgp
-#define COMPONENT_BEAUTIFIED MilGP
+#define COMPONENT opt_milgp
+#define COMPONENT_BEAUTIFIED opt_MilGP
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

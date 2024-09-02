@@ -148,6 +148,20 @@ class CfgTSSLoadouts {
                 };
             };
         };
+        class wetsuit {
+            class all {
+                class COMPONENT {
+                    uniforms[] = {
+                        "CUP_U_B_BAF_MTP_UBACSSEAL"
+                    };
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
     };
     class CfgOptics {
         class opticsRifle {
@@ -572,7 +586,7 @@ class CfgTSSLoadouts {
             class all {
                 class COMPONENT {
                     primaries[] = {
-                        RifleOB
+                        RifleO
                     };
                     defaultMagazine[] = {"CUP_30Rnd_545x39_AK12_M"};
                     allowedMagazineMods[] = {"cup"};
@@ -674,7 +688,7 @@ class CfgTSSLoadouts {
                 class COMPONENT {
                     primaries[] = {
                         RifleB,
-                        RifleOB
+                        RifleO
                     };
                     allowedMagazineMods[] = {"cup"};
                 };

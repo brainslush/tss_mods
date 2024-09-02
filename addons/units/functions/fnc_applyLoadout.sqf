@@ -57,4 +57,5 @@ _loadout pushBack [
 private _items = _unit getVariable ["tss_arsenalList_unit", []];
 [_unit, _items, false] call ace_arsenal_fnc_addVirtualItems;
 
+// ["tss_post_equip", {...}] call CBA_fnc_addEventHandler;
 ["tss_post_equip", _unit] call CBA_fnc_localEvent;

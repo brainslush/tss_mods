@@ -23,7 +23,7 @@ class tss_pmc_sc: tss_infantry_sc {
     tss_gps[] = {};
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"primarygrenades",4}
     };
 };
@@ -40,7 +40,7 @@ class tss_pmc_2ic: tss_infantry_2ic {
     tss_gps[] = {};
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"primarygrenades",4}
     };
 };
@@ -179,7 +179,7 @@ class tss_pmc_drop: tss_infantry_drop {
     tss_gps[] = {"uavterminalI"};
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         "darterGreenfor",
     };
 };

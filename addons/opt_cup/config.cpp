@@ -11,11 +11,12 @@ class CfgPatches {
         requiredAddons[] = {
             QGVARMAIN(main),
             QGVARMAIN(units),
-            QGVARMAIN(milgp),
             "CUP_Weapons_Ammunition"
+            //"CUP_Creatures_Military_BAF"
         };
     };
 };
 
 #include "CfgEventhandlers.hpp"
 #include "CfgTSSLoadouts.hpp"
+#include "CfgWeapons.hpp"

@@ -1,5 +1,5 @@
-#define COMPONENT gpnvg18
-#define COMPONENT_BEAUTIFIED GpNVG18
+#define COMPONENT opt_gpnvg18
+#define COMPONENT_BEAUTIFIED opt_GpNVG18
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

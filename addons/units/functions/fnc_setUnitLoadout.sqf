@@ -72,6 +72,8 @@ private _remainingContent = [];
                     private _newArray = if (_rounds == -1) then {[_item, _newCount]} else {[_item, _newCount, _rounds]};
                     _newContent pushBack _newArray;
                 };
+            } else {
+                ERROR(_item + " did not fit into " + _containerStr + ".")
             };
         } forEach _content;
 

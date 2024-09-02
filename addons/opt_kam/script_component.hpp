@@ -1,5 +1,5 @@
-#define COMPONENT kat
-#define COMPONENT_BEAUTIFIED Kat
+#define COMPONENT opt_kat
+#define COMPONENT_BEAUTIFIED opt_Kat
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

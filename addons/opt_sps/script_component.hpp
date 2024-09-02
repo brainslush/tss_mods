@@ -1,5 +1,5 @@
-#define COMPONENT sps
-#define COMPONENT_BEAUTIFIED SPS
+#define COMPONENT opt_sps
+#define COMPONENT_BEAUTIFIED opt_SPS
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

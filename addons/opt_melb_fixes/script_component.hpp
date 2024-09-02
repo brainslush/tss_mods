@@ -1,5 +1,5 @@
-#define COMPONENT melb_fixes
-#define COMPONENT_BEAUTIFIED melb_fixes
+#define COMPONENT opt_melb_fixes
+#define COMPONENT_BEAUTIFIED opt_melb_fixes
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

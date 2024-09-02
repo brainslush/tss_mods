@@ -1,5 +1,5 @@
-#define COMPONENT tf47
-#define COMPONENT_BEAUTIFIED TF47
+#define COMPONENT opt_tf47
+#define COMPONENT_BEAUTIFIED opt_TF47
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

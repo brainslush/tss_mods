@@ -1,5 +1,5 @@
-#define COMPONENT melb_fastrope
-#define COMPONENT_BEAUTIFIED melb_fastrope
+#define COMPONENT opt_melb_fastrope
+#define COMPONENT_BEAUTIFIED opt_melb_fastrope
 #include "\x\tss_mods\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

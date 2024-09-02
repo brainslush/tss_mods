@@ -29,7 +29,7 @@ class tss_infantry_soldier: B_soldier_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2}
+        {"markerevac",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -151,7 +151,7 @@ class tss_infantry_ar: B_soldier_AR_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"machinegunner"};
-    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
+    tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -165,7 +165,7 @@ class tss_infantry_ar: B_soldier_AR_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"primarymagazines",{"weight", 60}},
     };
 
@@ -295,7 +295,7 @@ class tss_infantry_gl: B_soldier_GL_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"primarygrenades",8}
     };
 
@@ -338,7 +338,7 @@ class tss_infantry_gat: B_soldier_AT_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"launchermagazines",1}
     };
 
@@ -425,7 +425,7 @@ class tss_infantry_lat: B_soldier_AT_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2}
+        {"markerevac",1}
     };
 
     tss_helmets[] = {"infantry"};
@@ -467,7 +467,7 @@ class tss_infantry_aa: B_soldier_AA_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"launchermagazines",2}
     };
 
@@ -510,7 +510,7 @@ class tss_infantry_aar: B_soldier_AAR_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"dummymagazine",20}
     };
 
@@ -554,8 +554,7 @@ class tss_infantry_dm: B_soldier_M_F {
         "dmrkit"
     };
     tss_backpacksContent[] = {
-        {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"primarymagazines",{"weight", 60}},
     };
 
@@ -643,7 +642,7 @@ class tss_infantry_breacher: B_soldier_exp_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         "breacherkit",
         "detector"
     };
@@ -664,7 +663,7 @@ class tss_infantry_exp: tss_infantry_breacher {
 
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         "expkit",
         "detector"
     };
@@ -699,7 +698,7 @@ class tss_infantry_alp: B_soldier_AAT_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"dummymissile",20}
     };
 
@@ -740,12 +739,12 @@ class tss_infantry_fac: B_recon_jtac_F {
         {"secondarymagazines",1},
         {"primarymagazines",{"weight", 80}},
         {"grenades",1},
-        {"markerred",1}
+        {"markerred",1},
+        {"markerevac",1}
     };
     tss_backpacksContent[] = {
-        {"grenades",1},
-        {"markerred",4},
-        {"markerevac",6},
+        {"markerred",1},
+        {"markerevac",5},
         "jtackit",
         "eplrs",
         "anprc117"
@@ -777,7 +776,7 @@ class tss_infantry_ptl: B_officer_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"xsmall", "small", "medium", "large"};
+    tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -792,7 +791,7 @@ class tss_infantry_ptl: B_officer_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         "eplrs"
     };
 
@@ -826,9 +825,8 @@ class tss_infantry_ptm: tss_infantry_cls {
         "anprc152",
         {"secondarymagazines",1},
         {"primarymagazines",{"weight", 80}},
-        {"smokewhite",4},
-        {"markerevac",2},
-        {"markerred",1}
+        {"smokewhite",3},
+        {"markerevac",4}
     };
     tss_backpacksContent[] = {
         "medkitptm"
@@ -842,8 +840,8 @@ class tss_infantry_ptd: tss_infantry_ptm {
         "anprc152",
         {"secondarymagazines",1},
         {"primarymagazines",{"weight", 80}},
-        {"smokewhite",2},
-        {"markerevac",3}
+        {"smokewhite",3},
+        {"markerevac",4}
     };
     tss_backpacksContent[] = {
         "medkitptd"
@@ -867,7 +865,7 @@ class tss_infantry_dropn: B_soldier_UAV_F {
 
     tss_uniforms[] = {"infantry"};
     tss_vests[] = {"rifleman"};
-    tss_backpacks[] = {"medium", "large"};
+    tss_backpacks[] = {"small", "medium", "large"};
     tss_uniformsContent[] = {
         UNIFORMCONTENT,
         {"cableties",2}
@@ -882,7 +880,7 @@ class tss_infantry_dropn: B_soldier_UAV_F {
     tss_backpacksContent[] = {
         {"grenades",1},
         {"markerred",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"tablet",1},
         "eplrs"
     };
@@ -899,9 +897,10 @@ class tss_infantry_dropn: B_soldier_UAV_F {
 class tss_infantry_drop: tss_infantry_dropn {
     displayName = "Drone Operator";
 
+    tss_backpacks[] = {"medium", "large"};
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         {"tablet",1},
         "darterBlufor",
         "eplrs"
@@ -937,7 +936,7 @@ class tss_infantry_engineer: B_soldier_repair_F {
     };
     tss_backpacksContent[] = {
         {"grenades",1},
-        {"markerevac",2},
+        {"markerevac",1},
         "engineerkit"
     };
 

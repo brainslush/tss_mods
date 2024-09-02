@@ -925,7 +925,8 @@ class CfgTSSLoadouts {
             class night {
                 class vanilla {
                     lasers[] = {
-                        "acc_pointer_ir",
+                        "ACE_DBAL_A3_Red",
+                        "ACE_DBAL_A3_Green",
                         ""
                     };
                 };
@@ -933,7 +934,8 @@ class CfgTSSLoadouts {
             class day {
                 class ace {
                     lasers[] = {
-                        "ace_acc_pointer_green",
+                        "ACE_DBAL_A3_Red",
+                        "ACE_DBAL_A3_Green",
                         ""
                     };
                 };
@@ -941,7 +943,8 @@ class CfgTSSLoadouts {
             class both {
                 class vanilla {
                     lasers[] = {
-                        "acc_pointer_ir",
+                        "ACE_DBAL_A3_Red",
+                        "ACE_DBAL_A3_Green",
                         ""
                     };
                 };
@@ -1227,14 +1230,14 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 4},
-                        {"ACE_packingBandage", 8},
-                        {"ACE_elasticBandage", 6},
-                        {"ACE_quikclot", 6},
+                        {"ACE_packingBandage", 5},
+                        {"ACE_elasticBandage", 12},
+                        {"ACE_quikclot", 2},
                         {"ACE_morphine", 2},
-                        {"ACE_epinephrine", 1},
+                        {"ACE_epinephrine", 3},
                         {"ACE_adenosine", 1},
                         {"ACE_splint", 2},
-                        {"ACE_salineIV_500", 1}
+                        {"ACE_salineIV_500", 2}
                     };
                 };
             };
@@ -1489,7 +1492,6 @@ class CfgTSSLoadouts {
             class night {
                 class vanace {
                     items[] = {
-                        {"ACE_HandFlare_Green", 1},
                         {"ACE_Chemlight_HiGreen", 1}
                     };
                 };
@@ -1497,7 +1499,6 @@ class CfgTSSLoadouts {
             class both {
                 class vanace {
                     items[] = {
-                        {"ACE_HandFlare_Green", 1},
                         {"ACE_Chemlight_HiGreen", 1},
                         {"SmokeShellPurple", 1}
                     };
