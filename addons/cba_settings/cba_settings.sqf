@@ -230,7 +230,10 @@ ace_nightvision_noiseScaling = 0.1;
 ace_nightvision_shutterEffects = true;
 
 // ACE Overheating
-ace_overheating_enabled = false;
+force force ace_overheating_cookoffCoef = 0;
+ace_overheating_enabled = true;
+ace_overheating_jamChanceCoef = 0.2;
+ace_overheating_showParticleEffectsForEveryone = true;
 
 // ACE Pointing
 force force ace_finger_enabled = true;
