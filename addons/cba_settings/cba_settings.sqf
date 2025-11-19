@@ -169,7 +169,7 @@ ace_medical_deathChance = 0.5;
 force ace_medical_enableVehicleCrashes = true;
 force force ace_medical_fatalDamageSource = 2;
 force ace_medical_feedback_bloodVolumeEffectType = 0;
-force ace_medical_feedback_painEffectType = 2;
+ace_medical_feedback_painEffectType = 2;
 force ace_medical_fractureChance = 0.599292;
 ace_medical_fractures = 2;
 force force ace_medical_ivFlowRate = 0.5;
@@ -382,3 +382,16 @@ zen_common_autoAddObjects = true;
 force zen_common_cameraBird = false;
 force zen_common_disableGearAnim = true;
 zen_common_preferredArsenal = 1;
+
+// Death and Hit Reactions
+force WBK_DeathAnimMod_Death_Chance = "100";
+force WBK_DeathAnimMod_Deaths_AI = true;
+force WBK_DeathAnimMod_Deaths_HUGEANIMS = true;
+force WBK_DeathAnimMod_Deaths_NECKSHOTS = true;
+force WBK_DeathAnimMod_Deaths_PLR = true;
+force WBK_DeathAnimMod_Flinch_AI = true;
+force WBK_DeathAnimMod_Flinch_PLR = true;
+force WBK_DeathAnimMod_Hit_AI = true;
+force WBK_DeathAnimMod_Hit_Chance = "10";
+force WBK_DeathAnimMod_Hit_Chance_PLR = "10";
+force WBK_DeathAnimMod_Hit_PLR = true;
