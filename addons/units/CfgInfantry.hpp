@@ -36,7 +36,7 @@ class tss_infantry_soldier: B_soldier_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -130,7 +130,7 @@ class tss_infantry_2ic: B_soldier_TL_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -173,7 +173,7 @@ class tss_infantry_ar: B_soldier_AR_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -216,7 +216,7 @@ class tss_infantry_lmg: B_soldier_AR_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -258,7 +258,7 @@ class tss_infantry_mmg: B_soldier_AR_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -303,7 +303,7 @@ class tss_infantry_gl: B_soldier_GL_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -346,7 +346,7 @@ class tss_infantry_gat: B_soldier_AT_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -389,7 +389,7 @@ class tss_infantry_at: B_soldier_AT_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -432,7 +432,7 @@ class tss_infantry_lat: B_soldier_AT_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -475,7 +475,7 @@ class tss_infantry_aa: B_soldier_AA_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -518,7 +518,7 @@ class tss_infantry_aar: B_soldier_AAR_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs","rangefinder"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -562,7 +562,7 @@ class tss_infantry_dm: B_soldier_M_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"rangefinder"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -607,7 +607,7 @@ class tss_infantry_cls: B_medic_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -651,7 +651,7 @@ class tss_infantry_breacher: B_soldier_exp_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -706,7 +706,7 @@ class tss_infantry_alp: B_soldier_AAT_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"binocs","rangefinder"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -754,7 +754,7 @@ class tss_infantry_fac: B_recon_jtac_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {"laserdesignator"};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};
@@ -944,7 +944,7 @@ class tss_infantry_engineer: B_soldier_repair_F {
     tss_glasses[] = {"glasses"};
     tss_binoculars[] = {};
     tss_maps[] = {"map"};
-    tss_gps[] = {"microdagr"};
+    tss_gps[] = {};
     tss_compass[] = {"compass"};
     tss_watches[] = {"watch"};
     tss_nvgs[] = {"nvg"};

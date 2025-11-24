@@ -799,6 +799,21 @@ class CfgTSSLoadouts {
             optics = "opticsPistol";
         };
     };
+    class CfgLaunchers {
+        class gat {
+            class all {
+                class COMPONENT {
+                    launchers[] = {"CUP_launch_Javelin"};
+                    defaultMagazine[] = {"CUP_Javelin_M"};
+                };
+            };
+            class des: all {};
+            class jgl: all {};
+            class mdt: all {};
+            class snw: all {};
+            class wdl: all {};
+        };
+    };
     class CfgMuzzles {
         class muzzleRifle {
             class silent {

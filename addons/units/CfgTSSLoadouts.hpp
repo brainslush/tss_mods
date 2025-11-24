@@ -1195,16 +1195,6 @@ class CfgTSSLoadouts {
             class night : all {};
             class both : all {};
         };
-        class dagr {
-            class all {
-                class ace {
-                    items[] = {{"ACE_DAGR", 1}};
-                };
-            };
-            class day : all {};
-            class night : all {};
-            class both : all {};
-        };
         class microdagr {
             class all {
                 class ace {
@@ -1230,14 +1220,15 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 4},
-                        {"ACE_packingBandage", 5},
-                        {"ACE_elasticBandage", 12},
-                        {"ACE_quikclot", 2},
+                        {"ACE_packingBandage", 12},
+                        {"ACE_elasticBandage", 2},
+                        {"ACE_quikclot", 9},
                         {"ACE_morphine", 2},
                         {"ACE_epinephrine", 3},
                         {"ACE_adenosine", 1},
                         {"ACE_splint", 2},
-                        {"ACE_salineIV_500", 2}
+                        {"ACE_salineIV_500", 2},
+                        {"ACE_painkillers", 1}
                     };
                 };
             };
@@ -1249,16 +1240,18 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 10},
-                        {"ACE_elasticBandage", 7},
-                        {"ACE_quikclot", 7},
+                        {"ACE_tourniquet", 2},
+                        {"ACE_packingBandage", 20},
+                        {"ACE_elasticBandage", 5},
+                        {"ACE_quikclot", 15},
                         {"ACE_morphine", 5},
                         {"ACE_epinephrine", 5},
                         {"ACE_salineIV_500", 6},
                         {"ACE_bodyBag", 1},
                         {"ACE_adenosine", 5},
-                        {"ACE_splint", 5}
+                        {"ACE_splint", 5},
+                        {"ACE_painkillers", 2},
+                        {"ACE_surgicalKit", 1}
                     };
                 };
             };
@@ -1271,15 +1264,16 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 15},
+                        {"ACE_packingBandage", 40},
                         {"ACE_elasticBandage", 10},
-                        {"ACE_quikclot", 10},
+                        {"ACE_quikclot", 30},
                         {"ACE_morphine", 10},
                         {"ACE_epinephrine", 10},
                         {"ACE_salineIV", 7},
                         {"ACE_bodyBag", 1},
                         {"ACE_adenosine", 10},
-                        {"ACE_splint", 10}
+                        {"ACE_splint", 10},
+                        {"ACE_painkillers", 10}
                     };
                 };
             };
@@ -1292,16 +1286,17 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 10},
-                        {"ACE_packingBandage", 30},
-                        {"ACE_elasticBandage", 20},
-                        {"ACE_quikclot", 20},
+                        {"ACE_packingBandage", 40},
+                        {"ACE_elasticBandage", 10},
+                        {"ACE_quikclot", 30},
                         {"ACE_morphine", 15},
                         {"ACE_epinephrine", 15},
                         {"ACE_salineIV_500", 10},
                         {"ACE_salineIV", 5},
                         {"ACE_bodyBag", 3},
                         {"ACE_adenosine", 15},
-                        {"ACE_splint", 15}
+                        {"ACE_splint", 15},
+                        {"ACE_painkillers", 10}
                     };
                 };
             };
@@ -1315,7 +1310,7 @@ class CfgTSSLoadouts {
                     items[] = {
                         {"ACE_tourniquet", 5},
                         {"ACE_packingBandage", 20},
-                        {"ACE_elasticBandage", 15},
+                        {"ACE_elasticBandage", 5},
                         {"ACE_quikclot", 15},
                         {"ACE_morphine", 10},
                         {"ACE_epinephrine", 15},
@@ -1324,7 +1319,8 @@ class CfgTSSLoadouts {
                         {"ACE_surgicalKit",6},
                         {"ACE_bodyBag", 3},
                         {"ACE_adenosine", 10},
-                        {"ACE_splint", 10}
+                        {"ACE_splint", 10},
+                        {"ACE_painkillers", 5}
                     };
                 };
             };
@@ -1337,9 +1333,9 @@ class CfgTSSLoadouts {
                 class ace {
                     items[] = {
                         {"ACE_tourniquet", 5},
-                        {"ACE_packingBandage", 15},
-                        {"ACE_elasticBandage", 10},
-                        {"ACE_quikclot", 10},
+                        {"ACE_packingBandage", 20},
+                        {"ACE_elasticBandage", 5},
+                        {"ACE_quikclot", 15},
                         {"ACE_morphine", 5},
                         {"ACE_epinephrine", 5},
                         {"ACE_surgicalKit",2}
@@ -1354,13 +1350,16 @@ class CfgTSSLoadouts {
             class all {
                 class ace {
                     items[] = {
-                        {"ACE_tourniquet", 2},
-                        {"ACE_packingBandage", 10},
+                        {"ACE_tourniquet", 5},
+                        {"ACE_packingBandage", 24},
                         {"ACE_elasticBandage", 7},
-                        {"ACE_quikclot", 7},
+                        {"ACE_quikclot", 17},
                         {"ACE_morphine", 2},
                         {"ACE_epinephrine", 2},
-                        {"ACE_salineIV_500", 2}
+                        {"ACE_salineIV_500", 2},
+                        {"ACE_adenosine", 2},
+                        {"ACE_splint", 2},
+                        {"ACE_painkillers", 2}
                     };
                 };
             };
